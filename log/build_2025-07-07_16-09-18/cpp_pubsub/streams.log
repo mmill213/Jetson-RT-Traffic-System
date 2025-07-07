@@ -1,0 +1,23 @@
+[0.026s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub -- -j6 -l6
+[0.104s] [35m[1mConsolidate compiler generated dependencies of target talker[0m
+[0.144s] [100%] Built target talker
+[0.166s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub -- -j6 -l6
+[0.169s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub
+[0.185s] -- Install configuration: ""
+[0.185s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/lib/cpp_pubsub/talker
+[0.186s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[0.186s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[0.187s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[0.187s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[0.188s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[0.188s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[0.188s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[0.189s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[0.189s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[0.189s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[0.190s] -- Installing: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[0.191s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[0.192s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[0.192s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[0.193s] -- Up-to-date: /home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[0.241s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub

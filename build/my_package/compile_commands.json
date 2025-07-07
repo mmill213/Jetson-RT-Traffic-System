@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/main-user/Jetson-RT-Traffic-System/build/my_package",
+  "command": "/usr/bin/c++  -I/home/main-user/Jetson-RT-Traffic-System/src/my_package/include -Wall -Wextra -Wpedantic -o CMakeFiles/my_node.dir/src/my_node.cpp.o -c /home/main-user/Jetson-RT-Traffic-System/src/my_package/src/my_node.cpp",
+  "file": "/home/main-user/Jetson-RT-Traffic-System/src/my_package/src/my_node.cpp"
+}
+]

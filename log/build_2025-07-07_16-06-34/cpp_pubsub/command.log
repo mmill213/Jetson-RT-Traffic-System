@@ -1,0 +1,2 @@
+Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub -- -j6 -l6
+Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub -- -j6 -l6
