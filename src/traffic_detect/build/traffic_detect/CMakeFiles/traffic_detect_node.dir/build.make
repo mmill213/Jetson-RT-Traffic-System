@@ -94,6 +94,16 @@ traffic_detect_node: CMakeFiles/traffic_detect_node.dir/src/main.cpp.o
 traffic_detect_node: CMakeFiles/traffic_detect_node.dir/build.make
 traffic_detect_node: /opt/ros/humble/lib/librclcpp.so
 traffic_detect_node: /opt/ros/humble/lib/libcv_bridge.so
+traffic_detect_node: /usr/lib/libopencv_gapi.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_highgui.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_ml.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_objdetect.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_photo.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_stitching.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_video.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_videoio.so.4.8.0
+traffic_detect_node: /usr/local/cuda-12.6/lib64/libcudart_static.a
+traffic_detect_node: /usr/lib/aarch64-linux-gnu/librt.a
 traffic_detect_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 traffic_detect_node: /opt/ros/humble/lib/librcl.so
 traffic_detect_node: /opt/ros/humble/lib/librmw_implementation.so
@@ -172,6 +182,10 @@ traffic_detect_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 traffic_detect_node: /opt/ros/humble/lib/librcpputils.so
 traffic_detect_node: /opt/ros/humble/lib/librcutils.so
 traffic_detect_node: /usr/lib/libopencv_imgcodecs.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_dnn.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_calib3d.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_features2d.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_flann.so.4.8.0
 traffic_detect_node: /usr/lib/libopencv_imgproc.so.4.8.0
 traffic_detect_node: /usr/lib/libopencv_core.so.4.8.0
 traffic_detect_node: CMakeFiles/traffic_detect_node.dir/link.txt

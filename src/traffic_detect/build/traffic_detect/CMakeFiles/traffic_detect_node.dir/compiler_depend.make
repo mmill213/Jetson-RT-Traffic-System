@@ -857,8 +857,65 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
   /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
   /usr/include/opencv4/opencv2/video.hpp \
   /usr/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/include/opencv4/opencv2/video/background_segm.hpp
+  /usr/include/opencv4/opencv2/video/background_segm.hpp \
+  /usr/include/aarch64-linux-gnu/NvInfer.h \
+  /usr/include/aarch64-linux-gnu/NvInferLegacyDims.h \
+  /usr/include/aarch64-linux-gnu/NvInferRuntimeBase.h \
+  /usr/include/aarch64-linux-gnu/NvInferVersion.h \
+  /usr/local/cuda/include/cuda_runtime_api.h \
+  /usr/local/cuda/include/crt/host_defines.h \
+  /usr/local/cuda/include/builtin_types.h \
+  /usr/local/cuda/include/device_types.h \
+  /usr/local/cuda/include/driver_types.h \
+  /usr/local/cuda/include/vector_types.h \
+  /usr/local/cuda/include/surface_types.h \
+  /usr/local/cuda/include/texture_types.h \
+  /usr/local/cuda/include/cuda_device_runtime_api.h \
+  /usr/include/aarch64-linux-gnu/NvInferRuntime.h \
+  /usr/include/aarch64-linux-gnu/NvInferImpl.h \
+  /usr/include/aarch64-linux-gnu/NvInferRuntimeCommon.h \
+  /usr/include/aarch64-linux-gnu/NvInferRuntimePlugin.h \
+  /usr/local/cuda/include/cuda_runtime.h \
+  /usr/local/cuda/include/crt/host_config.h \
+  /usr/local/cuda/include/library_types.h \
+  /usr/local/cuda/include/channel_descriptor.h \
+  /usr/local/cuda/include/cuda_runtime_api.h \
+  /usr/local/cuda/include/driver_functions.h \
+  /usr/local/cuda/include/vector_functions.h \
+  /usr/local/cuda/include/vector_functions.hpp \
+  /usr/include/c++/11/fstream \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc
 
+
+/usr/include/c++/11/bits/fstream.tcc:
+
+/usr/include/aarch64-linux-gnu/c++/11/bits/basic_file.h:
+
+/usr/include/c++/11/fstream:
+
+/usr/local/cuda/include/channel_descriptor.h:
+
+/usr/local/cuda/include/library_types.h:
+
+/usr/local/cuda/include/crt/host_config.h:
+
+/usr/include/aarch64-linux-gnu/NvInferImpl.h:
+
+/usr/include/aarch64-linux-gnu/NvInferRuntime.h:
+
+/usr/local/cuda/include/cuda_device_runtime_api.h:
+
+/usr/local/cuda/include/surface_types.h:
+
+/usr/local/cuda/include/vector_types.h:
+
+/usr/local/cuda/include/crt/host_defines.h:
+
+/usr/include/aarch64-linux-gnu/NvInferVersion.h:
+
+/usr/include/aarch64-linux-gnu/NvInferLegacyDims.h:
 
 /usr/include/opencv4/opencv2/video/background_segm.hpp:
 
@@ -882,6 +939,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp:
 
+/usr/include/aarch64-linux-gnu/NvInferRuntimeBase.h:
+
 /usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp:
 
 /usr/include/opencv4/opencv2/core/cuda.hpp:
@@ -900,6 +959,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /usr/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp:
 
+/usr/local/cuda/include/texture_types.h:
+
 /usr/include/opencv4/opencv2/videoio.hpp:
 
 /usr/include/opencv4/opencv2/imgcodecs.hpp:
@@ -917,6 +978,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 /usr/include/opencv4/opencv2/flann/logger.h:
 
 /usr/include/opencv4/opencv2/flann/kdtree_single_index.h:
+
+/usr/local/cuda/include/vector_functions.hpp:
 
 /usr/include/opencv4/opencv2/flann/allocator.h:
 
@@ -980,6 +1043,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /usr/include/opencv4/opencv2/core/matx.hpp:
 
+/usr/include/aarch64-linux-gnu/NvInferRuntimeCommon.h:
+
 /usr/include/opencv4/opencv2/core/traits.hpp:
 
 /usr/include/opencv4/opencv2/core/check.hpp:
@@ -995,6 +1060,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 /usr/lib/gcc/aarch64-linux-gnu/11/include/limits.h:
 
 /usr/include/c++/11/climits:
+
+/usr/include/aarch64-linux-gnu/NvInferRuntimePlugin.h:
 
 /usr/include/opencv4/opencv2/core/base.hpp:
 
@@ -1056,6 +1123,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__struct.hpp:
 
+/usr/local/cuda/include/cuda_runtime.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__builder.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
@@ -1106,6 +1175,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_client.hpp:
 
+/usr/include/aarch64-linux-gnu/NvInfer.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/create_publisher.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_options.hpp:
@@ -1142,6 +1213,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /opt/ros/humble/include/rclcpp/rclcpp/generic_subscription.hpp:
 
+/usr/local/cuda/include/cuda_runtime_api.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_factory.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher_factory.hpp:
@@ -1169,6 +1242,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__type_support.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__traits.hpp:
+
+/usr/include/aarch64-linux-gnu/c++/11/bits/c++io.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__builder.hpp:
 
@@ -1516,6 +1591,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /usr/include/stdint.h:
 
+/usr/local/cuda/include/builtin_types.h:
+
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
 /usr/include/endian.h:
@@ -1764,6 +1841,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /usr/include/c++/11/cstring:
 
+/usr/local/cuda/include/driver_functions.h:
+
 /opt/ros/humble/include/rcl/rcl/types.h:
 
 /usr/include/asm-generic/posix_types.h:
@@ -1779,6 +1858,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/c++/11/cstdint:
+
+/usr/local/cuda/include/vector_functions.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__traits.hpp:
 
@@ -1860,6 +1941,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /usr/include/c++/11/bits/exception.h:
 
+/usr/local/cuda/include/device_types.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/detail/subscription_callback_type_helper.hpp:
 
 /usr/include/c++/11/bits/locale_facets.h:
@@ -1883,6 +1966,8 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: ../../src/main.cpp \
 /usr/include/c++/11/pstl/pstl_config.h:
 
 /usr/include/aarch64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/local/cuda/include/driver_types.h:
 
 /usr/include/c++/11/bits/algorithmfwd.h:
 

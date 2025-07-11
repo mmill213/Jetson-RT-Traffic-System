@@ -1,0 +1,17 @@
+[0.024s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6
+[0.153s] [ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
+[24.571s] [100%] [32m[1mLinking CXX executable traffic_detect_node[0m
+[24.960s] /usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408
+[24.960s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408
+[24.962s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408
+[25.876s] /usr/bin/ld: CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: in function `TrafficDetector::image_callback(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >)':
+[25.876s] main.cpp:(.text._ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0x524): undefined reference to `cudaMalloc'
+[25.877s] /usr/bin/ld: main.cpp:(.text._ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0x650): undefined reference to `cudaGetErrorString'
+[25.878s] /usr/bin/ld: main.cpp:(.text._ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0x6a0): undefined reference to `cudaMemcpy'
+[25.878s] /usr/bin/ld: main.cpp:(.text._ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0x7cc): undefined reference to `cudaGetErrorString'
+[25.879s] /usr/bin/ld: main.cpp:(.text._ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN15TrafficDetector14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0x7fc): undefined reference to `cudaFree'
+[26.049s] collect2: error: ld returned 1 exit status
+[26.053s] gmake[2]: *** [CMakeFiles/traffic_detect_node.dir/build.make:179: traffic_detect_node] Error 1
+[26.053s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/traffic_detect_node.dir/all] Error 2
+[26.054s] gmake: *** [Makefile:146: all] Error 2
+[26.061s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6

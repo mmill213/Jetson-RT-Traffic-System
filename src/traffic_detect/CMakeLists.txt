@@ -16,14 +16,23 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(cv_bridge REQUIRED)
+find_package(CUDA REQUIRED)
 
 include_directories(
   include
   ${OpenCV_INCLUDE_DIRS}
+  /usr/local/cuda/include
+  ${CUDA_LIBRARIES}
 )
 
 add_executable(traffic_detect_node src/main.cpp)
 ament_target_dependencies(traffic_detect_node rclcpp sensor_msgs cv_bridge)
+
+target_link_libraries(traffic_detect_node
+  ${OpenCV_LIBRARIES}
+  ${CUDA_LIBRARIES}
+  nvinfer
+)
 
 install(TARGETS
   traffic_detect_node

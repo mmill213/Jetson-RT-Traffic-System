@@ -30,13 +30,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 25,
+				"line" : 28,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 26,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
@@ -44,6 +44,12 @@
 				"file" : 1,
 				"line" : 145,
 				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
 			},
 			{
 				"command" : 3,
@@ -54,7 +60,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 20,
+				"line" : 21,
 				"parent" : 0
 			},
 			{
@@ -71,15 +77,15 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"fragment" : "-Wall"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"fragment" : "-Wextra"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"fragment" : "-Wpedantic"
 				}
 			],
@@ -97,26 +103,46 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/include"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
+					"path" : "/usr/local/cuda/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/usr/local/cuda-12.6/lib64/libcudart_static.a"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/Threads::Threads"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/dl"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/usr/lib/aarch64-linux-gnu/librt.a"
+				},
+				{
+					"backtrace" : 6,
 					"isSystem" : true,
 					"path" : "/usr/include/opencv4"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rclcpp"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/sensor_msgs"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/cv_bridge"
 				},
@@ -279,6 +305,66 @@
 			{
 				"backtrace" : 3,
 				"fragment" : "/opt/ros/humble/lib/libcv_bridge.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_gapi.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_highgui.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_ml.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_objdetect.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_photo.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_stitching.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_video.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_videoio.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/local/cuda-12.6/lib64/libcudart_static.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/aarch64-linux-gnu/librt.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lnvinfer",
 				"role" : "libraries"
 			},
 			{
@@ -598,19 +684,43 @@
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "-ldl",
-				"role" : "libraries"
-			},
-			{
+				"backtrace" : 4,
 				"fragment" : "/usr/lib/libopencv_imgcodecs.so.4.8.0",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_dnn.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_calib3d.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_features2d.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/libopencv_flann.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
 				"fragment" : "/usr/lib/libopencv_imgproc.so.4.8.0",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 4,
 				"fragment" : "/usr/lib/libopencv_core.so.4.8.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-ldl",
 				"role" : "libraries"
 			}
 		],

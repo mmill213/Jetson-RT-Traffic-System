@@ -1,0 +1,2 @@
+Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6
+Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6

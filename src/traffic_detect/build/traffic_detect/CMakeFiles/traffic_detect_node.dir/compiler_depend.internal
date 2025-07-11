@@ -859,4 +859,33 @@ CMakeFiles/traffic_detect_node.dir/src/main.cpp.o
  /usr/include/opencv4/opencv2/video.hpp
  /usr/include/opencv4/opencv2/video/tracking.hpp
  /usr/include/opencv4/opencv2/video/background_segm.hpp
+ /usr/include/aarch64-linux-gnu/NvInfer.h
+ /usr/include/aarch64-linux-gnu/NvInferLegacyDims.h
+ /usr/include/aarch64-linux-gnu/NvInferRuntimeBase.h
+ /usr/include/aarch64-linux-gnu/NvInferVersion.h
+ /usr/local/cuda/include/cuda_runtime_api.h
+ /usr/local/cuda/include/crt/host_defines.h
+ /usr/local/cuda/include/builtin_types.h
+ /usr/local/cuda/include/device_types.h
+ /usr/local/cuda/include/driver_types.h
+ /usr/local/cuda/include/vector_types.h
+ /usr/local/cuda/include/surface_types.h
+ /usr/local/cuda/include/texture_types.h
+ /usr/local/cuda/include/cuda_device_runtime_api.h
+ /usr/include/aarch64-linux-gnu/NvInferRuntime.h
+ /usr/include/aarch64-linux-gnu/NvInferImpl.h
+ /usr/include/aarch64-linux-gnu/NvInferRuntimeCommon.h
+ /usr/include/aarch64-linux-gnu/NvInferRuntimePlugin.h
+ /usr/local/cuda/include/cuda_runtime.h
+ /usr/local/cuda/include/crt/host_config.h
+ /usr/local/cuda/include/library_types.h
+ /usr/local/cuda/include/channel_descriptor.h
+ /usr/local/cuda/include/cuda_runtime_api.h
+ /usr/local/cuda/include/driver_functions.h
+ /usr/local/cuda/include/vector_functions.h
+ /usr/local/cuda/include/vector_functions.hpp
+ /usr/include/c++/11/fstream
+ /usr/include/aarch64-linux-gnu/c++/11/bits/basic_file.h
+ /usr/include/aarch64-linux-gnu/c++/11/bits/c++io.h
+ /usr/include/c++/11/bits/fstream.tcc
 
