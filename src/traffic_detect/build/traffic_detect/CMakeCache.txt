@@ -25,7 +25,7 @@ AMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=ON
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
-AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -256,6 +256,9 @@ OPENSSL_INCLUDE_DIR:PATH=/usr/include
 //Path to a library.
 OPENSSL_SSL_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libssl.so
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/lib/cmake/opencv4
+
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
 
@@ -369,6 +372,9 @@ ament_xmllint_BIN:FILEPATH=/opt/ros/humble/bin/ament_xmllint
 
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/opt/ros/humble/share/builtin_interfaces/cmake
+
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/humble/share/cv_bridge/cmake
 
 //The directory containing a CMake configuration file for fastcdr.
 fastcdr_DIR:PATH=/opt/ros/humble/lib/cmake/fastcdr
@@ -513,15 +519,6 @@ traffic_detect_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 traffic_detect_SOURCE_DIR:STATIC=/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect
-
-//Value Computed by CMake
-traffic_detect_node_BINARY_DIR:STATIC=/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect
-
-//Value Computed by CMake
-traffic_detect_node_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-traffic_detect_node_SOURCE_DIR:STATIC=/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect
 
 //Path to a program.
 xmllint_BIN:FILEPATH=/usr/bin/xmllint
@@ -683,6 +680,8 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding FastRTPS
 FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/humble/include][/opt/ros/humble/lib/libfastrtps.so;/opt/ros/humble/lib/libfastcdr.so][v()]
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v4.8.0()]
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/aarch64-linux-gnu/libcrypto.so][/usr/include][c ][v3.0.2()]
 //Details about finding Python3
@@ -738,6 +737,8 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-aarch64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=0f3e53742e142b1d9e50e4ca5b901dd8
+//Index for unique symlink install targets
+__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=1
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_checked__OPENSSL:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto

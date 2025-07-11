@@ -1,0 +1,24 @@
+[0.021s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6
+[0.115s] [35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[0.157s] [100%] Built target traffic_detect_node
+[0.187s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6
+[0.212s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect
+[0.231s] -- Install configuration: ""
+[0.231s] -- Execute custom install script
+[0.232s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/lib/traffic_detect/traffic_detect_node
+[0.233s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect
+[0.233s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect
+[0.233s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh
+[0.234s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv
+[0.234s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/path.sh
+[0.234s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/path.dsv
+[0.235s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.bash
+[0.235s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.sh
+[0.235s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.zsh
+[0.236s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.dsv
+[0.236s] -- Symlinking: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/package.dsv
+[0.260s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect
+[0.260s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake
+[0.261s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake
+[0.261s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/package.xml
+[0.264s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect

@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/nvidia/Jetson-RT-Traffic-System/install/cpp_pubsub/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/nvidia/Jetson-RT-Traffic-System/install/cpp_pubsub/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/nvidia/Jetson-RT-Traffic-System/install/cpp_pubsub/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub/${destination}")
+      set(destination "/home/nvidia/Jetson-RT-Traffic-System/install/cpp_pubsub/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,49 +311,49 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "talker" "DESTINATION" "lib/cpp_pubsub")
-include("/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "talker" "listener" "DESTINATION" "lib/cpp_pubsub")
-include("/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cpp_pubsub/environment")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cpp_pubsub/environment")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cpp_pubsub/environment")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/cpp_pubsub/environment")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/cpp_pubsub/environment")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/cpp_pubsub/environment")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/cpp_pubsub/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cpp_pubsub/environment")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cpp_pubsub/environment")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cpp_pubsub/environment")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/cpp_pubsub/environment")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/cpp_pubsub/environment")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/cpp_pubsub/environment")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/cpp_pubsub/environment")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/cpp_pubsub")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/cpp_pubsub")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/cpp_pubsub")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/cpp_pubsub")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/cpp_pubsub")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/cpp_pubsub")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/cpp_pubsub")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/cpp_pubsub")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/cpp_pubsub")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/cpp_pubsub")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/cpp_pubsub")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/cpp_pubsub")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/cpp_pubsub")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/cpp_pubsub")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/cpp_pubsub")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/packages/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/packages/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/packages/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/packages/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig.cmake" "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig-version.cmake" "DESTINATION" "share/cpp_pubsub/cmake")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig.cmake" "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig-version.cmake" "DESTINATION" "share/cpp_pubsub/cmake")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig.cmake" "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig-version.cmake" "DESTINATION" "share/cpp_pubsub/cmake")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig.cmake" "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig-version.cmake" "DESTINATION" "share/cpp_pubsub/cmake")
 
-# install(FILES "/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub/package.xml" "DESTINATION" "share/cpp_pubsub")
-ament_cmake_symlink_install_files("/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub/package.xml" "DESTINATION" "share/cpp_pubsub")
+# install(FILES "/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub/package.xml" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub" FILES "/home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub/package.xml" "DESTINATION" "share/cpp_pubsub")

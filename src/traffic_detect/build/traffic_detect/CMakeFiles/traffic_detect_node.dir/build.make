@@ -93,11 +93,7 @@ traffic_detect_node_EXTERNAL_OBJECTS =
 traffic_detect_node: CMakeFiles/traffic_detect_node.dir/src/main.cpp.o
 traffic_detect_node: CMakeFiles/traffic_detect_node.dir/build.make
 traffic_detect_node: /opt/ros/humble/lib/librclcpp.so
-traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
-traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
-traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
-traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
-traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
+traffic_detect_node: /opt/ros/humble/lib/libcv_bridge.so
 traffic_detect_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 traffic_detect_node: /opt/ros/humble/lib/librcl.so
 traffic_detect_node: /opt/ros/humble/lib/librmw_implementation.so
@@ -131,24 +127,29 @@ traffic_detect_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_py
 traffic_detect_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so
 traffic_detect_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
 traffic_detect_node: /opt/ros/humble/lib/libtracetools.so
+traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 traffic_detect_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
 traffic_detect_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 traffic_detect_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
 traffic_detect_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
+traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/libfastcdr.so.1.0.24
 traffic_detect_node: /opt/ros/humble/lib/librmw.so
+traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 traffic_detect_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 traffic_detect_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 traffic_detect_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
+traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
 traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
 traffic_detect_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
 traffic_detect_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
@@ -167,9 +168,12 @@ traffic_detect_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 traffic_detect_node: /opt/ros/humble/lib/librosidl_typesupport_c.so
-traffic_detect_node: /opt/ros/humble/lib/librcpputils.so
 traffic_detect_node: /opt/ros/humble/lib/librosidl_runtime_c.so
+traffic_detect_node: /opt/ros/humble/lib/librcpputils.so
 traffic_detect_node: /opt/ros/humble/lib/librcutils.so
+traffic_detect_node: /usr/lib/libopencv_imgcodecs.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_imgproc.so.4.8.0
+traffic_detect_node: /usr/lib/libopencv_core.so.4.8.0
 traffic_detect_node: CMakeFiles/traffic_detect_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable traffic_detect_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/traffic_detect_node.dir/link.txt --verbose=$(VERBOSE)

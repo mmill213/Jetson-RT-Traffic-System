@@ -1,0 +1,26 @@
+[0.020s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6
+[0.115s] [35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[0.156s] [ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
+[20.388s] [100%] [32m[1mLinking CXX executable traffic_detect_node[0m
+[21.272s] [100%] Built target traffic_detect_node
+[21.300s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6
+[21.327s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect
+[21.348s] -- Install configuration: ""
+[21.348s] -- Installing: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/lib/traffic_detect/traffic_detect_node
+[21.358s] -- Set runtime path of "/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/lib/traffic_detect/traffic_detect_node" to ""
+[21.359s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect
+[21.359s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect
+[21.359s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh
+[21.360s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv
+[21.360s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/path.sh
+[21.360s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/path.dsv
+[21.360s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.bash
+[21.361s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.sh
+[21.361s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.zsh
+[21.361s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.dsv
+[21.361s] -- Installing: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/package.dsv
+[21.362s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect
+[21.362s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake
+[21.362s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake
+[21.362s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/package.xml
+[21.365s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect

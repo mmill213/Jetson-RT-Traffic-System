@@ -14,13 +14,16 @@ find_package(ament_cmake REQUIRED)
 
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(cv_bridge REQUIRED)
 
 include_directories(
   include
+  ${OpenCV_INCLUDE_DIRS}
 )
 
 add_executable(traffic_detect_node src/main.cpp)
-ament_target_dependencies(traffic_detect_node rclcpp sensor_msgs)
+ament_target_dependencies(traffic_detect_node rclcpp sensor_msgs cv_bridge)
 
 install(TARGETS
   traffic_detect_node

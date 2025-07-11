@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable traffic_detect_node[0m
+[100%] Built target traffic_detect_node
+-- Install configuration: ""
+-- Installing: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/lib/traffic_detect/traffic_detect_node
+-- Set runtime path of "/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/lib/traffic_detect/traffic_detect_node" to ""
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/path.sh
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/environment/path.dsv
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.bash
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.sh
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.zsh
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/local_setup.dsv
+-- Installing: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/package.dsv
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake
+-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/install/traffic_detect/share/traffic_detect/package.xml

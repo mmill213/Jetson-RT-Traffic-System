@@ -1,0 +1,52 @@
+[0.032s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/build/my_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/nvidia/Jetson-RT-Traffic-System/src/my_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/nvidia/Jetson-RT-Traffic-System/install/my_package
+[0.150s] -- The C compiler identification is GNU 11.4.0
+[0.280s] -- The CXX compiler identification is GNU 11.4.0
+[0.300s] -- Detecting C compiler ABI info
+[0.463s] -- Detecting C compiler ABI info - done
+[0.478s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.479s] -- Detecting C compile features
+[0.480s] -- Detecting C compile features - done
+[0.486s] -- Detecting CXX compiler ABI info
+[0.683s] -- Detecting CXX compiler ABI info - done
+[0.697s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.698s] -- Detecting CXX compile features
+[0.699s] -- Detecting CXX compile features - done
+[0.705s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.060s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.221s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.298s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.473s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.473s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/nvidia/Jetson-RT-Traffic-System/src/my_package/include>
+[1.473s] -- Configured cppcheck exclude dirs and/or files: 
+[1.474s] -- Added test 'lint_cmake' to check CMake code style
+[1.476s] -- Added test 'uncrustify' to check C / C++ code style
+[1.476s] -- Configured uncrustify additional arguments: 
+[1.476s] -- Added test 'xmllint' to check XML markup files
+[1.479s] -- Configuring done
+[1.491s] -- Generating done
+[1.496s] -- Build files have been written to: /home/nvidia/Jetson-RT-Traffic-System/build/my_package
+[1.508s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/build/my_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/nvidia/Jetson-RT-Traffic-System/src/my_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/nvidia/Jetson-RT-Traffic-System/install/my_package
+[1.511s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/build/my_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/build/my_package -- -j6 -l6
+[1.594s] [35m[1mConsolidate compiler generated dependencies of target my_node[0m
+[1.618s] [100%] Built target my_node
+[1.646s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/build/my_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/build/my_package -- -j6 -l6
+[1.669s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/build/my_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/build/my_package
+[1.686s] -- Install configuration: ""
+[1.687s] -- Execute custom install script
+[1.688s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/lib/my_package/my_node
+[1.693s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/ament_index/resource_index/package_run_dependencies/my_package
+[1.693s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/ament_index/resource_index/parent_prefix_path/my_package
+[1.693s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/environment/ament_prefix_path.sh
+[1.693s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/environment/ament_prefix_path.dsv
+[1.693s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/environment/path.sh
+[1.693s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/environment/path.dsv
+[1.694s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/local_setup.bash
+[1.694s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/local_setup.sh
+[1.694s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/local_setup.zsh
+[1.694s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/local_setup.dsv
+[1.694s] -- Symlinking: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/package.dsv
+[1.712s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/ament_index/resource_index/packages/my_package
+[1.713s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/cmake/my_packageConfig.cmake
+[1.713s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/cmake/my_packageConfig-version.cmake
+[1.713s] -- Up-to-date symlink: /home/nvidia/Jetson-RT-Traffic-System/install/my_package/share/my_package/package.xml
+[1.720s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/build/my_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/build/my_package
