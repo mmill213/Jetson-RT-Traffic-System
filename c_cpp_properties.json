@@ -5,9 +5,13 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/opt/ros/humble/include/**",
-                "/usr/include/opencv4/**",             // 👈 OpenCV headers
-                "/usr/include/**",                     // 👈 Standard headers
-                "/usr/local/include/**"  
+                "/usr/include/opencv4/**",
+                "/usr/include/**",
+                "/usr/local/include/**",
+                "/usr/local/cuda/include/**",
+                "/usr/include/aarch64-linux-gnu/**",
+                "/usr/lib/aarch64-linux-gnu/gstreamer-1.0/include/**",
+                "/home/nvidia/Jetson-RT-Traffic-System/install/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
