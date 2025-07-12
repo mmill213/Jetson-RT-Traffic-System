@@ -17,6 +17,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(CUDA REQUIRED)
+find_package(vision_msgs REQUIRED)
 
 include_directories(
   include
@@ -26,7 +27,12 @@ include_directories(
 )
 
 add_executable(traffic_detect_node src/main.cpp)
-ament_target_dependencies(traffic_detect_node rclcpp sensor_msgs cv_bridge)
+ament_target_dependencies(
+  traffic_detect_node 
+  rclcpp sensor_msgs 
+  cv_bridge 
+  vision_msgs
+)
 
 target_link_libraries(traffic_detect_node
   ${OpenCV_LIBRARIES}

@@ -1,14 +1,28 @@
 #include <chrono>
 #include <memory>
+#include "string.h"
+
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/image.hpp"
+
+
 
 #include "cv_bridge/cv_bridge.h"
 #include "opencv2/opencv.hpp"
 
+//#include "vision_msgs/msg/detection2_d_array.hpp"
+
 #include <NvInfer.h>
 #include <cuda_runtime.h>
+#include <cuda_device_runtime_api.h>
 #include <fstream>
+
+
+
+
+//#define MODEL_PATH "/home/nvidia/Jetson-RT-Traffic-System/camera-model/model.trt"
+#define MODEL_PATH "/home/main-user/Jetson-RT-Traffic-System/camera-model/model.trt"
+
 
 class Logger : public nvinfer1::ILogger {
   void log(Severity severity, const char* msg) noexcept override {
@@ -16,6 +30,9 @@ class Logger : public nvinfer1::ILogger {
       std::cout << "[TensorRT] " << msg << std::endl;
   }
 } gLogger;
+
+
+
 
 
 class TrafficDetector : public rclcpp::Node {
@@ -26,7 +43,11 @@ public:
       std::bind(&TrafficDetector::image_callback, this, std::placeholders::_1)
     );
 
-    std::ifstream engine_file("/home/nvidia/Jetson-RT-Traffic-System/camera-model/model.trt", std::ios::binary);
+    //detection_pub_ = this->create_publisher<vision_msgs::msg::Detection2DArray>("detections", 10);
+
+
+    //load engine
+    std::ifstream engine_file(MODEL_PATH, std::ios::binary);
     if (!engine_file) {
       RCLCPP_ERROR(this->get_logger(), "Failed to open TensorRT engine file.");
       throw std::runtime_error("Failed to open TensorRT engine file.");
@@ -36,9 +57,15 @@ public:
     engine_file.seekg(0, std::ifstream::beg);
     std::vector<char> engine_data(engine_size);
     engine_file.read(engine_data.data(), engine_size);
-    runtime_ = nvinfer1::createInferRuntime(gLogger);
+    //end load engine
+    runtime_ = nvinfer1::createInferRuntime(gLogger); // bind logger
     engine_ = runtime_->deserializeCudaEngine(engine_data.data(), engine_data.size());
     context_ = engine_->createExecutionContext();
+
+    for(int i = 0; i < engine_->getNbIOTensors(); i++){
+      RCLCPP_INFO(this->get_logger(), "name: %s\n", engine_->getIOTensorName(i));
+    }
+    
   }
 
 
@@ -49,8 +76,12 @@ public:
   }
 
 private:
+
+
   void image_callback(const sensor_msgs::msg::Image::SharedPtr msg) {
-    RCLCPP_INFO(this->get_logger(), "Received image: %d x %d, Format: %s", msg->width, msg->height, msg->encoding.c_str());
+
+
+    RCLCPP_INFO(this->get_logger(), "Received image: %d x %d, Format: %s", msg->width, msg->height, msg->encoding.c_str()); // heartbeat msg
 
     
     // Check for empty image data
@@ -59,9 +90,10 @@ private:
       return;
     }
    
+    //grab image from latest topic msg
     cv::Mat image;
     try {
-      image = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::YUV422)->image;
+      image = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::YUV422_YUY2)->image;
     } catch (cv_bridge::Exception& e) {
       RCLCPP_ERROR(this->get_logger(), "cv_bridge exception: %s", e.what());
       return;
@@ -83,27 +115,61 @@ private:
       }
     }
 
-    float* d_input = nullptr;
-    size_t input_size = input_tensor.size() * sizeof(float);
-    cudaError_t cudaStatus = cudaMalloc((void**)&d_input, input_size);
-    if (cudaStatus != cudaSuccess) {
-      RCLCPP_ERROR(this->get_logger(), "cudaMalloc failed: %s", cudaGetErrorString(cudaStatus));
-      return;
-    }
-    cudaStatus = cudaMemcpy(d_input, input_tensor.data(), input_size, cudaMemcpyHostToDevice);
-    if (cudaStatus != cudaSuccess) {
-      RCLCPP_ERROR(this->get_logger(), "cudaMemcpy failed: %s", cudaGetErrorString(cudaStatus));
-      cudaFree(d_input);
-      return;
-    }
-
-
-
-
-
-    cudaFree(d_input);
-    // Remember to cudaFree(d_input) after inference is done!
     
+    int input_idx = -1;
+    int cov_idx = -1;
+    int bbox_idx  = -1;
+    
+    for (int i = 0; i < engine_->getNbIOTensors(); i++){
+      if (strcmp(engine_->getIOTensorName(i), "input_1:0") == 0){
+        input_idx = i;
+      } else if (strcmp(engine_->getIOTensorName(i), "output_cov/Sigmoid:0") == 0){
+        cov_idx = i;
+      } else if (strcmp(engine_->getIOTensorName(i), "output_bbox/BiasAdd:0") == 0) {
+        bbox_idx = i;
+      }
+    } // load idxs
+
+    void* buffers[3];
+
+    size_t input_size = 1 * 3 * 544 * 960 * sizeof(float);
+    size_t cov_size = 1 * 4 * 34 * 60 * sizeof(float);
+    size_t bbox_size = 1 * 16 * 34 * 60 * sizeof(float);
+    
+    
+    cudaMalloc(&buffers[input_idx], input_size);
+    cudaMalloc(&buffers[cov_idx], cov_size);
+    cudaMalloc(&buffers[bbox_idx], bbox_size);
+
+    // Upload input
+    cudaMemcpy(buffers[input_idx], input_tensor.data(), input_tensor.size(), cudaMemcpyHostToDevice);
+
+    // Run inference
+    context_->executeV2(buffers);
+
+
+    std::vector<float> output_cov(cov_size);
+    std::vector<float> output_bbox(bbox_size);
+    // Download outputs
+    cudaMemcpy(output_cov.data(), buffers[cov_idx], output_cov.size(), cudaMemcpyDeviceToHost);
+    cudaMemcpy(output_bbox.data(), buffers[bbox_idx], output_bbox.size(), cudaMemcpyDeviceToHost);
+
+    RCLCPP_INFO(this->get_logger(), "Output cov:");
+    for (size_t i = 0; i < std::min<size_t>(10, output_cov.size()); ++i) {
+      std::cout << output_cov[i] << " ";
+    }
+    std::cout << std::endl;
+
+    RCLCPP_INFO(this->get_logger(), "Output bbox:");
+    for (size_t i = 0; i < std::min<size_t>(10, output_bbox.size()); ++i) {
+      std::cout << output_bbox[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Free CUDA buffers
+    cudaFree(buffers[input_idx]);
+    cudaFree(buffers[cov_idx]);
+    cudaFree(buffers[bbox_idx]);
     
   }
 

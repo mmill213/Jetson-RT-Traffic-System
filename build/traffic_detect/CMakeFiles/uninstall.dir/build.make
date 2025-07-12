@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect
+CMAKE_SOURCE_DIR = /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect
+CMAKE_BINARY_DIR = /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

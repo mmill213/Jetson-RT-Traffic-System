@@ -1,0 +1,31 @@
+[0.024s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[0.109s] [35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[0.153s] [ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
+[0.162s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda/lib64/libcudart_static.a: not a directory
+[0.163s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
+[36.557s] [100%] [32m[1mLinking CXX executable traffic_detect_node[0m
+[37.522s] /usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408
+[37.525s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408
+[37.528s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408
+[38.831s] [100%] Built target traffic_detect_node
+[38.862s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[38.884s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect
+[38.903s] -- Install configuration: ""
+[38.907s] -- Execute custom install script
+[38.910s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node
+[38.911s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect
+[38.912s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect
+[38.913s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh
+[38.913s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv
+[38.914s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.sh
+[38.915s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.dsv
+[38.916s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.bash
+[38.917s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.sh
+[38.918s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.zsh
+[38.918s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.dsv
+[38.919s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.dsv
+[38.945s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect
+[38.945s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake
+[38.946s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake
+[38.951s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.xml
+[38.955s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub
+CMAKE_SOURCE_DIR = /home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub
+CMAKE_BINARY_DIR = /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub
 
 # Utility rule file for cpp_pubsub_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/cpp_pubsub_uninstall.dir/compiler_depend.make
 include CMakeFiles/cpp_pubsub_uninstall.dir/progress.make
 
 CMakeFiles/cpp_pubsub_uninstall:
-	/usr/bin/cmake -P /home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 cpp_pubsub_uninstall: CMakeFiles/cpp_pubsub_uninstall
 cpp_pubsub_uninstall: CMakeFiles/cpp_pubsub_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/cpp_pubsub_uninstall.dir/clean:
 .PHONY : CMakeFiles/cpp_pubsub_uninstall.dir/clean
 
 CMakeFiles/cpp_pubsub_uninstall.dir/depend:
-	cd /home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub /home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub /home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub /home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub /home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/CMakeFiles/cpp_pubsub_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub /home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub /home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/CMakeFiles/cpp_pubsub_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cpp_pubsub_uninstall.dir/depend
 

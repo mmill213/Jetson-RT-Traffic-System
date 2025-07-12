@@ -1,0 +1,4 @@
+Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect
+Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect

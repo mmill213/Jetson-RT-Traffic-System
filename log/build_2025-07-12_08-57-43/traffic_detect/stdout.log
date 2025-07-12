@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[100%] Built target traffic_detect_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.sh
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.dsv
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.bash
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.sh
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.zsh
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.dsv
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.dsv
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake
+-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.xml

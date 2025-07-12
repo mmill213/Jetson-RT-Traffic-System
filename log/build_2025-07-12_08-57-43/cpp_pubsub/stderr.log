@@ -1,0 +1,14 @@
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub/src/subscriber_member_function.cpp:18:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp/rclcpp.hpp: No such file or directory
+   18 | #include [01;31m[K"rclcpp/rclcpp/rclcpp.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/listener.dir/build.make:76: CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/listener.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub/src/publisher_member_function.cpp:20:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp/rclcpp.hpp: No such file or directory
+   20 | #include [01;31m[K"rclcpp/rclcpp/rclcpp.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/talker.dir/build.make:76: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/talker.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

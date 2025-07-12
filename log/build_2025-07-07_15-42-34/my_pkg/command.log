@@ -1,6 +1,0 @@
-Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/my_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/main-user/Jetson-RT-Traffic-System/src/my_pkg -DCMAKE_INSTALL_PREFIX=/home/main-user/Jetson-RT-Traffic-System/install/my_pkg
-Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/my_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/main-user/Jetson-RT-Traffic-System/src/my_pkg -DCMAKE_INSTALL_PREFIX=/home/main-user/Jetson-RT-Traffic-System/install/my_pkg
-Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/my_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/my_pkg -- -j6 -l6
-Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/my_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/my_pkg -- -j6 -l6
-Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/my_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/my_pkg
-Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/my_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/my_pkg

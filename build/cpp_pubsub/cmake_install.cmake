@@ -1,8 +1,8 @@
-# Install script for directory: /home/nvidia/Jetson-RT-Traffic-System/src/cpp_pubsub
+# Install script for directory: /home/main-user/Jetson-RT-Traffic-System/src/cpp_pubsub
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nvidia/Jetson-RT-Traffic-System/install/cpp_pubsub")
+  set(CMAKE_INSTALL_PREFIX "/home/main-user/Jetson-RT-Traffic-System/install/cpp_pubsub")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nvidia/Jetson-RT-Traffic-System/build/cpp_pubsub/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/main-user/Jetson-RT-Traffic-System/build/cpp_pubsub/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,0 +1,23 @@
+[0.031s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[0.112s] [35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[0.158s] [100%] Built target traffic_detect_node
+[0.181s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[0.185s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect
+[0.199s] -- Install configuration: ""
+[0.200s] -- Execute custom install script
+[0.201s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node
+[0.219s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect
+[0.234s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect
+[0.249s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh
+[0.265s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv
+[0.282s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.sh
+[0.304s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.dsv
+[0.323s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.bash
+[0.341s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.sh
+[0.359s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.zsh
+[0.378s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.dsv
+[0.396s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.dsv
+[0.416s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect
+[0.434s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake
+[0.451s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake
+[0.471s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.xml

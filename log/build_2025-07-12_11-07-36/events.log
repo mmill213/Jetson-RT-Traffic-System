@@ -1,0 +1,273 @@
+[0.000000] (-) TimerEvent: {}
+[0.000944] (traffic_detect) JobQueued: {'identifier': 'traffic_detect', 'dependencies': OrderedDict()}
+[0.001250] (traffic_detect) JobStarted: {'identifier': 'traffic_detect'}
+[0.015790] (traffic_detect) JobProgress: {'identifier': 'traffic_detect', 'progress': 'cmake'}
+[0.017295] (traffic_detect) JobProgress: {'identifier': 'traffic_detect', 'progress': 'build'}
+[0.018665] (traffic_detect) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect', '--', '-j6', '-l6'], 'cwd': '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'main-user'), ('SSH_CLIENT', '192.168.9.220 64803 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/main-user'), ('OLDPWD', '/home/main-user/Jetson-RT-Traffic-System'), ('TERM_PROGRAM_VERSION', '1.101.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ea1667a4-2de3-4a07-a6fd-e042bfa56135.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/main-user/Jetson-RT-Traffic-System/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'main-user'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '43'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/main-user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e0f1795498.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect:/home/main-user/Jetson-RT-Traffic-System/install/my_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.9.220 64803 192.168.9.174 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect:/home/main-user/Jetson-RT-Traffic-System/install/my_package:/opt/ros/humble')]), 'shell': False}
+[0.098982] (-) TimerEvent: {}
+[0.104647] (traffic_detect) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target traffic_detect_node\x1b[0m\n'}
+[0.144467] (traffic_detect) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o\x1b[0m\n'}
+[0.153253] (traffic_detect) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1plus:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K/usr/local/cuda/lib64/libcudart_static.a: not a directory\n'}
+[0.154033] (traffic_detect) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1plus:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory\n'}
+[0.199127] (-) TimerEvent: {}
+[0.299870] (-) TimerEvent: {}
+[0.400655] (-) TimerEvent: {}
+[0.501324] (-) TimerEvent: {}
+[0.601928] (-) TimerEvent: {}
+[0.702671] (-) TimerEvent: {}
+[0.803942] (-) TimerEvent: {}
+[0.905066] (-) TimerEvent: {}
+[1.005814] (-) TimerEvent: {}
+[1.106540] (-) TimerEvent: {}
+[1.207301] (-) TimerEvent: {}
+[1.308001] (-) TimerEvent: {}
+[1.408679] (-) TimerEvent: {}
+[1.509368] (-) TimerEvent: {}
+[1.610064] (-) TimerEvent: {}
+[1.710712] (-) TimerEvent: {}
+[1.811318] (-) TimerEvent: {}
+[1.911936] (-) TimerEvent: {}
+[2.012630] (-) TimerEvent: {}
+[2.113348] (-) TimerEvent: {}
+[2.214018] (-) TimerEvent: {}
+[2.314598] (-) TimerEvent: {}
+[2.415203] (-) TimerEvent: {}
+[2.515861] (-) TimerEvent: {}
+[2.616464] (-) TimerEvent: {}
+[2.717005] (-) TimerEvent: {}
+[2.817547] (-) TimerEvent: {}
+[2.918143] (-) TimerEvent: {}
+[3.019301] (-) TimerEvent: {}
+[3.120099] (-) TimerEvent: {}
+[3.220818] (-) TimerEvent: {}
+[3.321532] (-) TimerEvent: {}
+[3.422499] (-) TimerEvent: {}
+[3.523499] (-) TimerEvent: {}
+[3.624223] (-) TimerEvent: {}
+[3.724936] (-) TimerEvent: {}
+[3.825636] (-) TimerEvent: {}
+[3.926344] (-) TimerEvent: {}
+[4.027083] (-) TimerEvent: {}
+[4.127802] (-) TimerEvent: {}
+[4.228503] (-) TimerEvent: {}
+[4.329178] (-) TimerEvent: {}
+[4.429875] (-) TimerEvent: {}
+[4.530571] (-) TimerEvent: {}
+[4.631288] (-) TimerEvent: {}
+[4.731986] (-) TimerEvent: {}
+[4.832656] (-) TimerEvent: {}
+[4.933334] (-) TimerEvent: {}
+[5.034039] (-) TimerEvent: {}
+[5.134862] (-) TimerEvent: {}
+[5.235549] (-) TimerEvent: {}
+[5.336220] (-) TimerEvent: {}
+[5.436835] (-) TimerEvent: {}
+[5.537557] (-) TimerEvent: {}
+[5.638261] (-) TimerEvent: {}
+[5.739042] (-) TimerEvent: {}
+[5.839623] (-) TimerEvent: {}
+[5.940169] (-) TimerEvent: {}
+[6.040717] (-) TimerEvent: {}
+[6.141265] (-) TimerEvent: {}
+[6.241823] (-) TimerEvent: {}
+[6.342358] (-) TimerEvent: {}
+[6.443042] (-) TimerEvent: {}
+[6.543708] (-) TimerEvent: {}
+[6.644281] (-) TimerEvent: {}
+[6.744841] (-) TimerEvent: {}
+[6.845381] (-) TimerEvent: {}
+[6.945915] (-) TimerEvent: {}
+[7.046459] (-) TimerEvent: {}
+[7.147108] (-) TimerEvent: {}
+[7.247651] (-) TimerEvent: {}
+[7.348172] (-) TimerEvent: {}
+[7.448705] (-) TimerEvent: {}
+[7.549362] (-) TimerEvent: {}
+[7.649941] (-) TimerEvent: {}
+[7.750501] (-) TimerEvent: {}
+[7.851082] (-) TimerEvent: {}
+[7.951625] (-) TimerEvent: {}
+[8.052339] (-) TimerEvent: {}
+[8.153016] (-) TimerEvent: {}
+[8.253668] (-) TimerEvent: {}
+[8.354209] (-) TimerEvent: {}
+[8.454790] (-) TimerEvent: {}
+[8.555531] (-) TimerEvent: {}
+[8.656163] (-) TimerEvent: {}
+[8.756719] (-) TimerEvent: {}
+[8.857253] (-) TimerEvent: {}
+[8.957772] (-) TimerEvent: {}
+[9.058348] (-) TimerEvent: {}
+[9.159078] (-) TimerEvent: {}
+[9.259648] (-) TimerEvent: {}
+[9.360193] (-) TimerEvent: {}
+[9.460733] (-) TimerEvent: {}
+[9.561306] (-) TimerEvent: {}
+[9.661964] (-) TimerEvent: {}
+[9.762536] (-) TimerEvent: {}
+[9.863111] (-) TimerEvent: {}
+[9.963720] (-) TimerEvent: {}
+[10.064256] (-) TimerEvent: {}
+[10.164805] (-) TimerEvent: {}
+[10.265436] (-) TimerEvent: {}
+[10.365966] (-) TimerEvent: {}
+[10.466481] (-) TimerEvent: {}
+[10.567044] (-) TimerEvent: {}
+[10.667705] (-) TimerEvent: {}
+[10.768353] (-) TimerEvent: {}
+[10.868943] (-) TimerEvent: {}
+[10.969601] (-) TimerEvent: {}
+[11.070256] (-) TimerEvent: {}
+[11.170873] (-) TimerEvent: {}
+[11.271612] (-) TimerEvent: {}
+[11.372158] (-) TimerEvent: {}
+[11.472695] (-) TimerEvent: {}
+[11.573231] (-) TimerEvent: {}
+[11.673803] (-) TimerEvent: {}
+[11.774454] (-) TimerEvent: {}
+[11.875032] (-) TimerEvent: {}
+[11.975653] (-) TimerEvent: {}
+[12.076206] (-) TimerEvent: {}
+[12.176747] (-) TimerEvent: {}
+[12.277272] (-) TimerEvent: {}
+[12.377793] (-) TimerEvent: {}
+[12.478359] (-) TimerEvent: {}
+[12.579046] (-) TimerEvent: {}
+[12.679732] (-) TimerEvent: {}
+[12.780380] (-) TimerEvent: {}
+[12.880977] (-) TimerEvent: {}
+[12.981636] (-) TimerEvent: {}
+[13.082205] (-) TimerEvent: {}
+[13.182858] (-) TimerEvent: {}
+[13.283476] (-) TimerEvent: {}
+[13.383999] (-) TimerEvent: {}
+[13.484577] (-) TimerEvent: {}
+[13.585211] (-) TimerEvent: {}
+[13.685796] (-) TimerEvent: {}
+[13.786436] (-) TimerEvent: {}
+[13.887009] (-) TimerEvent: {}
+[13.987663] (-) TimerEvent: {}
+[14.088332] (-) TimerEvent: {}
+[14.188977] (-) TimerEvent: {}
+[14.289613] (-) TimerEvent: {}
+[14.390168] (-) TimerEvent: {}
+[14.490746] (-) TimerEvent: {}
+[14.591312] (-) TimerEvent: {}
+[14.691925] (-) TimerEvent: {}
+[14.792496] (-) TimerEvent: {}
+[14.893119] (-) TimerEvent: {}
+[14.993675] (-) TimerEvent: {}
+[15.094227] (-) TimerEvent: {}
+[15.194771] (-) TimerEvent: {}
+[15.295327] (-) TimerEvent: {}
+[15.395987] (-) TimerEvent: {}
+[15.496628] (-) TimerEvent: {}
+[15.597263] (-) TimerEvent: {}
+[15.697912] (-) TimerEvent: {}
+[15.798542] (-) TimerEvent: {}
+[15.899206] (-) TimerEvent: {}
+[15.999902] (-) TimerEvent: {}
+[16.100520] (-) TimerEvent: {}
+[16.201163] (-) TimerEvent: {}
+[16.301792] (-) TimerEvent: {}
+[16.402413] (-) TimerEvent: {}
+[16.503066] (-) TimerEvent: {}
+[16.603703] (-) TimerEvent: {}
+[16.704418] (-) TimerEvent: {}
+[16.805043] (-) TimerEvent: {}
+[16.905693] (-) TimerEvent: {}
+[17.006362] (-) TimerEvent: {}
+[17.107057] (-) TimerEvent: {}
+[17.207728] (-) TimerEvent: {}
+[17.308468] (-) TimerEvent: {}
+[17.409151] (-) TimerEvent: {}
+[17.509819] (-) TimerEvent: {}
+[17.610488] (-) TimerEvent: {}
+[17.711152] (-) TimerEvent: {}
+[17.811796] (-) TimerEvent: {}
+[17.912518] (-) TimerEvent: {}
+[18.013150] (-) TimerEvent: {}
+[18.113786] (-) TimerEvent: {}
+[18.214425] (-) TimerEvent: {}
+[18.315095] (-) TimerEvent: {}
+[18.415725] (-) TimerEvent: {}
+[18.516433] (-) TimerEvent: {}
+[18.617077] (-) TimerEvent: {}
+[18.717713] (-) TimerEvent: {}
+[18.818351] (-) TimerEvent: {}
+[18.918991] (-) TimerEvent: {}
+[19.019637] (-) TimerEvent: {}
+[19.120362] (-) TimerEvent: {}
+[19.220999] (-) TimerEvent: {}
+[19.321657] (-) TimerEvent: {}
+[19.422345] (-) TimerEvent: {}
+[19.523112] (-) TimerEvent: {}
+[19.623781] (-) TimerEvent: {}
+[19.724502] (-) TimerEvent: {}
+[19.825149] (-) TimerEvent: {}
+[19.925792] (-) TimerEvent: {}
+[20.026457] (-) TimerEvent: {}
+[20.127155] (-) TimerEvent: {}
+[20.227829] (-) TimerEvent: {}
+[20.328576] (-) TimerEvent: {}
+[20.429251] (-) TimerEvent: {}
+[20.529941] (-) TimerEvent: {}
+[20.630656] (-) TimerEvent: {}
+[20.731369] (-) TimerEvent: {}
+[20.832088] (-) TimerEvent: {}
+[20.932709] (-) TimerEvent: {}
+[21.033234] (-) TimerEvent: {}
+[21.133734] (-) TimerEvent: {}
+[21.234227] (-) TimerEvent: {}
+[21.334622] (-) TimerEvent: {}
+[21.435077] (-) TimerEvent: {}
+[21.535416] (-) TimerEvent: {}
+[21.635739] (-) TimerEvent: {}
+[21.736046] (-) TimerEvent: {}
+[21.836363] (-) TimerEvent: {}
+[21.936772] (-) TimerEvent: {}
+[21.948631] (traffic_detect) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable traffic_detect_node\x1b[0m\n'}
+[22.036856] (-) TimerEvent: {}
+[22.137293] (-) TimerEvent: {}
+[22.237747] (-) TimerEvent: {}
+[22.338380] (-) TimerEvent: {}
+[22.401162] (traffic_detect) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408\n'}
+[22.402198] (traffic_detect) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408\n'}
+[22.403270] (traffic_detect) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408\n'}
+[22.438568] (-) TimerEvent: {}
+[22.539287] (-) TimerEvent: {}
+[22.640007] (-) TimerEvent: {}
+[22.740742] (-) TimerEvent: {}
+[22.841431] (-) TimerEvent: {}
+[22.942099] (-) TimerEvent: {}
+[23.042769] (-) TimerEvent: {}
+[23.143444] (-) TimerEvent: {}
+[23.244121] (-) TimerEvent: {}
+[23.344723] (-) TimerEvent: {}
+[23.445326] (-) TimerEvent: {}
+[23.465091] (traffic_detect) StdoutLine: {'line': b'[100%] Built target traffic_detect_node\n'}
+[23.490179] (traffic_detect) CommandEnded: {'returncode': 0}
+[23.491896] (traffic_detect) JobProgress: {'identifier': 'traffic_detect', 'progress': 'install'}
+[23.512051] (traffic_detect) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect'], 'cwd': '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'main-user'), ('SSH_CLIENT', '192.168.9.220 64803 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/main-user'), ('OLDPWD', '/home/main-user/Jetson-RT-Traffic-System'), ('TERM_PROGRAM_VERSION', '1.101.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ea1667a4-2de3-4a07-a6fd-e042bfa56135.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/main-user/Jetson-RT-Traffic-System/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'main-user'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '43'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/main-user/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/main-user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e0f1795498.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect:/home/main-user/Jetson-RT-Traffic-System/install/my_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.9.220 64803 192.168.9.174 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect:/home/main-user/Jetson-RT-Traffic-System/install/my_package:/opt/ros/humble')]), 'shell': False}
+[23.528564] (traffic_detect) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.529607] (traffic_detect) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[23.530329] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node\n'}
+[23.530787] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect\n'}
+[23.531204] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect\n'}
+[23.531605] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh\n'}
+[23.531970] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv\n'}
+[23.532425] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.sh\n'}
+[23.532719] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.dsv\n'}
+[23.533042] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.bash\n'}
+[23.533395] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.sh\n'}
+[23.533726] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.zsh\n'}
+[23.534057] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.dsv\n'}
+[23.534313] (traffic_detect) StdoutLine: {'line': b'-- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.dsv\n'}
+[23.545435] (-) TimerEvent: {}
+[23.553035] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect\n'}
+[23.553694] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake\n'}
+[23.554010] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake\n'}
+[23.554251] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.xml\n'}
+[23.558272] (traffic_detect) CommandEnded: {'returncode': 0}
+[23.603050] (traffic_detect) JobEnded: {'identifier': 'traffic_detect', 'rc': 0}
+[23.604793] (-) EventReactorShutdown: {}
