@@ -1,0 +1,19 @@
+[01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda/lib64/libcudart_static.a: not a directory
+[01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::image_callback(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:156:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wwrite-strings-Wwrite-strings]8;;[m[K]
+  156 |     log_output([01;35m[K"Output Cov: "[m[K, &output_cov);
+      |                [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:157:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wwrite-strings-Wwrite-strings]8;;[m[K]
+  157 |     log_output([01;35m[K"Output bbox: "[m[K, &output_bbox);
+      |                [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::send_data(std::vector<float>*, std::vector<float>*)[m[K’:
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:181:38:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcov[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  181 |   void send_data([01;35m[Kstd::vector<float> *cov[m[K, std::vector<float>* bbox){
+      |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:181:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbbox[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  181 |   void send_data(std::vector<float> *cov, [01;35m[Kstd::vector<float>* bbox[m[K){
+      |                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+/usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408
+/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408
+/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408

@@ -19,7 +19,6 @@
 
 
 
-
 //#define MODEL_PATH "/home/nvidia/Jetson-RT-Traffic-System/camera-model/model.trt"
 #define MODEL_PATH "/home/main-user/Jetson-RT-Traffic-System/camera-model/model.trt"
 
@@ -142,36 +141,65 @@ private:
     cudaMalloc(&buffers[bbox_idx], bbox_size);
 
     // Upload input
-    cudaMemcpy(buffers[input_idx], input_tensor.data(), input_tensor.size(), cudaMemcpyHostToDevice);
+    cudaMemcpy(buffers[input_idx], input_tensor.data(), input_tensor.size() * sizeof(float), cudaMemcpyHostToDevice);
 
     // Run inference
     context_->executeV2(buffers);
 
 
-    std::vector<float> output_cov(cov_size);
-    std::vector<float> output_bbox(bbox_size);
+    std::vector<float> output_cov(4 * 34 * 60);
+    std::vector<float> output_bbox(16 * 34 * 60);
     // Download outputs
-    cudaMemcpy(output_cov.data(), buffers[cov_idx], output_cov.size(), cudaMemcpyDeviceToHost);
-    cudaMemcpy(output_bbox.data(), buffers[bbox_idx], output_bbox.size(), cudaMemcpyDeviceToHost);
+    cudaMemcpy(output_cov.data(), buffers[cov_idx], output_cov.size() * sizeof(float), cudaMemcpyDeviceToHost);
+    cudaMemcpy(output_bbox.data(), buffers[bbox_idx], output_bbox.size() * sizeof(float), cudaMemcpyDeviceToHost);
 
-    RCLCPP_INFO(this->get_logger(), "Output cov:");
-    for (size_t i = 0; i < std::min<size_t>(10, output_cov.size()); ++i) {
-      std::cout << output_cov[i] << " ";
-    }
-    std::cout << std::endl;
+    log_output("Output Cov: ", &output_cov);
+    log_output("Output bbox: ", &output_bbox);
 
-    RCLCPP_INFO(this->get_logger(), "Output bbox:");
-    for (size_t i = 0; i < std::min<size_t>(10, output_bbox.size()); ++i) {
-      std::cout << output_bbox[i] << " ";
-    }
-    std::cout << std::endl;
+    send_data(&output_cov, &output_bbox);
 
     // Free CUDA buffers
     cudaFree(buffers[input_idx]);
     cudaFree(buffers[cov_idx]);
     cudaFree(buffers[bbox_idx]);
+
+    
+
     
   }
+
+  void log_output(char* desc, std::vector<float>* vec_ref){
+    std::vector<float> vec = *vec_ref;
+    RCLCPP_INFO(this->get_logger(), desc);
+    for (size_t i = 0; i < std::min<size_t>(10, vec.size()); ++i) {
+      std::cout << vec[i] << " ";
+    }
+    std::cout << "Size: " << vec.size() << " ";
+    std::cout << std::endl;
+  }
+
+  void send_data(std::vector<float>* cov, std::vector<float>* bbox, const float conf_thresh = 0.5f){
+    const int grid_h = 34;
+    const int grid_w = 60;
+    const int grid_d = 4;
+    
+    for (int i = 0; i< grid_h; ++i){
+      for (int j = 0; j < grid_w; ++j){
+        for (int k = 0; k < grid_d; ++k){
+          float confidence = (*cov)[ k * grid_h * grid_w + i * grid_w + j];
+          if (conf_thresh >= confidence) continue;
+
+          int base = k * 4;
+
+          
+
+        }
+      }
+    }
+
+  }
+
+
 
   nvinfer1::IRuntime* runtime_{nullptr};
   nvinfer1::ICudaEngine* engine_{nullptr};

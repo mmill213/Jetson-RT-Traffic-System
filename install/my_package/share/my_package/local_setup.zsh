@@ -1,1 +1,0 @@
-/home/main-user/Jetson-RT-Traffic-System/build/my_package/ament_cmake_environment_hooks/local_setup.zsh
