@@ -19,8 +19,9 @@
 
 
 
-//#define MODEL_PATH "/home/nvidia/Jetson-RT-Traffic-System/camera-model/model.trt"
+
 #define MODEL_PATH "/home/main-user/Jetson-RT-Traffic-System/camera-model/model.trt"
+// /#define MODEL_PATH "/home/nvidia/Jetson-RT-Traffic-System/camera-model/model.trt"
 
 
 class Logger : public nvinfer1::ILogger {
@@ -101,6 +102,7 @@ private:
     // Preprocess
     cv::Mat resized;
     cv::resize(image, resized, cv::Size(960, 544));
+    
     resized.convertTo(resized, CV_32FC3, 1.0 / 255);
 
     // NHWC to NCHW
@@ -153,8 +155,7 @@ private:
     cudaMemcpy(output_cov.data(), buffers[cov_idx], output_cov.size() * sizeof(float), cudaMemcpyDeviceToHost);
     cudaMemcpy(output_bbox.data(), buffers[bbox_idx], output_bbox.size() * sizeof(float), cudaMemcpyDeviceToHost);
 
-    log_output("Output Cov: ", &output_cov);
-    log_output("Output bbox: ", &output_bbox);
+    log_output("Output Cov: ", &output_cov, &output_bbox, false);
 
     send_data(&output_cov, &output_bbox);
 
@@ -168,14 +169,27 @@ private:
     
   }
 
-  void log_output(char* desc, std::vector<float>* vec_ref){
-    std::vector<float> vec = *vec_ref;
+  void log_output(char* desc, std::vector<float>* vec_cov, std::vector<float>* vec_bbox, bool limit = true){
+
+
+    std::vector<float> vec_c = *vec_cov;
+    std::vector<float> vec_b = *vec_bbox;
+    
+
     RCLCPP_INFO(this->get_logger(), desc);
-    for (size_t i = 0; i < std::min<size_t>(10, vec.size()); ++i) {
-      std::cout << vec[i] << " ";
+    for (size_t i = 0; i < std::min<size_t>(20, std::max<size_t>(vec_c.size(), vec_b.size())); ++i) {
+      
+
+      std::cout << "(cov: "<< vec_c[i] << " bbox: " << vec_b[i] << ") ";
+      
     }
-    std::cout << "Size: " << vec.size() << " ";
+    std::cout << "Size (cov): " << vec_c.size() << " ";
     std::cout << std::endl;
+
+    
+    std::cout << "Size (bbox): " << vec_b.size() << " ";
+    std::cout << std::endl;
+
   }
 
   void send_data(std::vector<float>* cov, std::vector<float>* bbox, const float conf_thresh = 0.5f){
