@@ -1,0 +1,85 @@
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found vision_msgs: 4.1.1 (/opt/ros/humble/share/vision_msgs/cmake)
+-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/include;/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/Threads::Threads;/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/dl
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect
+[35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
+[01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda-12.6/lib64/libcudart_static.a: not a directory
+[01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:217:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvision_msgs[m[K’ was not declared in this scope
+  217 |   rclcpp::Publisher<[01;31m[Kvision_msgs[m[K::msg::Detection2DArray>::SharedPtr detection_pub_;
+      |                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:217:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  217 |   rclcpp::Publisher<vision_msgs::msg::Detection2DArray[01;31m[K>[m[K::SharedPtr detection_pub_;
+      |                                                       [01;31m[K^[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:217:58:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  217 |   rclcpp::Publisher<vision_msgs::msg::Detection2DArray>::[01;31m[KSharedPtr[m[K detection_pub_;
+      |                                                          [01;31m[K^~~~~~~~~[m[K
+      |                                                                   [32m[K;[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:217:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetection_pub_[m[K’ does not name a type
+  217 |   rclcpp::Publisher<vision_msgs::msg::Detection2DArray>::SharedPtr [01;31m[Kdetection_pub_[m[K;
+      |                                                                    [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In constructor ‘[01m[KTrafficDetector::TrafficDetector()[m[K’:
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:46:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetection_pub_[m[K’ was not declared in this scope
+   46 |     [01;31m[Kdetection_pub_[m[K = this->create_publisher<vision_msgs::msg::Detection2DArray>("traffic_detections", 10);
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:46:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kvision_msgs[m[K’ was not declared in this scope
+   46 |     detection_pub_ = this->create_publisher<[01;31m[Kvision_msgs[m[K::msg::Detection2DArray>("traffic_detections", 10);
+      |                                             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:46:28:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   46 |     detection_pub_ = this->[01;31m[Kcreate_publisher<vision_msgs::msg::Detection2DArray>[m[K("traffic_detections", 10);
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:46:80:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTrafficDetector::create_publisher<<expression error> >(const char [19], int)[m[K’
+   46 |     detection_pub_ = [01;31m[Kthis->create_publisher<vision_msgs::msg::Detection2DArray>("traffic_detections", 10)[m[K;
+      |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:5[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+  195 |   [01;36m[Kcreate_publisher[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:46:80:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   46 |     detection_pub_ = [01;31m[Kthis->create_publisher<vision_msgs::msg::Detection2DArray>("traffic_detections", 10)[m[K;
+      |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::image_callback(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:158:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wwrite-strings-Wwrite-strings]8;;[m[K]
+  158 |     log_output([01;35m[K"Output Cov: "[m[K, &output_cov, &output_bbox, false);
+      |                [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::log_output(char*, std::vector<float>*, std::vector<float>*, bool)[m[K’:
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:172:95:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klimit[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  172 |   void log_output(char* desc, std::vector<float>* vec_cov, std::vector<float>* vec_bbox, [01;35m[Kbool limit = true[m[K){
+      |                                                                                          [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::send_data(std::vector<float>*, std::vector<float>*, float)[m[K’:
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:206:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbase[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  206 |           int [01;35m[Kbase[m[K = k * 4;
+      |               [01;35m[K^~~~[m[K
+[01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:195:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbbox[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  195 |   void send_data(std::vector<float>* cov, [01;35m[Kstd::vector<float>* bbox[m[K, const float conf_thresh = 0.5f){
+      |                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+gmake[2]: *** [CMakeFiles/traffic_detect_node.dir/build.make:76: CMakeFiles/traffic_detect_node.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/traffic_detect_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

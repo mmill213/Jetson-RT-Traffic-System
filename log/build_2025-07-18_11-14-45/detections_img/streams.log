@@ -1,0 +1,24 @@
+[0.032s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/build/detections_img -- -j6 -l6
+[0.120s] [35m[1mConsolidate compiler generated dependencies of target detections_img_node[0m
+[0.142s] [ 50%] [32mBuilding CXX object CMakeFiles/detections_img_node.dir/src/main.cpp.o[0m
+[7.072s] [100%] [32m[1mLinking CXX executable detections_img_node[0m
+[7.337s] [100%] Built target detections_img_node
+[7.362s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/build/detections_img -- -j6 -l6
+[7.367s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/build/detections_img
+[7.383s] -- Install configuration: ""
+[7.384s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/package_run_dependencies/detections_img
+[7.384s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/parent_prefix_path/detections_img
+[7.384s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/ament_prefix_path.sh
+[7.384s] -- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/ament_prefix_path.dsv
+[7.385s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/path.sh
+[7.385s] -- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/path.dsv
+[7.385s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.bash
+[7.385s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.sh
+[7.385s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.zsh
+[7.386s] -- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.dsv
+[7.386s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.dsv
+[7.386s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/packages/detections_img
+[7.386s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/cmake/detections_imgConfig.cmake
+[7.386s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/cmake/detections_imgConfig-version.cmake
+[7.386s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.xml
+[7.392s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/build/detections_img

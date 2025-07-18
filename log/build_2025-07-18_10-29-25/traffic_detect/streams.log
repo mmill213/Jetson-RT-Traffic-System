@@ -1,0 +1,39 @@
+[0.023s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[0.116s] [35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[0.163s] [ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
+[0.172s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda-12.6/lib64/libcudart_static.a: not a directory
+[0.173s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
+[9.091s] [01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::image_callback(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)[m[K’:
+[9.091s] [01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:159:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wwrite-strings-Wwrite-strings]8;;[m[K]
+[9.091s]   159 |     log_output([01;35m[K"Output Cov: "[m[K, &output_cov, &output_bbox, false);
+[9.091s]       |                [01;35m[K^~~~~~~~~~~~~~[m[K
+[9.096s] [01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::log_output(char*, std::vector<float>*, std::vector<float>*, bool)[m[K’:
+[9.096s] [01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:173:95:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klimit[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.096s]   173 |   void log_output(char* desc, std::vector<float>* vec_cov, std::vector<float>* vec_bbox, [01;35m[Kbool limit = true[m[K){
+[9.096s]       |                                                                                          [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[25.367s] [100%] [32m[1mLinking CXX executable traffic_detect_node[0m
+[25.904s] /usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408
+[25.905s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408
+[25.906s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408
+[27.054s] [100%] Built target traffic_detect_node
+[27.084s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[27.108s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect
+[27.125s] -- Install configuration: ""
+[27.125s] -- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node
+[27.138s] -- Set runtime path of "/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node" to ""
+[27.138s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect
+[27.139s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect
+[27.139s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh
+[27.139s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv
+[27.139s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.sh
+[27.140s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.dsv
+[27.140s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.bash
+[27.140s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.sh
+[27.140s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.zsh
+[27.140s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.dsv
+[27.140s] -- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.dsv
+[27.140s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect
+[27.141s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake
+[27.141s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake
+[27.141s] -- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.xml
+[27.146s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect

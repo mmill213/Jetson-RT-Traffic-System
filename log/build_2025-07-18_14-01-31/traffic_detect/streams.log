@@ -1,0 +1,13 @@
+[0.031s] Invoking command in '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[0.131s] [35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[0.180s] [ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
+[0.190s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda-12.6/lib64/libcudart_static.a: not a directory
+[0.191s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
+[9.425s] [01m[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:347:9:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[9.426s]   347 |   float [01;31m[Kiou_t_[m[K
+[9.426s]       |         [01;31m[K^~~~~~[m[K
+[9.426s]       |               [32m[K;[m[K
+[17.554s] gmake[2]: *** [CMakeFiles/traffic_detect_node.dir/build.make:76: CMakeFiles/traffic_detect_node.dir/src/main.cpp.o] Error 1
+[17.555s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/traffic_detect_node.dir/all] Error 2
+[17.555s] gmake: *** [Makefile:146: all] Error 2
+[17.561s] Invoked command in '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6

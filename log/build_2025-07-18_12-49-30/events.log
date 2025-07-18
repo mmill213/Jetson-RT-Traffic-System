@@ -1,0 +1,416 @@
+[0.000000] (-) TimerEvent: {}
+[0.000846] (detections_img) JobQueued: {'identifier': 'detections_img', 'dependencies': OrderedDict()}
+[0.001499] (traffic_detect) JobQueued: {'identifier': 'traffic_detect', 'dependencies': OrderedDict()}
+[0.001772] (detections_img) JobStarted: {'identifier': 'detections_img'}
+[0.015602] (traffic_detect) JobStarted: {'identifier': 'traffic_detect'}
+[0.026914] (detections_img) JobProgress: {'identifier': 'detections_img', 'progress': 'cmake'}
+[0.028651] (detections_img) JobProgress: {'identifier': 'detections_img', 'progress': 'build'}
+[0.030189] (detections_img) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img', '--', '-j6', '-l6'], 'cwd': '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2172'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nvidia'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2149,unix/ubuntu:/tmp/.ICE-unix/2149'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/93f3a01f_a635_4755_b5bf_84b99630208a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/opt/ros/humble')]), 'shell': False}
+[0.038856] (traffic_detect) JobProgress: {'identifier': 'traffic_detect', 'progress': 'cmake'}
+[0.040591] (traffic_detect) JobProgress: {'identifier': 'traffic_detect', 'progress': 'build'}
+[0.041206] (traffic_detect) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect', '--', '-j6', '-l6'], 'cwd': '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2172'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nvidia'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2149,unix/ubuntu:/tmp/.ICE-unix/2149'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/93f3a01f_a635_4755_b5bf_84b99630208a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/opt/ros/humble')]), 'shell': False}
+[0.099248] (-) TimerEvent: {}
+[0.127450] (detections_img) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target detections_img_node\x1b[0m\n'}
+[0.163447] (traffic_detect) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o\x1b[0m\n'}
+[0.172271] (traffic_detect) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1plus:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K/usr/local/cuda-12.6/lib64/libcudart_static.a: not a directory\n'}
+[0.172895] (traffic_detect) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1plus:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory\n'}
+[0.173110] (detections_img) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/detections_img_node.dir/src/main.cpp.o\x1b[0m\n'}
+[0.199430] (-) TimerEvent: {}
+[0.300152] (-) TimerEvent: {}
+[0.400869] (-) TimerEvent: {}
+[0.501562] (-) TimerEvent: {}
+[0.602292] (-) TimerEvent: {}
+[0.703054] (-) TimerEvent: {}
+[0.803835] (-) TimerEvent: {}
+[0.904588] (-) TimerEvent: {}
+[1.005327] (-) TimerEvent: {}
+[1.106191] (-) TimerEvent: {}
+[1.206919] (-) TimerEvent: {}
+[1.307732] (-) TimerEvent: {}
+[1.408505] (-) TimerEvent: {}
+[1.509252] (-) TimerEvent: {}
+[1.610029] (-) TimerEvent: {}
+[1.710829] (-) TimerEvent: {}
+[1.811551] (-) TimerEvent: {}
+[1.912296] (-) TimerEvent: {}
+[2.013036] (-) TimerEvent: {}
+[2.113808] (-) TimerEvent: {}
+[2.214553] (-) TimerEvent: {}
+[2.315303] (-) TimerEvent: {}
+[2.416051] (-) TimerEvent: {}
+[2.516790] (-) TimerEvent: {}
+[2.617547] (-) TimerEvent: {}
+[2.718288] (-) TimerEvent: {}
+[2.819035] (-) TimerEvent: {}
+[2.919778] (-) TimerEvent: {}
+[3.020531] (-) TimerEvent: {}
+[3.121276] (-) TimerEvent: {}
+[3.222041] (-) TimerEvent: {}
+[3.322783] (-) TimerEvent: {}
+[3.423560] (-) TimerEvent: {}
+[3.524307] (-) TimerEvent: {}
+[3.625150] (-) TimerEvent: {}
+[3.725982] (-) TimerEvent: {}
+[3.827075] (-) TimerEvent: {}
+[3.927840] (-) TimerEvent: {}
+[4.028820] (-) TimerEvent: {}
+[4.129677] (-) TimerEvent: {}
+[4.230457] (-) TimerEvent: {}
+[4.331235] (-) TimerEvent: {}
+[4.431991] (-) TimerEvent: {}
+[4.532767] (-) TimerEvent: {}
+[4.633853] (-) TimerEvent: {}
+[4.734636] (-) TimerEvent: {}
+[4.835411] (-) TimerEvent: {}
+[4.936201] (-) TimerEvent: {}
+[5.036948] (-) TimerEvent: {}
+[5.137731] (-) TimerEvent: {}
+[5.238470] (-) TimerEvent: {}
+[5.339206] (-) TimerEvent: {}
+[5.440036] (-) TimerEvent: {}
+[5.540798] (-) TimerEvent: {}
+[5.641582] (-) TimerEvent: {}
+[5.742395] (-) TimerEvent: {}
+[5.843180] (-) TimerEvent: {}
+[5.943939] (-) TimerEvent: {}
+[6.044725] (-) TimerEvent: {}
+[6.145535] (-) TimerEvent: {}
+[6.246320] (-) TimerEvent: {}
+[6.347129] (-) TimerEvent: {}
+[6.447890] (-) TimerEvent: {}
+[6.548813] (-) TimerEvent: {}
+[6.649587] (-) TimerEvent: {}
+[6.750333] (-) TimerEvent: {}
+[6.851116] (-) TimerEvent: {}
+[6.951866] (-) TimerEvent: {}
+[7.052608] (-) TimerEvent: {}
+[7.153345] (-) TimerEvent: {}
+[7.254111] (-) TimerEvent: {}
+[7.354855] (-) TimerEvent: {}
+[7.455596] (-) TimerEvent: {}
+[7.556355] (-) TimerEvent: {}
+[7.657103] (-) TimerEvent: {}
+[7.757895] (-) TimerEvent: {}
+[7.858633] (-) TimerEvent: {}
+[7.959395] (-) TimerEvent: {}
+[8.060140] (-) TimerEvent: {}
+[8.160885] (-) TimerEvent: {}
+[8.261675] (-) TimerEvent: {}
+[8.362439] (-) TimerEvent: {}
+[8.463205] (-) TimerEvent: {}
+[8.563960] (-) TimerEvent: {}
+[8.664735] (-) TimerEvent: {}
+[8.765517] (-) TimerEvent: {}
+[8.866271] (-) TimerEvent: {}
+[8.967019] (-) TimerEvent: {}
+[9.067787] (-) TimerEvent: {}
+[9.168553] (-) TimerEvent: {}
+[9.269310] (-) TimerEvent: {}
+[9.370101] (-) TimerEvent: {}
+[9.470850] (-) TimerEvent: {}
+[9.571598] (-) TimerEvent: {}
+[9.672354] (-) TimerEvent: {}
+[9.773099] (-) TimerEvent: {}
+[9.863652] (detections_img) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nvidia/Jetson-RT-Traffic-System/src/detections_img/src/main.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid DrawingNode::try_render()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[9.864311] (detections_img) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nvidia/Jetson-RT-Traffic-System/src/detections_img/src/main.cpp:56:25:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kloop variable \xe2\x80\x98\x1b[01m\x1b[Kbox\x1b[m\x1b[K\xe2\x80\x99 creates a copy from type \xe2\x80\x98\x1b[01m\x1b[Kconst vision_msgs::msg::Detection2D_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wrange-loop-construct\x07-Wrange-loop-construct\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[9.864529] (detections_img) StderrLine: {'line': b'   56 |         for (const auto \x1b[01;35m\x1b[Kbox\x1b[m\x1b[K : latest_boxes_->detections){\n'}
+[9.864701] (detections_img) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[9.864860] (detections_img) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nvidia/Jetson-RT-Traffic-System/src/detections_img/src/main.cpp:56:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kuse reference type to prevent copying\n'}
+[9.865012] (detections_img) StderrLine: {'line': b'   56 |         for (const auto \x1b[01;36m\x1b[Kbox\x1b[m\x1b[K : latest_boxes_->detections){\n'}
+[9.865157] (detections_img) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[9.865300] (detections_img) StderrLine: {'line': b'      |                         \x1b[32m\x1b[K&\x1b[m\x1b[K\n'}
+[9.873213] (-) TimerEvent: {}
+[9.973876] (-) TimerEvent: {}
+[10.074620] (-) TimerEvent: {}
+[10.175375] (-) TimerEvent: {}
+[10.276088] (-) TimerEvent: {}
+[10.376862] (-) TimerEvent: {}
+[10.477592] (-) TimerEvent: {}
+[10.578320] (-) TimerEvent: {}
+[10.679064] (-) TimerEvent: {}
+[10.779787] (-) TimerEvent: {}
+[10.880524] (-) TimerEvent: {}
+[10.981270] (-) TimerEvent: {}
+[11.082046] (-) TimerEvent: {}
+[11.182779] (-) TimerEvent: {}
+[11.283526] (-) TimerEvent: {}
+[11.384346] (-) TimerEvent: {}
+[11.485094] (-) TimerEvent: {}
+[11.585876] (-) TimerEvent: {}
+[11.686634] (-) TimerEvent: {}
+[11.787374] (-) TimerEvent: {}
+[11.888114] (-) TimerEvent: {}
+[11.988868] (-) TimerEvent: {}
+[12.089569] (-) TimerEvent: {}
+[12.190312] (-) TimerEvent: {}
+[12.291028] (-) TimerEvent: {}
+[12.391767] (-) TimerEvent: {}
+[12.492503] (-) TimerEvent: {}
+[12.593235] (-) TimerEvent: {}
+[12.693994] (-) TimerEvent: {}
+[12.794719] (-) TimerEvent: {}
+[12.895455] (-) TimerEvent: {}
+[12.996183] (-) TimerEvent: {}
+[13.096902] (-) TimerEvent: {}
+[13.197657] (-) TimerEvent: {}
+[13.298396] (-) TimerEvent: {}
+[13.399134] (-) TimerEvent: {}
+[13.499878] (-) TimerEvent: {}
+[13.600623] (-) TimerEvent: {}
+[13.701367] (-) TimerEvent: {}
+[13.802157] (-) TimerEvent: {}
+[13.902922] (-) TimerEvent: {}
+[14.003667] (-) TimerEvent: {}
+[14.104415] (-) TimerEvent: {}
+[14.205156] (-) TimerEvent: {}
+[14.305918] (-) TimerEvent: {}
+[14.406664] (-) TimerEvent: {}
+[14.507455] (-) TimerEvent: {}
+[14.608224] (-) TimerEvent: {}
+[14.708981] (-) TimerEvent: {}
+[14.809777] (-) TimerEvent: {}
+[14.910517] (-) TimerEvent: {}
+[15.011281] (-) TimerEvent: {}
+[15.112007] (-) TimerEvent: {}
+[15.212764] (-) TimerEvent: {}
+[15.313550] (-) TimerEvent: {}
+[15.414290] (-) TimerEvent: {}
+[15.515027] (-) TimerEvent: {}
+[15.615759] (-) TimerEvent: {}
+[15.716512] (-) TimerEvent: {}
+[15.817258] (-) TimerEvent: {}
+[15.918090] (-) TimerEvent: {}
+[16.018890] (-) TimerEvent: {}
+[16.119649] (-) TimerEvent: {}
+[16.220413] (-) TimerEvent: {}
+[16.321159] (-) TimerEvent: {}
+[16.421946] (-) TimerEvent: {}
+[16.522690] (-) TimerEvent: {}
+[16.623428] (-) TimerEvent: {}
+[16.724178] (-) TimerEvent: {}
+[16.824937] (-) TimerEvent: {}
+[16.925683] (-) TimerEvent: {}
+[17.026410] (-) TimerEvent: {}
+[17.127160] (-) TimerEvent: {}
+[17.227913] (-) TimerEvent: {}
+[17.328642] (-) TimerEvent: {}
+[17.429375] (-) TimerEvent: {}
+[17.530139] (-) TimerEvent: {}
+[17.630897] (-) TimerEvent: {}
+[17.731667] (-) TimerEvent: {}
+[17.832411] (-) TimerEvent: {}
+[17.933153] (-) TimerEvent: {}
+[18.033911] (-) TimerEvent: {}
+[18.134643] (-) TimerEvent: {}
+[18.235384] (-) TimerEvent: {}
+[18.336120] (-) TimerEvent: {}
+[18.436840] (-) TimerEvent: {}
+[18.537564] (-) TimerEvent: {}
+[18.638268] (-) TimerEvent: {}
+[18.738993] (-) TimerEvent: {}
+[18.839690] (-) TimerEvent: {}
+[18.940406] (-) TimerEvent: {}
+[19.041138] (-) TimerEvent: {}
+[19.141903] (-) TimerEvent: {}
+[19.242607] (-) TimerEvent: {}
+[19.343323] (-) TimerEvent: {}
+[19.444031] (-) TimerEvent: {}
+[19.544765] (-) TimerEvent: {}
+[19.645498] (-) TimerEvent: {}
+[19.746225] (-) TimerEvent: {}
+[19.846930] (-) TimerEvent: {}
+[19.947649] (-) TimerEvent: {}
+[20.048372] (-) TimerEvent: {}
+[20.149125] (-) TimerEvent: {}
+[20.249868] (-) TimerEvent: {}
+[20.350596] (-) TimerEvent: {}
+[20.451341] (-) TimerEvent: {}
+[20.552098] (-) TimerEvent: {}
+[20.652830] (-) TimerEvent: {}
+[20.753571] (-) TimerEvent: {}
+[20.854285] (-) TimerEvent: {}
+[20.955007] (-) TimerEvent: {}
+[21.055722] (-) TimerEvent: {}
+[21.156436] (-) TimerEvent: {}
+[21.257145] (-) TimerEvent: {}
+[21.357896] (-) TimerEvent: {}
+[21.458631] (-) TimerEvent: {}
+[21.559352] (-) TimerEvent: {}
+[21.660064] (-) TimerEvent: {}
+[21.760776] (-) TimerEvent: {}
+[21.861511] (-) TimerEvent: {}
+[21.962215] (-) TimerEvent: {}
+[22.062921] (-) TimerEvent: {}
+[22.163630] (-) TimerEvent: {}
+[22.264329] (-) TimerEvent: {}
+[22.365032] (-) TimerEvent: {}
+[22.465747] (-) TimerEvent: {}
+[22.566444] (-) TimerEvent: {}
+[22.667153] (-) TimerEvent: {}
+[22.767885] (-) TimerEvent: {}
+[22.868594] (-) TimerEvent: {}
+[22.969310] (-) TimerEvent: {}
+[23.070053] (-) TimerEvent: {}
+[23.170768] (-) TimerEvent: {}
+[23.271464] (-) TimerEvent: {}
+[23.372167] (-) TimerEvent: {}
+[23.472876] (-) TimerEvent: {}
+[23.573613] (-) TimerEvent: {}
+[23.674301] (-) TimerEvent: {}
+[23.775004] (-) TimerEvent: {}
+[23.875711] (-) TimerEvent: {}
+[23.976410] (-) TimerEvent: {}
+[24.077145] (-) TimerEvent: {}
+[24.177876] (-) TimerEvent: {}
+[24.278602] (-) TimerEvent: {}
+[24.379323] (-) TimerEvent: {}
+[24.480062] (-) TimerEvent: {}
+[24.580793] (-) TimerEvent: {}
+[24.681543] (-) TimerEvent: {}
+[24.782253] (-) TimerEvent: {}
+[24.882976] (-) TimerEvent: {}
+[24.983713] (-) TimerEvent: {}
+[25.084439] (-) TimerEvent: {}
+[25.185184] (-) TimerEvent: {}
+[25.285931] (-) TimerEvent: {}
+[25.386666] (-) TimerEvent: {}
+[25.487378] (-) TimerEvent: {}
+[25.588089] (-) TimerEvent: {}
+[25.688814] (-) TimerEvent: {}
+[25.789557] (-) TimerEvent: {}
+[25.890287] (-) TimerEvent: {}
+[25.991012] (-) TimerEvent: {}
+[26.086086] (traffic_detect) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable traffic_detect_node\x1b[0m\n'}
+[26.091158] (-) TimerEvent: {}
+[26.191901] (-) TimerEvent: {}
+[26.292620] (-) TimerEvent: {}
+[26.393373] (-) TimerEvent: {}
+[26.494149] (-) TimerEvent: {}
+[26.594989] (-) TimerEvent: {}
+[26.632403] (traffic_detect) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408\n'}
+[26.633734] (traffic_detect) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408\n'}
+[26.634901] (traffic_detect) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408\n'}
+[26.695169] (-) TimerEvent: {}
+[26.795899] (-) TimerEvent: {}
+[26.896637] (-) TimerEvent: {}
+[26.997363] (-) TimerEvent: {}
+[27.098103] (-) TimerEvent: {}
+[27.198815] (-) TimerEvent: {}
+[27.299521] (-) TimerEvent: {}
+[27.400237] (-) TimerEvent: {}
+[27.500967] (-) TimerEvent: {}
+[27.601707] (-) TimerEvent: {}
+[27.702410] (-) TimerEvent: {}
+[27.803120] (-) TimerEvent: {}
+[27.816728] (traffic_detect) StdoutLine: {'line': b'[100%] Built target traffic_detect_node\n'}
+[27.845510] (traffic_detect) CommandEnded: {'returncode': 0}
+[27.848881] (traffic_detect) JobProgress: {'identifier': 'traffic_detect', 'progress': 'install'}
+[27.872638] (traffic_detect) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect'], 'cwd': '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2172'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nvidia'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2149,unix/ubuntu:/tmp/.ICE-unix/2149'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/93f3a01f_a635_4755_b5bf_84b99630208a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/opt/ros/humble')]), 'shell': False}
+[27.889970] (traffic_detect) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[27.890593] (traffic_detect) StdoutLine: {'line': b'-- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node\n'}
+[27.903240] (-) TimerEvent: {}
+[27.903848] (traffic_detect) StdoutLine: {'line': b'-- Set runtime path of "/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node" to ""\n'}
+[27.904460] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect\n'}
+[27.904836] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect\n'}
+[27.905028] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh\n'}
+[27.905370] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv\n'}
+[27.905777] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.sh\n'}
+[27.906498] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.dsv\n'}
+[27.906797] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.bash\n'}
+[27.906977] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.sh\n'}
+[27.907134] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.zsh\n'}
+[27.907286] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.dsv\n'}
+[27.907432] (traffic_detect) StdoutLine: {'line': b'-- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.dsv\n'}
+[27.907578] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect\n'}
+[27.907720] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake\n'}
+[27.907902] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake\n'}
+[27.908048] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.xml\n'}
+[27.910284] (traffic_detect) CommandEnded: {'returncode': 0}
+[27.972053] (traffic_detect) JobEnded: {'identifier': 'traffic_detect', 'rc': 0}
+[28.003430] (-) TimerEvent: {}
+[28.104115] (-) TimerEvent: {}
+[28.204825] (-) TimerEvent: {}
+[28.305532] (-) TimerEvent: {}
+[28.406223] (-) TimerEvent: {}
+[28.506933] (-) TimerEvent: {}
+[28.607688] (-) TimerEvent: {}
+[28.708498] (-) TimerEvent: {}
+[28.809208] (-) TimerEvent: {}
+[28.909968] (-) TimerEvent: {}
+[29.010653] (-) TimerEvent: {}
+[29.111350] (-) TimerEvent: {}
+[29.212074] (-) TimerEvent: {}
+[29.312749] (-) TimerEvent: {}
+[29.413846] (-) TimerEvent: {}
+[29.515125] (-) TimerEvent: {}
+[29.615932] (-) TimerEvent: {}
+[29.716784] (-) TimerEvent: {}
+[29.817698] (-) TimerEvent: {}
+[29.918525] (-) TimerEvent: {}
+[30.019398] (-) TimerEvent: {}
+[30.120252] (-) TimerEvent: {}
+[30.221074] (-) TimerEvent: {}
+[30.321838] (-) TimerEvent: {}
+[30.422679] (-) TimerEvent: {}
+[30.523526] (-) TimerEvent: {}
+[30.624327] (-) TimerEvent: {}
+[30.725143] (-) TimerEvent: {}
+[30.825994] (-) TimerEvent: {}
+[30.926837] (-) TimerEvent: {}
+[31.027653] (-) TimerEvent: {}
+[31.128472] (-) TimerEvent: {}
+[31.229317] (-) TimerEvent: {}
+[31.330188] (-) TimerEvent: {}
+[31.431050] (-) TimerEvent: {}
+[31.531929] (-) TimerEvent: {}
+[31.632750] (-) TimerEvent: {}
+[31.733596] (-) TimerEvent: {}
+[31.757575] (detections_img) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable detections_img_node\x1b[0m\n'}
+[31.833775] (-) TimerEvent: {}
+[31.934503] (-) TimerEvent: {}
+[32.035277] (-) TimerEvent: {}
+[32.136162] (-) TimerEvent: {}
+[32.237440] (-) TimerEvent: {}
+[32.298266] (detections_img) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408\n'}
+[32.299362] (detections_img) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408\n'}
+[32.300479] (detections_img) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408\n'}
+[32.337574] (-) TimerEvent: {}
+[32.438334] (-) TimerEvent: {}
+[32.539192] (-) TimerEvent: {}
+[32.640044] (-) TimerEvent: {}
+[32.740870] (-) TimerEvent: {}
+[32.841738] (-) TimerEvent: {}
+[32.942583] (-) TimerEvent: {}
+[33.043404] (-) TimerEvent: {}
+[33.144225] (-) TimerEvent: {}
+[33.245057] (-) TimerEvent: {}
+[33.345951] (-) TimerEvent: {}
+[33.446808] (-) TimerEvent: {}
+[33.547643] (-) TimerEvent: {}
+[33.647501] (detections_img) StdoutLine: {'line': b'[100%] Built target detections_img_node\n'}
+[33.648033] (-) TimerEvent: {}
+[33.673791] (detections_img) CommandEnded: {'returncode': 0}
+[33.676273] (detections_img) JobProgress: {'identifier': 'detections_img', 'progress': 'install'}
+[33.677175] (detections_img) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img'], 'cwd': '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2172'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nvidia'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nvidia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2149,unix/ubuntu:/tmp/.ICE-unix/2149'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/93f3a01f_a635_4755_b5bf_84b99630208a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/opt/ros/humble')]), 'shell': False}
+[33.699537] (detections_img) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[33.700072] (detections_img) StdoutLine: {'line': b'-- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/lib/detections_img/detections_img_node\n'}
+[33.715090] (detections_img) StdoutLine: {'line': b'-- Set runtime path of "/home/nvidia/Jetson-RT-Traffic-System/install/detections_img/lib/detections_img/detections_img_node" to ""\n'}
+[33.715681] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/package_run_dependencies/detections_img\n'}
+[33.716035] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/parent_prefix_path/detections_img\n'}
+[33.716324] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/ament_prefix_path.sh\n'}
+[33.716496] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/ament_prefix_path.dsv\n'}
+[33.716654] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/path.sh\n'}
+[33.716806] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/path.dsv\n'}
+[33.717106] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.bash\n'}
+[33.717318] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.sh\n'}
+[33.717503] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.zsh\n'}
+[33.717683] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.dsv\n'}
+[33.717839] (detections_img) StdoutLine: {'line': b'-- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.dsv\n'}
+[33.717993] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/packages/detections_img\n'}
+[33.718139] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/cmake/detections_imgConfig.cmake\n'}
+[33.718282] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/cmake/detections_imgConfig-version.cmake\n'}
+[33.718424] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.xml\n'}
+[33.721369] (detections_img) CommandEnded: {'returncode': 0}
+[33.748279] (-) TimerEvent: {}
+[33.768151] (detections_img) JobEnded: {'identifier': 'detections_img', 'rc': 0}
+[33.770807] (-) EventReactorShutdown: {}

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect
+CMAKE_SOURCE_DIR = /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect
+CMAKE_BINARY_DIR = /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect
 
 # Utility rule file for traffic_detect_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/traffic_detect_uninstall.dir/compiler_depend.make
 include CMakeFiles/traffic_detect_uninstall.dir/progress.make
 
 CMakeFiles/traffic_detect_uninstall:
-	/usr/bin/cmake -P /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 traffic_detect_uninstall: CMakeFiles/traffic_detect_uninstall
 traffic_detect_uninstall: CMakeFiles/traffic_detect_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/traffic_detect_uninstall.dir/clean:
 .PHONY : CMakeFiles/traffic_detect_uninstall.dir/clean
 
 CMakeFiles/traffic_detect_uninstall.dir/depend:
-	cd /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles/traffic_detect_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles/traffic_detect_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/traffic_detect_uninstall.dir/depend
 

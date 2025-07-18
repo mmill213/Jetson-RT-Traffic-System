@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect
+CMAKE_SOURCE_DIR = /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect
+CMAKE_BINARY_DIR = /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect
 
 # Include any dependencies generated for this target.
 include CMakeFiles/traffic_detect_node.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/traffic_detect_node.dir/progress.make
 include CMakeFiles/traffic_detect_node.dir/flags.make
 
 CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: CMakeFiles/traffic_detect_node.dir/flags.make
-CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp
+CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp
 CMakeFiles/traffic_detect_node.dir/src/main.cpp.o: CMakeFiles/traffic_detect_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/traffic_detect_node.dir/src/main.cpp.o -MF CMakeFiles/traffic_detect_node.dir/src/main.cpp.o.d -o CMakeFiles/traffic_detect_node.dir/src/main.cpp.o -c /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/traffic_detect_node.dir/src/main.cpp.o -MF CMakeFiles/traffic_detect_node.dir/src/main.cpp.o.d -o CMakeFiles/traffic_detect_node.dir/src/main.cpp.o -c /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp
 
 CMakeFiles/traffic_detect_node.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/traffic_detect_node.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp > CMakeFiles/traffic_detect_node.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp > CMakeFiles/traffic_detect_node.dir/src/main.cpp.i
 
 CMakeFiles/traffic_detect_node.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/traffic_detect_node.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp -o CMakeFiles/traffic_detect_node.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp -o CMakeFiles/traffic_detect_node.dir/src/main.cpp.s
 
 # Object files for target traffic_detect_node
 traffic_detect_node_OBJECTS = \
@@ -108,7 +108,7 @@ traffic_detect_node: /usr/lib/libopencv_photo.so.4.8.0
 traffic_detect_node: /usr/lib/libopencv_stitching.so.4.8.0
 traffic_detect_node: /usr/lib/libopencv_video.so.4.8.0
 traffic_detect_node: /usr/lib/libopencv_videoio.so.4.8.0
-traffic_detect_node: /usr/local/cuda/lib64/libcudart_static.a
+traffic_detect_node: /usr/local/cuda-12.6/lib64/libcudart_static.a
 traffic_detect_node: /usr/lib/aarch64-linux-gnu/librt.a
 traffic_detect_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 traffic_detect_node: /opt/ros/humble/lib/librcl.so
@@ -197,7 +197,7 @@ traffic_detect_node: /usr/lib/libopencv_flann.so.4.8.0
 traffic_detect_node: /usr/lib/libopencv_imgproc.so.4.8.0
 traffic_detect_node: /usr/lib/libopencv_core.so.4.8.0
 traffic_detect_node: CMakeFiles/traffic_detect_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable traffic_detect_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable traffic_detect_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/traffic_detect_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -209,6 +209,6 @@ CMakeFiles/traffic_detect_node.dir/clean:
 .PHONY : CMakeFiles/traffic_detect_node.dir/clean
 
 CMakeFiles/traffic_detect_node.dir/depend:
-	cd /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles/traffic_detect_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect /home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect/CMakeFiles/traffic_detect_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/traffic_detect_node.dir/depend
 
