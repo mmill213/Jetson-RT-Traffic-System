@@ -78,6 +78,11 @@ private:
             
             cv::putText(img, b_id, cv::Point(pt1.x, pt1.y - 5), 
             cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1);
+            
+            
+            cv::circle(img, cv::Point(ctr.x, ctr.y), 3, cv::Scalar(255, 255, 255), -1);  // center dot
+            
+
 
         }
 

@@ -28,8 +28,8 @@ def generate_launch_description():
             name='traffic_detect_node',
             output='screen',
             parameters=[{
-                'conf_thresh': 0.6,
-                'intersection_max': 0.0
+                'conf_thresh': 0.05,
+                'intersection_max': 1.0
             }]
         ),
         Node(
