@@ -57,10 +57,12 @@ private:
             const auto ctr = box.bbox.center.position;
             float w = box.bbox.size_x;
             float h = box.bbox.size_y;
-            cv::Point pt1(ctr.x - (w/2.0f), ctr.y - (h/2.0f));
-            cv::Point pt2(ctr.x + (w/2.0f), ctr.y + (h/2.0f));
+            cv::Point pt1(static_cast<int>(ctr.x - w/2.0f), static_cast<int>(ctr.y - h/2.0f));
+            cv::Point pt2(static_cast<int>(ctr.x + w/2.0f), static_cast<int>(ctr.y + h/2.0f));
 
+            if (box.results.empty()) continue;
             auto b_id = box.results[0].hypothesis.class_id;
+
 
             if (b_id == "car") {
                 cv::rectangle(img, pt1, pt2, cv::Scalar(0, 0, 255));
@@ -75,7 +77,7 @@ private:
             }
             
             cv::putText(img, b_id, cv::Point(pt1.x, pt1.y - 5), 
-            cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 255), 1);
+            cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1);
 
         }
 

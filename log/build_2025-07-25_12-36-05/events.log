@@ -1,0 +1,370 @@
+[0.000000] (-) TimerEvent: {}
+[0.000749] (detections_img) JobQueued: {'identifier': 'detections_img', 'dependencies': OrderedDict()}
+[0.001386] (traffic_detect) JobQueued: {'identifier': 'traffic_detect', 'dependencies': OrderedDict()}
+[0.001723] (videopub) JobQueued: {'identifier': 'videopub', 'dependencies': OrderedDict()}
+[0.002066] (detections_img) JobStarted: {'identifier': 'detections_img'}
+[0.018953] (traffic_detect) JobStarted: {'identifier': 'traffic_detect'}
+[0.028043] (videopub) JobStarted: {'identifier': 'videopub'}
+[0.044437] (detections_img) JobProgress: {'identifier': 'detections_img', 'progress': 'cmake'}
+[0.045813] (detections_img) JobProgress: {'identifier': 'detections_img', 'progress': 'build'}
+[0.047222] (detections_img) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img', '--', '-j6', '-l6'], 'cwd': '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('SSH_CLIENT', '10.144.202.199 65041 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('BROWSER', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6699bb7a-ee30-4c50-a415-a1e0aa3058c9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install:/home/nvidia/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nvidia'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-69f018fb52.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img'), ('SSH_CONNECTION', '10.144.202.199 65041 129.65.138.237 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/home/nvidia/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:/home/nvidia/install/videopub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble')]), 'shell': False}
+[0.054387] (traffic_detect) JobProgress: {'identifier': 'traffic_detect', 'progress': 'cmake'}
+[0.055872] (traffic_detect) JobProgress: {'identifier': 'traffic_detect', 'progress': 'build'}
+[0.056515] (traffic_detect) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect', '--', '-j6', '-l6'], 'cwd': '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('SSH_CLIENT', '10.144.202.199 65041 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('BROWSER', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6699bb7a-ee30-4c50-a415-a1e0aa3058c9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install:/home/nvidia/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nvidia'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-69f018fb52.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect'), ('SSH_CONNECTION', '10.144.202.199 65041 129.65.138.237 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/home/nvidia/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:/home/nvidia/install/videopub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble')]), 'shell': False}
+[0.099282] (-) TimerEvent: {}
+[0.196579] (detections_img) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target detections_img_node\x1b[0m\n'}
+[0.199362] (-) TimerEvent: {}
+[0.228395] (traffic_detect) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o\x1b[0m\n'}
+[0.243331] (detections_img) StdoutLine: {'line': b'[100%] Built target detections_img_node\n'}
+[0.257046] (traffic_detect) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1plus:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K/usr/local/cuda-12.6/lib64/libcudart_static.a: not a directory\n'}
+[0.257601] (traffic_detect) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1plus:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory\n'}
+[0.299552] (-) TimerEvent: {}
+[0.400256] (-) TimerEvent: {}
+[0.500890] (-) TimerEvent: {}
+[0.601566] (-) TimerEvent: {}
+[0.672639] (detections_img) CommandEnded: {'returncode': 0}
+[0.674212] (detections_img) JobProgress: {'identifier': 'detections_img', 'progress': 'install'}
+[0.695505] (detections_img) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img'], 'cwd': '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('SSH_CLIENT', '10.144.202.199 65041 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('BROWSER', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6699bb7a-ee30-4c50-a415-a1e0aa3058c9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install:/home/nvidia/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nvidia'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-69f018fb52.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/nvidia/Jetson-RT-Traffic-System/build/detections_img'), ('SSH_CONNECTION', '10.144.202.199 65041 129.65.138.237 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/home/nvidia/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:/home/nvidia/install/videopub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble')]), 'shell': False}
+[0.702199] (-) TimerEvent: {}
+[0.715397] (detections_img) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.716875] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/lib/detections_img/detections_img_node\n'}
+[0.717343] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/package_run_dependencies/detections_img\n'}
+[0.717567] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/parent_prefix_path/detections_img\n'}
+[0.717752] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/ament_prefix_path.sh\n'}
+[0.717933] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/ament_prefix_path.dsv\n'}
+[0.718113] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/path.sh\n'}
+[0.718282] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/path.dsv\n'}
+[0.718435] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.bash\n'}
+[0.718584] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.sh\n'}
+[0.718741] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.zsh\n'}
+[0.719933] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.dsv\n'}
+[0.720153] (detections_img) StdoutLine: {'line': b'-- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.dsv\n'}
+[0.720312] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/packages/detections_img\n'}
+[0.720468] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/cmake/detections_imgConfig.cmake\n'}
+[0.720616] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/cmake/detections_imgConfig-version.cmake\n'}
+[0.720763] (detections_img) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.xml\n'}
+[0.727331] (detections_img) CommandEnded: {'returncode': 0}
+[0.776255] (detections_img) JobEnded: {'identifier': 'detections_img', 'rc': 0}
+[0.802406] (-) TimerEvent: {}
+[0.903101] (-) TimerEvent: {}
+[1.003849] (-) TimerEvent: {}
+[1.104638] (-) TimerEvent: {}
+[1.205454] (-) TimerEvent: {}
+[1.306167] (-) TimerEvent: {}
+[1.406854] (-) TimerEvent: {}
+[1.507586] (-) TimerEvent: {}
+[1.521935] (videopub) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/videopub', 'build', '--build-base', '/home/nvidia/Jetson-RT-Traffic-System/build/videopub/build', 'install', '--record', '/home/nvidia/Jetson-RT-Traffic-System/build/videopub/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nvidia/Jetson-RT-Traffic-System/src/videopub', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'nvidia', 'SSH_CLIENT': '10.144.202.199 65041 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:', 'BROWSER': '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/nvidia', 'OLDPWD': '/home/nvidia', 'TERM_PROGRAM_VERSION': '1.102.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-6699bb7a-ee30-4c50-a415-a1e0aa3058c9.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/nvidia/Jetson-RT-Traffic-System/install:/home/nvidia/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'nvidia', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/usr/local/cuda-12.6/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-69f018fb52.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/nvidia/Jetson-RT-Traffic-System/build/videopub', 'SSH_CONNECTION': '10.144.202.199 65041 129.65.138.237 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share/:/usr/share/', 'PYTHONPATH': '/home/nvidia/Jetson-RT-Traffic-System/build/videopub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nvidia/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:/home/nvidia/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:/home/nvidia/install/videopub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img'}, 'shell': False}
+[1.607725] (-) TimerEvent: {}
+[1.708422] (-) TimerEvent: {}
+[1.809088] (-) TimerEvent: {}
+[1.909763] (-) TimerEvent: {}
+[2.010465] (-) TimerEvent: {}
+[2.075677] (videopub) StdoutLine: {'line': b'running egg_info\n'}
+[2.078284] (videopub) StdoutLine: {'line': b'writing ../../build/videopub/videopub.egg-info/PKG-INFO\n'}
+[2.080613] (videopub) StdoutLine: {'line': b'writing dependency_links to ../../build/videopub/videopub.egg-info/dependency_links.txt\n'}
+[2.080996] (videopub) StdoutLine: {'line': b'writing entry points to ../../build/videopub/videopub.egg-info/entry_points.txt\n'}
+[2.081191] (videopub) StdoutLine: {'line': b'writing requirements to ../../build/videopub/videopub.egg-info/requires.txt\n'}
+[2.081355] (videopub) StdoutLine: {'line': b'writing top-level names to ../../build/videopub/videopub.egg-info/top_level.txt\n'}
+[2.085247] (videopub) StdoutLine: {'line': b"reading manifest file '../../build/videopub/videopub.egg-info/SOURCES.txt'\n"}
+[2.087266] (videopub) StdoutLine: {'line': b"writing manifest file '../../build/videopub/videopub.egg-info/SOURCES.txt'\n"}
+[2.087709] (videopub) StdoutLine: {'line': b'running build\n'}
+[2.087943] (videopub) StdoutLine: {'line': b'running build_py\n'}
+[2.088508] (videopub) StdoutLine: {'line': b'running install\n'}
+[2.089373] (videopub) StdoutLine: {'line': b'running install_lib\n'}
+[2.092655] (videopub) StdoutLine: {'line': b'running install_data\n'}
+[2.093078] (videopub) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.097863] (videopub) StdoutLine: {'line': b"removing '/home/nvidia/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages/videopub-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[2.098683] (videopub) StdoutLine: {'line': b'Copying ../../build/videopub/videopub.egg-info to /home/nvidia/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages/videopub-0.0.0-py3.10.egg-info\n'}
+[2.101106] (videopub) StdoutLine: {'line': b'running install_scripts\n'}
+[2.110587] (-) TimerEvent: {}
+[2.152767] (videopub) StdoutLine: {'line': b'Installing video_publisher script to /home/nvidia/Jetson-RT-Traffic-System/install/videopub/lib/videopub\n'}
+[2.154097] (videopub) StdoutLine: {'line': b"writing list of installed files to '/home/nvidia/Jetson-RT-Traffic-System/build/videopub/install.log'\n"}
+[2.210799] (-) TimerEvent: {}
+[2.235743] (videopub) CommandEnded: {'returncode': 0}
+[2.253513] (videopub) JobEnded: {'identifier': 'videopub', 'rc': 0}
+[2.311057] (-) TimerEvent: {}
+[2.411810] (-) TimerEvent: {}
+[2.512557] (-) TimerEvent: {}
+[2.613322] (-) TimerEvent: {}
+[2.714080] (-) TimerEvent: {}
+[2.814810] (-) TimerEvent: {}
+[2.915545] (-) TimerEvent: {}
+[3.016339] (-) TimerEvent: {}
+[3.117086] (-) TimerEvent: {}
+[3.218061] (-) TimerEvent: {}
+[3.318790] (-) TimerEvent: {}
+[3.419543] (-) TimerEvent: {}
+[3.520353] (-) TimerEvent: {}
+[3.621103] (-) TimerEvent: {}
+[3.721880] (-) TimerEvent: {}
+[3.822640] (-) TimerEvent: {}
+[3.923416] (-) TimerEvent: {}
+[4.024205] (-) TimerEvent: {}
+[4.124975] (-) TimerEvent: {}
+[4.225694] (-) TimerEvent: {}
+[4.326347] (-) TimerEvent: {}
+[4.426908] (-) TimerEvent: {}
+[4.527443] (-) TimerEvent: {}
+[4.628009] (-) TimerEvent: {}
+[4.728536] (-) TimerEvent: {}
+[4.829089] (-) TimerEvent: {}
+[4.929815] (-) TimerEvent: {}
+[5.030558] (-) TimerEvent: {}
+[5.131269] (-) TimerEvent: {}
+[5.232052] (-) TimerEvent: {}
+[5.332811] (-) TimerEvent: {}
+[5.433565] (-) TimerEvent: {}
+[5.534315] (-) TimerEvent: {}
+[5.635045] (-) TimerEvent: {}
+[5.735773] (-) TimerEvent: {}
+[5.836502] (-) TimerEvent: {}
+[5.937216] (-) TimerEvent: {}
+[6.037930] (-) TimerEvent: {}
+[6.138648] (-) TimerEvent: {}
+[6.239362] (-) TimerEvent: {}
+[6.340140] (-) TimerEvent: {}
+[6.440857] (-) TimerEvent: {}
+[6.541593] (-) TimerEvent: {}
+[6.642300] (-) TimerEvent: {}
+[6.743008] (-) TimerEvent: {}
+[6.843711] (-) TimerEvent: {}
+[6.944438] (-) TimerEvent: {}
+[7.045166] (-) TimerEvent: {}
+[7.145901] (-) TimerEvent: {}
+[7.246637] (-) TimerEvent: {}
+[7.347700] (-) TimerEvent: {}
+[7.448789] (-) TimerEvent: {}
+[7.549829] (-) TimerEvent: {}
+[7.650875] (-) TimerEvent: {}
+[7.751922] (-) TimerEvent: {}
+[7.852868] (-) TimerEvent: {}
+[7.953884] (-) TimerEvent: {}
+[8.054913] (-) TimerEvent: {}
+[8.155929] (-) TimerEvent: {}
+[8.256921] (-) TimerEvent: {}
+[8.357918] (-) TimerEvent: {}
+[8.458907] (-) TimerEvent: {}
+[8.559908] (-) TimerEvent: {}
+[8.660897] (-) TimerEvent: {}
+[8.761896] (-) TimerEvent: {}
+[8.862854] (-) TimerEvent: {}
+[8.963903] (-) TimerEvent: {}
+[9.064916] (-) TimerEvent: {}
+[9.165930] (-) TimerEvent: {}
+[9.266968] (-) TimerEvent: {}
+[9.367999] (-) TimerEvent: {}
+[9.368807] (traffic_detect) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid TrafficDetector::send_data(std::vector<float>*, std::vector<float>*, float, float)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[9.370259] (traffic_detect) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:272:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kbase\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[9.371441] (traffic_detect) StderrLine: {'line': b'  272 |           int \x1b[01;35m\x1b[Kbase\x1b[m\x1b[K = k * 4;\n'}
+[9.372592] (traffic_detect) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[9.468163] (-) TimerEvent: {}
+[9.569140] (-) TimerEvent: {}
+[9.670151] (-) TimerEvent: {}
+[9.771135] (-) TimerEvent: {}
+[9.872140] (-) TimerEvent: {}
+[9.973144] (-) TimerEvent: {}
+[10.074149] (-) TimerEvent: {}
+[10.175132] (-) TimerEvent: {}
+[10.276167] (-) TimerEvent: {}
+[10.377172] (-) TimerEvent: {}
+[10.478189] (-) TimerEvent: {}
+[10.579186] (-) TimerEvent: {}
+[10.680250] (-) TimerEvent: {}
+[10.781267] (-) TimerEvent: {}
+[10.882266] (-) TimerEvent: {}
+[10.983280] (-) TimerEvent: {}
+[11.084357] (-) TimerEvent: {}
+[11.185349] (-) TimerEvent: {}
+[11.286338] (-) TimerEvent: {}
+[11.387347] (-) TimerEvent: {}
+[11.488387] (-) TimerEvent: {}
+[11.589374] (-) TimerEvent: {}
+[11.690382] (-) TimerEvent: {}
+[11.791387] (-) TimerEvent: {}
+[11.892396] (-) TimerEvent: {}
+[11.993408] (-) TimerEvent: {}
+[12.094435] (-) TimerEvent: {}
+[12.195437] (-) TimerEvent: {}
+[12.296486] (-) TimerEvent: {}
+[12.397488] (-) TimerEvent: {}
+[12.498500] (-) TimerEvent: {}
+[12.599502] (-) TimerEvent: {}
+[12.700562] (-) TimerEvent: {}
+[12.801575] (-) TimerEvent: {}
+[12.902566] (-) TimerEvent: {}
+[13.003585] (-) TimerEvent: {}
+[13.104625] (-) TimerEvent: {}
+[13.205617] (-) TimerEvent: {}
+[13.306630] (-) TimerEvent: {}
+[13.407629] (-) TimerEvent: {}
+[13.508657] (-) TimerEvent: {}
+[13.609643] (-) TimerEvent: {}
+[13.710666] (-) TimerEvent: {}
+[13.811669] (-) TimerEvent: {}
+[13.912712] (-) TimerEvent: {}
+[14.013784] (-) TimerEvent: {}
+[14.114828] (-) TimerEvent: {}
+[14.215887] (-) TimerEvent: {}
+[14.316920] (-) TimerEvent: {}
+[14.417971] (-) TimerEvent: {}
+[14.519021] (-) TimerEvent: {}
+[14.620077] (-) TimerEvent: {}
+[14.721130] (-) TimerEvent: {}
+[14.822142] (-) TimerEvent: {}
+[14.923151] (-) TimerEvent: {}
+[15.024192] (-) TimerEvent: {}
+[15.125192] (-) TimerEvent: {}
+[15.226214] (-) TimerEvent: {}
+[15.327253] (-) TimerEvent: {}
+[15.428293] (-) TimerEvent: {}
+[15.529293] (-) TimerEvent: {}
+[15.630302] (-) TimerEvent: {}
+[15.731306] (-) TimerEvent: {}
+[15.832338] (-) TimerEvent: {}
+[15.933351] (-) TimerEvent: {}
+[16.034368] (-) TimerEvent: {}
+[16.135388] (-) TimerEvent: {}
+[16.236417] (-) TimerEvent: {}
+[16.337401] (-) TimerEvent: {}
+[16.438382] (-) TimerEvent: {}
+[16.539361] (-) TimerEvent: {}
+[16.640385] (-) TimerEvent: {}
+[16.741387] (-) TimerEvent: {}
+[16.842396] (-) TimerEvent: {}
+[16.943409] (-) TimerEvent: {}
+[17.046843] (-) TimerEvent: {}
+[17.148367] (-) TimerEvent: {}
+[17.249381] (-) TimerEvent: {}
+[17.350392] (-) TimerEvent: {}
+[17.451446] (-) TimerEvent: {}
+[17.552482] (-) TimerEvent: {}
+[17.653529] (-) TimerEvent: {}
+[17.754580] (-) TimerEvent: {}
+[17.855521] (-) TimerEvent: {}
+[17.956550] (-) TimerEvent: {}
+[18.057524] (-) TimerEvent: {}
+[18.158519] (-) TimerEvent: {}
+[18.259485] (-) TimerEvent: {}
+[18.360493] (-) TimerEvent: {}
+[18.461470] (-) TimerEvent: {}
+[18.562452] (-) TimerEvent: {}
+[18.663433] (-) TimerEvent: {}
+[18.764465] (-) TimerEvent: {}
+[18.865397] (-) TimerEvent: {}
+[18.966380] (-) TimerEvent: {}
+[19.067348] (-) TimerEvent: {}
+[19.168343] (-) TimerEvent: {}
+[19.269296] (-) TimerEvent: {}
+[19.370254] (-) TimerEvent: {}
+[19.471185] (-) TimerEvent: {}
+[19.572153] (-) TimerEvent: {}
+[19.673126] (-) TimerEvent: {}
+[19.774094] (-) TimerEvent: {}
+[19.875001] (-) TimerEvent: {}
+[19.975916] (-) TimerEvent: {}
+[20.076864] (-) TimerEvent: {}
+[20.177820] (-) TimerEvent: {}
+[20.278797] (-) TimerEvent: {}
+[20.379794] (-) TimerEvent: {}
+[20.480752] (-) TimerEvent: {}
+[20.581694] (-) TimerEvent: {}
+[20.682658] (-) TimerEvent: {}
+[20.783636] (-) TimerEvent: {}
+[20.884615] (-) TimerEvent: {}
+[20.985569] (-) TimerEvent: {}
+[21.086549] (-) TimerEvent: {}
+[21.187513] (-) TimerEvent: {}
+[21.288504] (-) TimerEvent: {}
+[21.389449] (-) TimerEvent: {}
+[21.490413] (-) TimerEvent: {}
+[21.591365] (-) TimerEvent: {}
+[21.692373] (-) TimerEvent: {}
+[21.793337] (-) TimerEvent: {}
+[21.894296] (-) TimerEvent: {}
+[21.995248] (-) TimerEvent: {}
+[22.096245] (-) TimerEvent: {}
+[22.197189] (-) TimerEvent: {}
+[22.298129] (-) TimerEvent: {}
+[22.399099] (-) TimerEvent: {}
+[22.500105] (-) TimerEvent: {}
+[22.601043] (-) TimerEvent: {}
+[22.701994] (-) TimerEvent: {}
+[22.802941] (-) TimerEvent: {}
+[22.903897] (-) TimerEvent: {}
+[23.004832] (-) TimerEvent: {}
+[23.105769] (-) TimerEvent: {}
+[23.206699] (-) TimerEvent: {}
+[23.307636] (-) TimerEvent: {}
+[23.408608] (-) TimerEvent: {}
+[23.509548] (-) TimerEvent: {}
+[23.610479] (-) TimerEvent: {}
+[23.711417] (-) TimerEvent: {}
+[23.812368] (-) TimerEvent: {}
+[23.913304] (-) TimerEvent: {}
+[24.014239] (-) TimerEvent: {}
+[24.115199] (-) TimerEvent: {}
+[24.216252] (-) TimerEvent: {}
+[24.317018] (-) TimerEvent: {}
+[24.417650] (-) TimerEvent: {}
+[24.518221] (-) TimerEvent: {}
+[24.618748] (-) TimerEvent: {}
+[24.719248] (-) TimerEvent: {}
+[24.819750] (-) TimerEvent: {}
+[24.920252] (-) TimerEvent: {}
+[25.020721] (-) TimerEvent: {}
+[25.121176] (-) TimerEvent: {}
+[25.221692] (-) TimerEvent: {}
+[25.322158] (-) TimerEvent: {}
+[25.422622] (-) TimerEvent: {}
+[25.523074] (-) TimerEvent: {}
+[25.623519] (-) TimerEvent: {}
+[25.723974] (-) TimerEvent: {}
+[25.804804] (traffic_detect) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable traffic_detect_node\x1b[0m\n'}
+[25.824077] (-) TimerEvent: {}
+[25.924529] (-) TimerEvent: {}
+[26.025095] (-) TimerEvent: {}
+[26.125875] (-) TimerEvent: {}
+[26.226589] (-) TimerEvent: {}
+[26.327861] (-) TimerEvent: {}
+[26.415034] (traffic_detect) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408\n'}
+[26.418854] (traffic_detect) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408\n'}
+[26.421734] (traffic_detect) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408\n'}
+[26.427849] (-) TimerEvent: {}
+[26.528460] (-) TimerEvent: {}
+[26.629228] (-) TimerEvent: {}
+[26.730081] (-) TimerEvent: {}
+[26.830915] (-) TimerEvent: {}
+[26.931727] (-) TimerEvent: {}
+[27.032632] (-) TimerEvent: {}
+[27.133505] (-) TimerEvent: {}
+[27.234350] (-) TimerEvent: {}
+[27.335202] (-) TimerEvent: {}
+[27.436094] (-) TimerEvent: {}
+[27.536903] (-) TimerEvent: {}
+[27.629500] (traffic_detect) StdoutLine: {'line': b'[100%] Built target traffic_detect_node\n'}
+[27.637036] (-) TimerEvent: {}
+[27.655306] (traffic_detect) CommandEnded: {'returncode': 0}
+[27.657678] (traffic_detect) JobProgress: {'identifier': 'traffic_detect', 'progress': 'install'}
+[27.658602] (traffic_detect) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect'], 'cwd': '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nvidia'), ('SSH_CLIENT', '10.144.202.199 65041 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('BROWSER', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nvidia'), ('OLDPWD', '/home/nvidia'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6699bb7a-ee30-4c50-a415-a1e0aa3058c9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install:/home/nvidia/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nvidia'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/nvidia/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nvidia/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-69f018fb52.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/nvidia/Jetson-RT-Traffic-System/build/traffic_detect'), ('SSH_CONNECTION', '10.144.202.199 65041 129.65.138.237 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/home/nvidia/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:/home/nvidia/install/videopub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/home/nvidia/Jetson-RT-Traffic-System/install/detections_img:/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble')]), 'shell': False}
+[27.676972] (traffic_detect) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[27.677475] (traffic_detect) StdoutLine: {'line': b'-- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node\n'}
+[27.690101] (traffic_detect) StdoutLine: {'line': b'-- Set runtime path of "/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/lib/traffic_detect/traffic_detect_node" to ""\n'}
+[27.690613] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/package_run_dependencies/traffic_detect\n'}
+[27.690882] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/parent_prefix_path/traffic_detect\n'}
+[27.691103] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.sh\n'}
+[27.691269] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/ament_prefix_path.dsv\n'}
+[27.691425] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.sh\n'}
+[27.691577] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/environment/path.dsv\n'}
+[27.691722] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.bash\n'}
+[27.692066] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.sh\n'}
+[27.693608] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.zsh\n'}
+[27.693964] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/local_setup.dsv\n'}
+[27.694190] (traffic_detect) StdoutLine: {'line': b'-- Installing: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.dsv\n'}
+[27.694900] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/ament_index/resource_index/packages/traffic_detect\n'}
+[27.695550] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig.cmake\n'}
+[27.696346] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/cmake/traffic_detectConfig-version.cmake\n'}
+[27.698765] (traffic_detect) StdoutLine: {'line': b'-- Up-to-date: /home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.xml\n'}
+[27.699262] (traffic_detect) CommandEnded: {'returncode': 0}
+[27.737446] (-) TimerEvent: {}
+[27.742655] (traffic_detect) JobEnded: {'identifier': 'traffic_detect', 'rc': 0}
+[27.745399] (-) EventReactorShutdown: {}

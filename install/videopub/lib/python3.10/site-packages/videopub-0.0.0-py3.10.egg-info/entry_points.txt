@@ -1,0 +1,3 @@
+[console_scripts]
+video_publisher = videopub.video_publisher:main
+

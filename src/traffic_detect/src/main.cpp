@@ -227,7 +227,7 @@ private:
 
     
 
-    send_data(&output_cov, &output_bbox, image.cols, image.rows);
+    send_data(&output_cov, &output_bbox, image.cols, image.rows, msg->header.frame_id.c_str());
 
     // Free CUDA buffers
     cudaFree(buffers[input_idx]);
@@ -241,7 +241,7 @@ private:
 
   
 
-  void send_data(std::vector<float>* cov, std::vector<float>* bbox, float img_w, float img_h) {
+  void send_data(std::vector<float>* cov, std::vector<float>* bbox, float img_w, float img_h, const char* frid) {
     const int grid_h = 34;
     const int grid_w = 60;
     const int grid_d = 4;
@@ -290,8 +290,6 @@ private:
           float w = std::clamp(w_model * scale_x, 1.0f, img_w);
           float h = std::clamp(h_model * scale_y, 1.0f, img_h);
 
-          w = std::clamp(w, 1.0f, img_w);
-          h = std::clamp(h, 1.0f, img_h);
 
           vision_msgs::msg::Detection2D det;
           
@@ -318,7 +316,7 @@ private:
 
     vision_msgs::msg::Detection2DArray filtered_detections;
     filtered_detections.header.stamp = this->get_clock()->now();
-    filtered_detections.header.frame_id = "camera_frame";
+    filtered_detections.header.frame_id = frid;
 
     for (auto& [class_id, dets] : detections_by_class) {
         auto nmsed = non_max_suppression(dets, iou_t_);

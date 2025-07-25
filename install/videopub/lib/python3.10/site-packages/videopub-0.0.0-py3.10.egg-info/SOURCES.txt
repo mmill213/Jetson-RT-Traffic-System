@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/videopub/videopub.egg-info/PKG-INFO
+../../build/videopub/videopub.egg-info/SOURCES.txt
+../../build/videopub/videopub.egg-info/dependency_links.txt
+../../build/videopub/videopub.egg-info/entry_points.txt
+../../build/videopub/videopub.egg-info/requires.txt
+../../build/videopub/videopub.egg-info/top_level.txt
+../../build/videopub/videopub.egg-info/zip-safe
+resource/videopub
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+videopub/__init__.py
+videopub/video_publisher.py

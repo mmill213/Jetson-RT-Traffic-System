@@ -1,1 +1,1 @@
-/home/nvidia/Jetson-RT-Traffic-System/install/traffic_detect:/opt/ros/humble
+/home/nvidia/Jetson-RT-Traffic-System/install/videopub:/home/nvidia/install/videopub:/opt/ros/humble
