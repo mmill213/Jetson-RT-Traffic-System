@@ -7,7 +7,7 @@ def generate_launch_description():
 
     video_path_arg = DeclareLaunchArgument(
         'video_path',
-        default_value='/home/nvidia/Jetson-RT-Traffic-System/video/2103099-hd_1280_720_60fps.mp4',
+        default_value='~/Jetson-RT-Traffic-System/video/2103099-hd_1280_720_60fps.mp4',
         description='Path to the video file to publish'
     )
 

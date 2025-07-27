@@ -23,8 +23,15 @@
 
 
 
-//#define MODEL_PATH "/home/main-user/Jetson-RT-Traffic-System/camera-model/model.trt"
-#define MODEL_PATH "/home/nvidia/Jetson-RT-Traffic-System/camera-model/model.trt"
+#include <cstdlib>
+#include <string>
+
+std::string get_model_path() {
+  const char* home = std::getenv("HOME");
+  if (!home) home = "~";
+  return std::string(home) + "/Jetson-RT-Traffic-System/camera-model/model.trt";
+}
+#define MODEL_PATH get_model_path().c_str()
 
 
 class Logger : public nvinfer1::ILogger {
