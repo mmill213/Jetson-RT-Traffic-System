@@ -1,0 +1,37 @@
+[0.048s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/detections_img': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/detections_img -- -j6 -l6
+[0.147s] [35m[1mConsolidate compiler generated dependencies of target detections_img_node[0m
+[0.205s] [ 50%] [32mBuilding CXX object CMakeFiles/detections_img_node.dir/src/main.cpp.o[0m
+[8.553s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/detections_img/src/main.cpp:[m[K In member function ‘[01m[Kvoid DrawingNode::try_render()[m[K’:
+[8.553s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/detections_img/src/main.cpp:56:25:[m[K [01;35m[Kwarning: [m[Kloop variable ‘[01m[Kbox[m[K’ creates a copy from type ‘[01m[Kconst vision_msgs::msg::Detection2D_<std::allocator<void> >[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wrange-loop-construct-Wrange-loop-construct]8;;[m[K]
+[8.553s]    56 |         for (const auto [01;35m[Kbox[m[K : latest_boxes_->detections){
+[8.554s]       |                         [01;35m[K^~~[m[K
+[8.554s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/detections_img/src/main.cpp:56:25:[m[K [01;36m[Knote: [m[Kuse reference type to prevent copying
+[8.554s]    56 |         for (const auto [01;36m[Kbox[m[K : latest_boxes_->detections){
+[8.554s]       |                         [01;36m[K^~~[m[K
+[8.555s]       |                         [32m[K&[m[K
+[28.107s] [100%] [32m[1mLinking CXX executable detections_img_node[0m
+[28.657s] /usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408
+[28.659s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408
+[28.660s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408
+[29.945s] [100%] Built target detections_img_node
+[29.974s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/detections_img' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/detections_img -- -j6 -l6
+[29.978s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/detections_img': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/detections_img
+[29.994s] -- Install configuration: ""
+[29.994s] -- Execute custom install script
+[29.995s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/lib/detections_img/detections_img_node
+[29.996s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/package_run_dependencies/detections_img
+[29.996s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/parent_prefix_path/detections_img
+[29.997s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/ament_prefix_path.sh
+[29.997s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/ament_prefix_path.dsv
+[29.997s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/path.sh
+[29.998s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/environment/path.dsv
+[29.998s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.bash
+[29.998s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.sh
+[29.999s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.zsh
+[29.999s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/local_setup.dsv
+[29.999s] -- Symlinking: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.dsv
+[30.018s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/ament_index/resource_index/packages/detections_img
+[30.018s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/cmake/detections_imgConfig.cmake
+[30.018s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/cmake/detections_imgConfig-version.cmake
+[30.019s] -- Up-to-date symlink: /home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.xml
+[30.026s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/detections_img' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/detections_img

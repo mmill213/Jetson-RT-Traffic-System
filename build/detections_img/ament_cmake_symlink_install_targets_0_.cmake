@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/main-user/Jetson-RT-Traffic-System/build/detections_img/detections_img_node" "TARGETS" "detections_img_node" "DESTINATION" "lib/detections_img")

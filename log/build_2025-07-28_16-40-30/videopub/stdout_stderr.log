@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/main-user/Jetson-RT-Traffic-System/src/videopub/setup.py", line 1, in <module>
+    from setuptools import setup
+  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+    import setuptools.version
+  File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+    import pkg_resources
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 77, in <module>
+    __import__('pkg_resources.extern.packaging.specifiers')
+  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/specifiers.py", line 24, in <module>
+    from .utils import canonicalize_version
+  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/utils.py", line 8, in <module>
+    from .tags import Tag, parse_tag
+  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/tags.py", line 5, in <module>
+    import logging
+  File "/usr/lib/python3.10/logging/__init__.py", line 522, in <module>
+    class Formatter(object):
+KeyboardInterrupt

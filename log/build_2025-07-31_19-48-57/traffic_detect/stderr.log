@@ -1,0 +1,30 @@
+[01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda/lib64/libcudart_static.a: not a directory
+[01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:6[m[K:
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::send_data(std::vector<float>*, std::vector<float>*, float, float, std::string&)[m[K’:
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:296:97:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_x[m[K’ was not declared in this scope
+  296 |           RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", [01;31m[Kraw_x[m[K, raw_y, raw_w, raw_h);
+      |                                                                                                 [01;31m[K^~~~~[m[K
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:296:104:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_y[m[K’ was not declared in this scope
+  296 |           RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", raw_x, [01;31m[Kraw_y[m[K, raw_w, raw_h);
+      |                                                                                                        [01;31m[K^~~~~[m[K
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:296:111:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_w[m[K’ was not declared in this scope
+  296 |           RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", raw_x, raw_y, [01;31m[Kraw_w[m[K, raw_h);
+      |                                                                                                               [01;31m[K^~~~~[m[K
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:296:118:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_h[m[K’ was not declared in this scope
+  296 |           RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", raw_x, raw_y, raw_w, [01;31m[Kraw_h[m[K);
+      |                                                                                                                      [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/traffic_detect_node.dir/build.make:76: CMakeFiles/traffic_detect_node.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/traffic_detect_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

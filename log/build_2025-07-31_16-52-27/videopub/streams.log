@@ -1,0 +1,21 @@
+[1.316s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/src/videopub': PYTHONPATH=/home/main-user/Jetson-RT-Traffic-System/build/videopub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/videopub build --build-base /home/main-user/Jetson-RT-Traffic-System/build/videopub/build install --record /home/main-user/Jetson-RT-Traffic-System/build/videopub/install.log --single-version-externally-managed install_data
+[1.801s] running egg_info
+[1.802s] writing ../../build/videopub/videopub.egg-info/PKG-INFO
+[1.803s] writing dependency_links to ../../build/videopub/videopub.egg-info/dependency_links.txt
+[1.803s] writing entry points to ../../build/videopub/videopub.egg-info/entry_points.txt
+[1.803s] writing requirements to ../../build/videopub/videopub.egg-info/requires.txt
+[1.804s] writing top-level names to ../../build/videopub/videopub.egg-info/top_level.txt
+[1.807s] reading manifest file '../../build/videopub/videopub.egg-info/SOURCES.txt'
+[1.809s] writing manifest file '../../build/videopub/videopub.egg-info/SOURCES.txt'
+[1.809s] running build
+[1.810s] running build_py
+[1.810s] running install
+[1.811s] running install_lib
+[1.813s] running install_data
+[1.814s] running install_egg_info
+[1.817s] removing '/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages/videopub-0.0.0-py3.10.egg-info' (and everything under it)
+[1.818s] Copying ../../build/videopub/videopub.egg-info to /home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages/videopub-0.0.0-py3.10.egg-info
+[1.820s] running install_scripts
+[1.864s] Installing video_publisher script to /home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/videopub
+[1.865s] writing list of installed files to '/home/main-user/Jetson-RT-Traffic-System/build/videopub/install.log'
+[1.935s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/src/videopub' returned '0': PYTHONPATH=/home/main-user/Jetson-RT-Traffic-System/build/videopub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/videopub build --build-base /home/main-user/Jetson-RT-Traffic-System/build/videopub/build install --record /home/main-user/Jetson-RT-Traffic-System/build/videopub/install.log --single-version-externally-managed install_data

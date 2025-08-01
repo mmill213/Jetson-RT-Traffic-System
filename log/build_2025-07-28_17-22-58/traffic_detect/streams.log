@@ -1,0 +1,16 @@
+[0.039s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/install/videopub:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[0.141s] [35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
+[0.183s] [ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
+[0.195s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda/lib64/libcudart_static.a: not a directory
+[0.195s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
+[8.462s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::send_data(std::vector<float>*, std::vector<float>*, float, float, std::string&)[m[K’:
+[8.463s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:257:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcell_w[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[8.463s]   257 |     const float [01;35m[Kcell_w[m[K = 960.0f / static_cast<float>(grid_w);  // cell size on model input scale
+[8.463s]       |                 [01;35m[K^~~~~~[m[K
+[8.464s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:258:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcell_h[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[8.464s]   258 |     const float [01;35m[Kcell_h[m[K = 544.0f / static_cast<float>(grid_h);
+[8.464s]       |                 [01;35m[K^~~~~~[m[K
+[10.372s] gmake[2]: *** [CMakeFiles/traffic_detect_node.dir/build.make:76: CMakeFiles/traffic_detect_node.dir/src/main.cpp.o] Interrupt
+[10.373s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/traffic_detect_node.dir/all] Interrupt
+[10.374s] gmake: *** [Makefile:146: all] Interrupt
+[10.449s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/install/videopub:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6

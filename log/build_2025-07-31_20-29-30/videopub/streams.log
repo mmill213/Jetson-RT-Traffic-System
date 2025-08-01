@@ -1,0 +1,40 @@
+[1.253s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/src/videopub': PYTHONPATH=/home/main-user/Jetson-RT-Traffic-System/build/videopub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/videopub build --build-base /home/main-user/Jetson-RT-Traffic-System/build/videopub/build install --record /home/main-user/Jetson-RT-Traffic-System/build/videopub/install.log --single-version-externally-managed install_data
+[1.396s] Traceback (most recent call last):
+[1.397s]   File "/home/main-user/Jetson-RT-Traffic-System/src/videopub/setup.py", line 1, in <module>
+[1.397s]     from setuptools import setup
+[1.397s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+[1.400s]     import setuptools.version
+[1.401s]   File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+[1.401s]     import pkg_resources
+[1.401s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 77, in <module>
+[1.402s]     __import__('pkg_resources.extern.packaging.specifiers')
+[1.402s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/specifiers.py", line 317, in <module>
+[1.404s]     class Specifier(_IndividualSpecifier):
+[1.404s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/specifiers.py", line 412, in Specifier
+[1.404s]     _regex = re.compile(r"^\s*" + _regex_str + r"\s*$", re.VERBOSE | re.IGNORECASE)
+[1.404s]   File "/usr/lib/python3.10/re.py", line 251, in compile
+[1.405s]     return _compile(pattern, flags)
+[1.405s]   File "/usr/lib/python3.10/re.py", line 303, in _compile
+[1.405s]     p = sre_compile.compile(pattern, flags)
+[1.406s]   File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+[1.407s]     p = sre_parse.parse(p, flags)
+[1.407s]   File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+[1.408s]     p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+[1.408s]   File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+[1.408s]     itemsappend(_parse(source, state, verbose, nested + 1,
+[1.408s]   File "/usr/lib/python3.10/sre_parse.py", line 841, in _parse
+[1.409s]     p = _parse_sub(source, state, sub_verbose, nested + 1)
+[1.409s]   File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+[1.409s]     itemsappend(_parse(source, state, verbose, nested + 1,
+[1.409s]   File "/usr/lib/python3.10/sre_parse.py", line 841, in _parse
+[1.409s]     p = _parse_sub(source, state, sub_verbose, nested + 1)
+[1.409s]   File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+[1.410s]     itemsappend(_parse(source, state, verbose, nested + 1,
+[1.410s]   File "/usr/lib/python3.10/sre_parse.py", line 512, in _parse
+[1.410s]     sourceget()
+[1.410s]   File "/usr/lib/python3.10/sre_parse.py", line 257, in get
+[1.410s]     self.__next()
+[1.410s]   File "/usr/lib/python3.10/sre_parse.py", line 234, in __next
+[1.410s]     def __next(self):
+[1.410s] KeyboardInterrupt
+[1.442s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/src/videopub' returned '-2': PYTHONPATH=/home/main-user/Jetson-RT-Traffic-System/build/videopub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/videopub build --build-base /home/main-user/Jetson-RT-Traffic-System/build/videopub/build install --record /home/main-user/Jetson-RT-Traffic-System/build/videopub/install.log --single-version-externally-managed install_data

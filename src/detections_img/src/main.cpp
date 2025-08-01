@@ -69,9 +69,9 @@ private:
             } else if (b_id == "bicycle"){
                 cv::rectangle(img, pt1, pt2, cv::Scalar(255, 0, 0));
             } else if (b_id == "person"){
-                cv::rectangle(img, pt1, pt2, cv::Scalar(0, 255, 0));
+                cv::rectangle(img, pt1, pt2, cv::Scalar(40, 255, 0));
             } else if (b_id == "road_sign"){
-                cv::rectangle(img, pt1, pt2, cv::Scalar(127, 127, 0));
+                cv::rectangle(img, pt1, pt2, cv::Scalar(60, 187, 255));
             } else {
                 return;
             }

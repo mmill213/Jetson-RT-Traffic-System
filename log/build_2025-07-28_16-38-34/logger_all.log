@@ -1,0 +1,326 @@
+[0.277s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.278s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff95013700>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff950130a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff950130a0>>)
+[0.627s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.627s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.627s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.627s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.627s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.628s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.628s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/main-user/Jetson-RT-Traffic-System'
+[0.628s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.628s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.628s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extensions ['ignore', 'ignore_ament_install']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extension 'ignore'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extension 'ignore_ament_install'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extensions ['colcon_pkg']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extension 'colcon_pkg'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extensions ['colcon_meta']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extension 'colcon_meta'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extensions ['ros']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extension 'ros'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extensions ['cmake', 'python']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extension 'cmake'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extension 'python'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extensions ['python_setup_py']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(camera-model) by extension 'python_setup_py'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ignore', 'ignore_ament_install']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore_ament_install'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_pkg']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_pkg'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_meta']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_meta'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ros']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ros'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['cmake', 'python']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'cmake'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['python_setup_py']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python_setup_py'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore_ament_install'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_pkg']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_pkg'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_meta']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_meta'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ros']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ros'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['cmake', 'python']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'cmake'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['python_setup_py']
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python_setup_py'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(src/detections_img) by extensions ['ignore', 'ignore_ament_install']
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(src/detections_img) by extension 'ignore'
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(src/detections_img) by extension 'ignore_ament_install'
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(src/detections_img) by extensions ['colcon_pkg']
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(src/detections_img) by extension 'colcon_pkg'
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(src/detections_img) by extensions ['colcon_meta']
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(src/detections_img) by extension 'colcon_meta'
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(src/detections_img) by extensions ['ros']
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(src/detections_img) by extension 'ros'
+[0.702s] DEBUG:colcon.colcon_core.package_identification:Package 'src/detections_img' with type 'ros.ament_cmake' and name 'detections_img'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/traffic_detect) by extensions ['ignore', 'ignore_ament_install']
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/traffic_detect) by extension 'ignore'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/traffic_detect) by extension 'ignore_ament_install'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/traffic_detect) by extensions ['colcon_pkg']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/traffic_detect) by extension 'colcon_pkg'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/traffic_detect) by extensions ['colcon_meta']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/traffic_detect) by extension 'colcon_meta'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/traffic_detect) by extensions ['ros']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/traffic_detect) by extension 'ros'
+[0.706s] DEBUG:colcon.colcon_core.package_identification:Package 'src/traffic_detect' with type 'ros.ament_cmake' and name 'traffic_detect'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/videopub) by extensions ['ignore', 'ignore_ament_install']
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/videopub) by extension 'ignore'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/videopub) by extension 'ignore_ament_install'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/videopub) by extensions ['colcon_pkg']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/videopub) by extension 'colcon_pkg'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/videopub) by extensions ['colcon_meta']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/videopub) by extension 'colcon_meta'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/videopub) by extensions ['ros']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/videopub) by extension 'ros'
+[0.708s] DEBUG:colcon.colcon_core.package_identification:Package 'src/videopub' with type 'ros.ament_python' and name 'videopub'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extensions ['ignore', 'ignore_ament_install']
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extension 'ignore'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extension 'ignore_ament_install'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extensions ['colcon_pkg']
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extension 'colcon_pkg'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extensions ['colcon_meta']
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extension 'colcon_meta'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extensions ['ros']
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extension 'ros'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extensions ['cmake', 'python']
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extension 'cmake'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extension 'python'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extensions ['python_setup_py']
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(usb_cam_cfg) by extension 'python_setup_py'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extensions ['ignore', 'ignore_ament_install']
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extension 'ignore'
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extension 'ignore_ament_install'
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extensions ['colcon_pkg']
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extension 'colcon_pkg'
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extensions ['colcon_meta']
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extension 'colcon_meta'
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extensions ['ros']
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extension 'ros'
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extensions ['cmake', 'python']
+[0.712s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extension 'cmake'
+[0.712s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extension 'python'
+[0.712s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extensions ['python_setup_py']
+[0.712s] Level 1:colcon.colcon_core.package_identification:_identify(video) by extension 'python_setup_py'
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.755s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.756s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.760s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/main-user/Jetson-RT-Traffic-System/install
+[0.761s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/main-user/install
+[0.765s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 303 installed packages in /opt/ros/humble
+[0.768s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.855s] Level 5:colcon.colcon_core.verb:set package 'detections_img' build argument 'cmake_args' from command line to 'None'
+[0.855s] Level 5:colcon.colcon_core.verb:set package 'detections_img' build argument 'cmake_target' from command line to 'None'
+[0.855s] Level 5:colcon.colcon_core.verb:set package 'detections_img' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.855s] Level 5:colcon.colcon_core.verb:set package 'detections_img' build argument 'cmake_clean_cache' from command line to 'False'
+[0.855s] Level 5:colcon.colcon_core.verb:set package 'detections_img' build argument 'cmake_clean_first' from command line to 'False'
+[0.855s] Level 5:colcon.colcon_core.verb:set package 'detections_img' build argument 'cmake_force_configure' from command line to 'False'
+[0.855s] Level 5:colcon.colcon_core.verb:set package 'detections_img' build argument 'ament_cmake_args' from command line to 'None'
+[0.855s] Level 5:colcon.colcon_core.verb:set package 'detections_img' build argument 'catkin_cmake_args' from command line to 'None'
+[0.855s] Level 5:colcon.colcon_core.verb:set package 'detections_img' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.855s] DEBUG:colcon.colcon_core.verb:Building package 'detections_img' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/main-user/Jetson-RT-Traffic-System/build/detections_img', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/main-user/Jetson-RT-Traffic-System/install/detections_img', 'merge_install': False, 'path': '/home/main-user/Jetson-RT-Traffic-System/src/detections_img', 'symlink_install': False, 'test_result_base': None}
+[0.856s] Level 5:colcon.colcon_core.verb:set package 'traffic_detect' build argument 'cmake_args' from command line to 'None'
+[0.856s] Level 5:colcon.colcon_core.verb:set package 'traffic_detect' build argument 'cmake_target' from command line to 'None'
+[0.856s] Level 5:colcon.colcon_core.verb:set package 'traffic_detect' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.856s] Level 5:colcon.colcon_core.verb:set package 'traffic_detect' build argument 'cmake_clean_cache' from command line to 'False'
+[0.856s] Level 5:colcon.colcon_core.verb:set package 'traffic_detect' build argument 'cmake_clean_first' from command line to 'False'
+[0.856s] Level 5:colcon.colcon_core.verb:set package 'traffic_detect' build argument 'cmake_force_configure' from command line to 'False'
+[0.856s] Level 5:colcon.colcon_core.verb:set package 'traffic_detect' build argument 'ament_cmake_args' from command line to 'None'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'traffic_detect' build argument 'catkin_cmake_args' from command line to 'None'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'traffic_detect' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.857s] DEBUG:colcon.colcon_core.verb:Building package 'traffic_detect' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect', 'merge_install': False, 'path': '/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect', 'symlink_install': False, 'test_result_base': None}
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'videopub' build argument 'cmake_args' from command line to 'None'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'videopub' build argument 'cmake_target' from command line to 'None'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'videopub' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'videopub' build argument 'cmake_clean_cache' from command line to 'False'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'videopub' build argument 'cmake_clean_first' from command line to 'False'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'videopub' build argument 'cmake_force_configure' from command line to 'False'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'videopub' build argument 'ament_cmake_args' from command line to 'None'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'videopub' build argument 'catkin_cmake_args' from command line to 'None'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'videopub' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.858s] DEBUG:colcon.colcon_core.verb:Building package 'videopub' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/main-user/Jetson-RT-Traffic-System/build/videopub', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/main-user/Jetson-RT-Traffic-System/install/videopub', 'merge_install': False, 'path': '/home/main-user/Jetson-RT-Traffic-System/src/videopub', 'symlink_install': False, 'test_result_base': None}
+[0.858s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.860s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.861s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/main-user/Jetson-RT-Traffic-System/src/detections_img' with build type 'ament_cmake'
+[0.861s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/main-user/Jetson-RT-Traffic-System/src/detections_img'
+[0.866s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.866s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.866s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.875s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect' with build type 'ament_cmake'
+[0.875s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect'
+[0.875s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.876s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.884s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/main-user/Jetson-RT-Traffic-System/src/videopub' with build type 'ament_python'
+[0.884s] Level 1:colcon.colcon_core.shell:create_environment_hook('videopub', 'ament_prefix_path')
+[0.885s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/hook/ament_prefix_path.ps1'
+[0.886s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/hook/ament_prefix_path.dsv'
+[0.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/hook/ament_prefix_path.sh'
+[0.889s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.889s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.904s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/detections_img': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/detections_img -- -j6 -l6
+[0.914s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[1.493s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/main-user/Jetson-RT-Traffic-System/src/videopub'
+[1.494s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.495s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.509s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/detections_img' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/detections_img -- -j6 -l6
+[1.531s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/detections_img': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/detections_img
+[1.575s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(detections_img)
+[1.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/detections_img' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/detections_img
+[1.582s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img' for CMake module files
+[1.584s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img' for CMake config files
+[1.585s] Level 1:colcon.colcon_core.shell:create_environment_hook('detections_img', 'cmake_prefix_path')
+[1.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/hook/cmake_prefix_path.ps1'
+[1.587s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/hook/cmake_prefix_path.dsv'
+[1.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/hook/cmake_prefix_path.sh'
+[1.590s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/lib'
+[1.591s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/bin'
+[1.591s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/lib/pkgconfig/detections_img.pc'
+[1.592s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/lib/python3.10/site-packages'
+[1.592s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/bin'
+[1.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.ps1'
+[1.595s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.dsv'
+[1.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.sh'
+[1.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.bash'
+[1.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.zsh'
+[1.603s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/colcon-core/packages/detections_img)
+[1.606s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(detections_img)
+[1.606s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img' for CMake module files
+[1.608s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img' for CMake config files
+[1.608s] Level 1:colcon.colcon_core.shell:create_environment_hook('detections_img', 'cmake_prefix_path')
+[1.609s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/hook/cmake_prefix_path.ps1'
+[1.611s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/hook/cmake_prefix_path.dsv'
+[1.612s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/hook/cmake_prefix_path.sh'
+[1.615s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/lib'
+[1.615s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/bin'
+[1.616s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/lib/pkgconfig/detections_img.pc'
+[1.616s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/lib/python3.10/site-packages'
+[1.617s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/bin'
+[1.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.ps1'
+[1.620s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.dsv'
+[1.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.sh'
+[1.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.bash'
+[1.626s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/detections_img/package.zsh'
+[1.627s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/main-user/Jetson-RT-Traffic-System/install/detections_img/share/colcon-core/packages/detections_img)
+[2.258s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/main-user/Jetson-RT-Traffic-System/src/videopub': PYTHONPATH=/home/main-user/Jetson-RT-Traffic-System/build/videopub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/videopub build --build-base /home/main-user/Jetson-RT-Traffic-System/build/videopub/build install --record /home/main-user/Jetson-RT-Traffic-System/build/videopub/install.log --single-version-externally-managed install_data
+[2.905s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/videopub' for CMake module files
+[2.906s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/main-user/Jetson-RT-Traffic-System/src/videopub' returned '0': PYTHONPATH=/home/main-user/Jetson-RT-Traffic-System/build/videopub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/videopub build --build-base /home/main-user/Jetson-RT-Traffic-System/build/videopub/build install --record /home/main-user/Jetson-RT-Traffic-System/build/videopub/install.log --single-version-externally-managed install_data
+[2.907s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/videopub' for CMake config files
+[2.910s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib'
+[2.910s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/videopub/bin'
+[2.910s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/pkgconfig/videopub.pc'
+[2.911s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages'
+[2.911s] Level 1:colcon.colcon_core.shell:create_environment_hook('videopub', 'pythonpath')
+[2.912s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/hook/pythonpath.ps1'
+[2.914s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/hook/pythonpath.dsv'
+[2.916s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/hook/pythonpath.sh'
+[2.918s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/videopub/bin'
+[2.918s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(videopub)
+[2.920s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/package.ps1'
+[2.922s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/package.dsv'
+[2.924s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/package.sh'
+[2.925s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/package.bash'
+[2.927s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/videopub/package.zsh'
+[2.928s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/main-user/Jetson-RT-Traffic-System/install/videopub/share/colcon-core/packages/videopub)
+[26.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[26.185s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect
+[26.231s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(traffic_detect)
+[26.232s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect' for CMake module files
+[26.233s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --install /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect
+[26.235s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect' for CMake config files
+[26.236s] Level 1:colcon.colcon_core.shell:create_environment_hook('traffic_detect', 'cmake_prefix_path')
+[26.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/hook/cmake_prefix_path.ps1'
+[26.239s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/hook/cmake_prefix_path.dsv'
+[26.240s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/hook/cmake_prefix_path.sh'
+[26.242s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib'
+[26.243s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/bin'
+[26.243s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib/pkgconfig/traffic_detect.pc'
+[26.244s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib/python3.10/site-packages'
+[26.245s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/bin'
+[26.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.ps1'
+[26.248s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.dsv'
+[26.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.sh'
+[26.252s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.bash'
+[26.253s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.zsh'
+[26.254s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/colcon-core/packages/traffic_detect)
+[26.257s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(traffic_detect)
+[26.257s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect' for CMake module files
+[26.259s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect' for CMake config files
+[26.261s] Level 1:colcon.colcon_core.shell:create_environment_hook('traffic_detect', 'cmake_prefix_path')
+[26.261s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/hook/cmake_prefix_path.ps1'
+[26.263s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/hook/cmake_prefix_path.dsv'
+[26.264s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/hook/cmake_prefix_path.sh'
+[26.266s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib'
+[26.267s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/bin'
+[26.267s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib/pkgconfig/traffic_detect.pc'
+[26.268s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/lib/python3.10/site-packages'
+[26.269s] Level 1:colcon.colcon_core.environment:checking '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/bin'
+[26.270s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.ps1'
+[26.272s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.dsv'
+[26.273s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.sh'
+[26.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.bash'
+[26.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/traffic_detect/package.zsh'
+[26.278s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/main-user/Jetson-RT-Traffic-System/install/traffic_detect/share/colcon-core/packages/traffic_detect)
+[26.279s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[26.280s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[26.281s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[26.281s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[26.300s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[26.300s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[26.300s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[26.334s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[26.335s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/main-user/Jetson-RT-Traffic-System/install/local_setup.ps1'
+[26.339s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/main-user/Jetson-RT-Traffic-System/install/_local_setup_util_ps1.py'
+[26.344s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/main-user/Jetson-RT-Traffic-System/install/setup.ps1'
+[26.348s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/main-user/Jetson-RT-Traffic-System/install/local_setup.sh'
+[26.351s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/main-user/Jetson-RT-Traffic-System/install/_local_setup_util_sh.py'
+[26.353s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/main-user/Jetson-RT-Traffic-System/install/setup.sh'
+[26.358s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/main-user/Jetson-RT-Traffic-System/install/local_setup.bash'
+[26.359s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/main-user/Jetson-RT-Traffic-System/install/setup.bash'
+[26.363s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/main-user/Jetson-RT-Traffic-System/install/local_setup.zsh'
+[26.365s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/main-user/Jetson-RT-Traffic-System/install/setup.zsh'

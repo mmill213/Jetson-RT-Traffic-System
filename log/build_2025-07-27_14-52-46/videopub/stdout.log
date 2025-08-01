@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing videopub.egg-info/PKG-INFO
+writing dependency_links to videopub.egg-info/dependency_links.txt
+writing entry points to videopub.egg-info/entry_points.txt
+writing requirements to videopub.egg-info/requires.txt
+writing top-level names to videopub.egg-info/top_level.txt
+reading manifest file 'videopub.egg-info/SOURCES.txt'
+writing manifest file 'videopub.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/python3.10/site-packages/videopub.egg-link (link to .)
+Installing video_publisher script to /home/main-user/Jetson-RT-Traffic-System/install/videopub/lib/videopub
+
+Installed /home/main-user/Jetson-RT-Traffic-System/build/videopub
+running symlink_data

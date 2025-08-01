@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/nvidia/Jetson-RT-Traffic-System/src/detections_img/src/main.cpp" "CMakeFiles/detections_img_node.dir/src/main.cpp.o" "gcc" "CMakeFiles/detections_img_node.dir/src/main.cpp.o.d"
+  "/home/main-user/Jetson-RT-Traffic-System/src/detections_img/src/main.cpp" "CMakeFiles/detections_img_node.dir/src/main.cpp.o" "gcc" "CMakeFiles/detections_img_node.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

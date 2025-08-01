@@ -1,0 +1,12 @@
+[01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda/lib64/libcudart_static.a: not a directory
+[01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::send_data(std::vector<float>*, std::vector<float>*, float, float, std::string&)[m[K’:
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:257:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcell_w[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  257 |     const float [01;35m[Kcell_w[m[K = 960.0f / static_cast<float>(grid_w);  // cell size on model input scale
+      |                 [01;35m[K^~~~~~[m[K
+[01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:258:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcell_h[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  258 |     const float [01;35m[Kcell_h[m[K = 544.0f / static_cast<float>(grid_h);
+      |                 [01;35m[K^~~~~~[m[K
+/usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.408
+/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408
+/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408

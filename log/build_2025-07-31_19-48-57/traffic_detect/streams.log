@@ -1,0 +1,33 @@
+[0.043s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/home/main-user/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
+[0.202s] [ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
+[0.211s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda/lib64/libcudart_static.a: not a directory
+[0.211s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
+[8.746s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[8.746s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[8.747s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.747s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.747s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.747s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.747s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.747s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.747s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.748s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.748s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.748s]                  from [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:6[m[K:
+[8.748s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:[m[K In member function ‘[01m[Kvoid TrafficDetector::send_data(std::vector<float>*, std::vector<float>*, float, float, std::string&)[m[K’:
+[8.748s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:296:97:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_x[m[K’ was not declared in this scope
+[8.748s]   296 |           RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", [01;31m[Kraw_x[m[K, raw_y, raw_w, raw_h);
+[8.748s]       |                                                                                                 [01;31m[K^~~~~[m[K
+[8.773s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:296:104:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_y[m[K’ was not declared in this scope
+[8.774s]   296 |           RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", raw_x, [01;31m[Kraw_y[m[K, raw_w, raw_h);
+[8.774s]       |                                                                                                        [01;31m[K^~~~~[m[K
+[8.801s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:296:111:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_w[m[K’ was not declared in this scope
+[8.801s]   296 |           RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", raw_x, raw_y, [01;31m[Kraw_w[m[K, raw_h);
+[8.801s]       |                                                                                                               [01;31m[K^~~~~[m[K
+[8.827s] [01m[K/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/src/main.cpp:296:118:[m[K [01;31m[Kerror: [m[K‘[01m[Kraw_h[m[K’ was not declared in this scope
+[8.827s]   296 |           RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", raw_x, raw_y, raw_w, [01;31m[Kraw_h[m[K);
+[8.828s]       |                                                                                                                      [01;31m[K^~~~~[m[K
+[16.168s] gmake[2]: *** [CMakeFiles/traffic_detect_node.dir/build.make:76: CMakeFiles/traffic_detect_node.dir/src/main.cpp.o] Error 1
+[16.169s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/traffic_detect_node.dir/all] Error 2
+[16.169s] gmake: *** [Makefile:146: all] Error 2
+[16.174s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/home/main-user/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6

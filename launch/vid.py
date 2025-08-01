@@ -2,12 +2,13 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+import os
 
 def generate_launch_description():
 
     video_path_arg = DeclareLaunchArgument(
         'video_path',
-        default_value='~/Jetson-RT-Traffic-System/video/2103099-hd_1280_720_60fps.mp4',
+        default_value= os.path.expanduser('~/Jetson-RT-Traffic-System/video/2103099-hd_1280_720_60fps.mp4'),
         description='Path to the video file to publish'
     )
 
@@ -28,8 +29,8 @@ def generate_launch_description():
             name='traffic_detect_node',
             output='screen',
             parameters=[{
-                'conf_thresh': 0.05,
-                'intersection_max': 1.0
+                'conf_thresh': 0.5,
+                'intersection_max': 0.5
             }]
         ),
         Node(

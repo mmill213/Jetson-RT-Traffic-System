@@ -234,7 +234,8 @@ private:
 
     
 
-    send_data(&output_cov, &output_bbox, image.cols, image.rows, msg->header.frame_id);
+    send_data(&output_cov, &output_bbox, static_cast<float>(msg->width), static_cast<float>(msg->height), msg->header.frame_id);
+
 
     // Free CUDA buffers
     cudaFree(buffers[input_idx]);
@@ -253,8 +254,9 @@ private:
     const int grid_w = 60;
     const int grid_d = 4;
 
-    //const float img_w = 960;
-    //const float img_h = 544;
+    const float cell_w = 960.0f / static_cast<float>(grid_w);  // cell size on model input scale
+    const float cell_h = 544.0f / static_cast<float>(grid_h);
+
 
     const char* ids[] = {
       "car",
@@ -273,34 +275,44 @@ private:
     for (int i = 0; i < grid_h; ++i) {
       for (int j = 0; j < grid_w; ++j) {
         for (int k = 0; k < grid_d; ++k) {
+          
+          // if the covaraince vector is less than the thresh at the index of our object, skip this elem
           float confidence = (*cov)[k * grid_h * grid_w + i * grid_w + j];
           if (confidence < conf_thresh_) continue;
 
+          // otherwise, we need to proc the elem in the bbox vector
+          // bboxes have size of 4x ints, so base == 'l' == k * 4 
           int base = k * 4;
-          float cell_w = 960.0f / grid_w;  // cell size on model input scale
-          float cell_h = 544.0f / grid_h;
+          
 
-          float x_norm = (*bbox)[(base + 0) * grid_h * grid_w + i * grid_w + j];
-          float y_norm = (*bbox)[(base + 1) * grid_h * grid_w + i * grid_w + j];
-          float w_norm = (*bbox)[(base + 2) * grid_h * grid_w + i * grid_w + j];
-          float h_norm = (*bbox)[(base + 3) * grid_h * grid_w + i * grid_w + j];
+          // (x, y, w, h)
+          // collect all values at index == base fro mthe model bbox vector
+          // base + n is essentially k once the vector is flattened
+          float x_raw = (*bbox)[(base + 0) * grid_h * grid_w + i * grid_w + j];
+          float y_raw = (*bbox)[(base + 1) * grid_h * grid_w + i * grid_w + j];
+          float w_raw = (*bbox)[(base + 2) * grid_h * grid_w + i * grid_w + j];
+          float h_raw = (*bbox)[(base + 3) * grid_h * grid_w + i * grid_w + j];
 
-          float w_model = w_norm * cell_w;
-          float h_model = h_norm * cell_h;
+          //RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", x_raw, y_raw, w_raw, h_raw);
+          
+          float w_model = w_raw * scale_x; // TODO try permuations with 960, cell_w, and 16
+          float h_model = h_raw * scale_y;
 
-          float x_model = j * cell_w + x_norm;
-          float y_model = i * cell_h + y_norm;
+          //grab the actual x-y from the current cell
+          float x_model = (j + x_raw) * cell_w;
+          float y_model = (i + y_raw) * cell_h;
 
           // Now scale to original image size:
           float x = x_model * scale_x;
           float y = y_model * scale_y;
-          float w = std::clamp(w_model * scale_x, 1.0f, img_w);
-          float h = std::clamp(h_model * scale_y, 1.0f, img_h);
-
+          float w = w_model;
+          float h = h_model;
+                  
 
           vision_msgs::msg::Detection2D det;
           
 
+          //log to the bbox data structure
           det.bbox.center.position.x = x;
           det.bbox.center.position.y = y;
           det.bbox.size_x = w;
@@ -309,7 +321,7 @@ private:
           det.results.resize(1);
           det.results[0].hypothesis.class_id = ids[k];  // or std::to_string(k)
           det.results[0].hypothesis.score = confidence;
-
+          //push bbox
           raw_detections.push_back(det);
         }
       }

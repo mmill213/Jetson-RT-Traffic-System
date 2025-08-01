@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nvidia/Jetson-RT-Traffic-System/src/detections_img
+CMAKE_SOURCE_DIR = /home/main-user/Jetson-RT-Traffic-System/src/detections_img
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nvidia/Jetson-RT-Traffic-System/build/detections_img
+CMAKE_BINARY_DIR = /home/main-user/Jetson-RT-Traffic-System/build/detections_img
 
 # Utility rule file for detections_img_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/detections_img_uninstall.dir/compiler_depend.make
 include CMakeFiles/detections_img_uninstall.dir/progress.make
 
 CMakeFiles/detections_img_uninstall:
-	/usr/bin/cmake -P /home/nvidia/Jetson-RT-Traffic-System/build/detections_img/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/main-user/Jetson-RT-Traffic-System/build/detections_img/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 detections_img_uninstall: CMakeFiles/detections_img_uninstall
 detections_img_uninstall: CMakeFiles/detections_img_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/detections_img_uninstall.dir/clean:
 .PHONY : CMakeFiles/detections_img_uninstall.dir/clean
 
 CMakeFiles/detections_img_uninstall.dir/depend:
-	cd /home/nvidia/Jetson-RT-Traffic-System/build/detections_img && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Jetson-RT-Traffic-System/src/detections_img /home/nvidia/Jetson-RT-Traffic-System/src/detections_img /home/nvidia/Jetson-RT-Traffic-System/build/detections_img /home/nvidia/Jetson-RT-Traffic-System/build/detections_img /home/nvidia/Jetson-RT-Traffic-System/build/detections_img/CMakeFiles/detections_img_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/main-user/Jetson-RT-Traffic-System/build/detections_img && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/main-user/Jetson-RT-Traffic-System/src/detections_img /home/main-user/Jetson-RT-Traffic-System/src/detections_img /home/main-user/Jetson-RT-Traffic-System/build/detections_img /home/main-user/Jetson-RT-Traffic-System/build/detections_img /home/main-user/Jetson-RT-Traffic-System/build/detections_img/CMakeFiles/detections_img_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/detections_img_uninstall.dir/depend
 
