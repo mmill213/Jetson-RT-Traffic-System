@@ -21,8 +21,6 @@
 #include "vision_msgs/msg/detection2_d_array.hpp"
 
 
-
-
 #include <cstdlib>
 #include <string>
 
@@ -125,23 +123,56 @@ public:
       throw std::runtime_error("Failed to open TensorRT engine file.");
     }
     engine_file.seekg(0, std::ifstream::end);
-    size_t engine_size = engine_file.tellg();
+    size_t engine_size = engine_file.tellg(); // grab engine size at EOF
     engine_file.seekg(0, std::ifstream::beg);
     std::vector<char> engine_data(engine_size);
     engine_file.read(engine_data.data(), engine_size);
     //end load engine
     runtime_ = nvinfer1::createInferRuntime(gLogger); // bind logger
     engine_ = runtime_->deserializeCudaEngine(engine_data.data(), engine_data.size());
-    context_ = engine_->createExecutionContext();
+    context_ = engine_->createExecutionContext(); // create context for model
 
     for(int i = 0; i < engine_->getNbIOTensors(); i++){
-      RCLCPP_INFO(this->get_logger(), "name: %s\n", engine_->getIOTensorName(i));
+      RCLCPP_INFO(this->get_logger(), "name: %s\n", engine_->getIOTensorName(i)); // list all tensor names in order
     }
     
+    input_idx = -1;
+    cov_idx = -1;
+    bbox_idx  = -1;
+    
+    for (int i = 0; i < engine_->getNbIOTensors(); i++){
+      if (strcmp(engine_->getIOTensorName(i), "input_1:0") == 0){
+        input_idx = i;
+      } else if (strcmp(engine_->getIOTensorName(i), "output_cov/Sigmoid:0") == 0){
+        cov_idx = i;
+      } else if (strcmp(engine_->getIOTensorName(i), "output_bbox/BiasAdd:0") == 0) {
+        bbox_idx = i;
+      }
+    } // load idxs
+
+    void* buffers[3];
+
+    size_t input_size = 1 * 3 * 544 * 960 * sizeof(float);
+    size_t cov_size = 1 * 4 * 34 * 60 * sizeof(float);
+    size_t bbox_size = 1 * 16 * 34 * 60 * sizeof(float);
+    
+    
+    cudaMalloc(&this->buffers[input_idx], input_size);
+    cudaMalloc(&this->buffers[cov_idx], cov_size);
+    cudaMalloc(&this->buffers[bbox_idx], bbox_size);
+
+
   }
 
 
   ~TrafficDetector() override {
+    // Free CUDA buffers
+    
+    cudaFree(buffers[input_idx]);
+    cudaFree(buffers[cov_idx]);
+    cudaFree(buffers[bbox_idx]);
+
+
     if (context_) delete context_;
     if (engine_) delete engine_;
     if (runtime_) delete runtime_;
@@ -180,9 +211,9 @@ private:
     cv::resize(image, resized, cv::Size(model_width, model_height));
 
     // Convert to float and scale to [0, 1]
-    resized.convertTo(resized, CV_32FC3, 1.0 / 255.0);
+    resized.convertTo(resized, CV_32FC3, 1.0 / 255.0); // CV_32FC3 -> f32 @ 3 channels
 
-    // Convert HWC to NCHW
+    // Convert height x width x color -> normalized-channel x height x width
     std::vector<float> input_tensor(3 * model_height * model_width);
     int idx = 0;
     for (int c = 0; c < 3; ++c) {
@@ -194,35 +225,11 @@ private:
     }
 
     
-    int input_idx = -1;
-    int cov_idx = -1;
-    int bbox_idx  = -1;
-    
-    for (int i = 0; i < engine_->getNbIOTensors(); i++){
-      if (strcmp(engine_->getIOTensorName(i), "input_1:0") == 0){
-        input_idx = i;
-      } else if (strcmp(engine_->getIOTensorName(i), "output_cov/Sigmoid:0") == 0){
-        cov_idx = i;
-      } else if (strcmp(engine_->getIOTensorName(i), "output_bbox/BiasAdd:0") == 0) {
-        bbox_idx = i;
-      }
-    } // load idxs
-
-    void* buffers[3];
-
-    size_t input_size = 1 * 3 * 544 * 960 * sizeof(float);
-    size_t cov_size = 1 * 4 * 34 * 60 * sizeof(float);
-    size_t bbox_size = 1 * 16 * 34 * 60 * sizeof(float);
-    
-    
-    cudaMalloc(&buffers[input_idx], input_size);
-    cudaMalloc(&buffers[cov_idx], cov_size);
-    cudaMalloc(&buffers[bbox_idx], bbox_size);
-
+  
     // Upload input
     cudaMemcpy(buffers[input_idx], input_tensor.data(), input_tensor.size() * sizeof(float), cudaMemcpyHostToDevice);
 
-    // Run inference
+    // Run inference thru model context
     context_->executeV2(buffers);
 
 
@@ -233,17 +240,9 @@ private:
     cudaMemcpy(output_bbox.data(), buffers[bbox_idx], output_bbox.size() * sizeof(float), cudaMemcpyDeviceToHost);
 
     
-
+    // publish the found data after processing into a ROS msg
     send_data(&output_cov, &output_bbox, static_cast<float>(msg->width), static_cast<float>(msg->height), msg->header.frame_id);
-
-
-    // Free CUDA buffers
-    cudaFree(buffers[input_idx]);
-    cudaFree(buffers[cov_idx]);
-    cudaFree(buffers[bbox_idx]);
-
-    
-
+  
     
   }
 
@@ -305,8 +304,8 @@ private:
           // Now scale to original image size:
           float x = x_model * scale_x;
           float y = y_model * scale_y;
-          float w = w_model;
-          float h = h_model;
+          float w = w_model * 60.0f;
+          float h = h_model * 34.0f;
                   
 
           vision_msgs::msg::Detection2D det;
@@ -362,6 +361,11 @@ private:
   
   float conf_thresh_{0.05f};  // default value
   float iou_t_{0.5f};
+
+  void* buffers[3];
+  int input_idx;
+  int cov_idx;
+  int bbox_idx;
 };
 
 

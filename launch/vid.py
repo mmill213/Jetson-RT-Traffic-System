@@ -20,7 +20,11 @@ def generate_launch_description():
             executable='video_publisher',
             name='video_publisher_node',
             output='screen',
-            parameters=[{'video_path': LaunchConfiguration('video_path')}]
+            parameters=[{
+                'video_path': LaunchConfiguration('video_path'),
+                'width': 960,
+                'height': 544
+                }]
         ),
 
         Node(
@@ -29,8 +33,9 @@ def generate_launch_description():
             name='traffic_detect_node',
             output='screen',
             parameters=[{
-                'conf_thresh': 0.5,
-                'intersection_max': 0.5
+                'conf_thresh': 0.55,
+                'intersection_max': 0.3
+
             }]
         ),
         Node(
