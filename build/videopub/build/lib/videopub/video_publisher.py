@@ -49,6 +49,7 @@ class VideoPublisher(Node):
                 frame = cv2.resize(frame, self.resize_dims)
             
             ros_image = self.bridge.cv2_to_imgmsg(frame, encoding='bgr8')
+            
             self.publisher_.publish(ros_image)
             self.get_logger().info('Publishing video frame')
         else:
