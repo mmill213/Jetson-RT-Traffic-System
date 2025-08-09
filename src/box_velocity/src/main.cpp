@@ -4,7 +4,7 @@
 #include <chrono>
 
 float hypot(float x1, float y1, float x2, float y2){
-    return std::pow(std::pow((x1 - x2), 2.0) + std::pow((y1 - y2), 2.0), 0.5f);
+    return std::hypot(x1-x2, y1-y2);
 }
 
 float angle(float x1, float y1, float x2, float y2){
@@ -24,22 +24,23 @@ public:
             std::bind(&BoxVelocityNode::box_callback, this, std::placeholders::_1)
         );
         
-        //last_msg = NULL;
+        
     }
 private:
 
     void box_callback(const vision_msgs::msg::Detection2DArray::SharedPtr m){
 
+        // first loop count init stuff
         auto msg_time = rclcpp::Time(m->header.stamp);
         if (!prev_time.nanoseconds()){
             prev_time = msg_time;
-            return;
+            
         }
 
         double dt = (msg_time - prev_time).seconds();
         prev_time = msg_time;
 
-
+        
         if (chains.size() == 0){
             for (auto &det : m->detections){
                 std::vector<vision_msgs::msg::Detection2D> v;
@@ -50,15 +51,20 @@ private:
             
             return;
         }
-
+        // end first loop
         
 
         
-
+        // link all chains with new detections, 
+        // we parse through all detections in new frame, 
+        // and compare the dists to the latest member of each chain
+        // then we link our detection to closest chain
         for (auto &c : chains){
+            
             auto latest = c.back();
-            float d = 999999999999.0f;
+            float d = 999999999999.0f; // impossibly large number by default. 
             vision_msgs::msg::Detection2D* closest = nullptr;
+
             for (auto &det : m->detections){
                 if (det.id != latest.id) continue;
                 
@@ -69,6 +75,7 @@ private:
                 if ((dist < d)){
                     d = dist;
                     closest = &det;
+                    
                 }
 
 
@@ -77,10 +84,36 @@ private:
             }
 
             
+            
 
-            c.push_back(*closest);
+            if (closest) {
+                // add closest to chain
+                c.push_back(*closest);
 
+                //erase the closest from the detection pool. we found the match and linked it.
+                auto it = std::find_if(m->detections.begin(), m->detections.end(),
+                    [closest](const vision_msgs::msg::Detection2D& det) {
+                        return &det == closest;
+                    });
+                if (it != m->detections.end()) {
+                    m->detections.erase(it);
+                }
 
+            } else {
+                RCLCPP_WARN(this->get_logger(), "No matching detection found for ID: %s", latest.id.c_str());
+                continue; // skip velocity calc
+            }
+
+            // limit the number of items in a chain.
+            const size_t max_chain_length = 10; // TODO make this a cli param
+            if (c.size() > max_chain_length) {
+                c.erase(c.begin());  // Remove oldest
+            }
+
+        }
+
+        for (auto &c : chains){
+            // get last -> cur velo and track the obj across camera
             if (c.size() >= 2 && dt > 0.0) {
                 auto &prev = c[c.size() - 2];
                 auto &curr = c[c.size() - 1];
@@ -89,17 +122,15 @@ private:
                 float dy = curr.bbox.center.position.y - prev.bbox.center.position.y;
                 float vx = dx / dt;
                 float vy = dy / dt;
-                float speed = std::sqrt(vx * vx + vy * vy);
+                float speed = std::hypot(vx, vy);
                 float dir = std::atan2(vy, vx);  
 
                 RCLCPP_INFO(this->get_logger(),
                     "Object ID: %s | v = (%.2f, %.2f) px/s | speed = %.2f px/s | angle = %.2f rad",
                     curr.id.c_str(), vx, vy, speed, dir);
             }
-        
-        
-        
-        }
+        }        
+
 
 
 

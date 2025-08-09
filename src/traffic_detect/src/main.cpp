@@ -66,9 +66,7 @@ float IoU(const vision_msgs::msg::Detection2D& a, const vision_msgs::msg::Detect
 }
 
 // NMS filter function
-std::vector<vision_msgs::msg::Detection2D> non_max_suppression(
-    const std::vector<vision_msgs::msg::Detection2D>& boxes,
-    float iou_threshold = 0.5f) {
+std::vector<vision_msgs::msg::Detection2D> non_max_suppression(const std::vector<vision_msgs::msg::Detection2D>& boxes, float iou_threshold = 0.5f) {
 
     std::vector<vision_msgs::msg::Detection2D> result;
 
@@ -97,6 +95,24 @@ std::vector<vision_msgs::msg::Detection2D> non_max_suppression(
     return result;
 }
 
+std::vector<vision_msgs::msg::Detection2D> size_suppress(const std::vector<vision_msgs::msg::Detection2D>& boxes, float w_min = 20.0f, float h_min = 20.0f){
+  std::vector<vision_msgs::msg::Detection2D> result;
+  #define cur boxes[i]
+
+  for (size_t i = 0; i < boxes.size(); i++){
+    
+    if (cur.bbox.size_x <= w_min || cur.bbox.size_y <= h_min){
+      continue;
+    }
+
+    result.push_back(cur);
+    
+  }
+ 
+  return result;
+  #undef cur
+}
+
 class TrafficDetector : public rclcpp::Node {
 public:
   TrafficDetector() : Node("traffic_detect") {
@@ -109,7 +125,7 @@ public:
 
 
     subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
-      "/image_raw", 10,
+      "/image_raw", 5,
       std::bind(&TrafficDetector::image_callback, this, std::placeholders::_1)
     );
 
@@ -128,6 +144,8 @@ public:
     std::vector<char> engine_data(engine_size);
     engine_file.read(engine_data.data(), engine_size);
     //end load engine
+
+
     runtime_ = nvinfer1::createInferRuntime(gLogger); // bind logger
     engine_ = runtime_->deserializeCudaEngine(engine_data.data(), engine_data.size());
     context_ = engine_->createExecutionContext(); // create context for model
@@ -294,8 +312,8 @@ private:
 
           //RCLCPP_INFO(this->get_logger(), "raw vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", x_raw, y_raw, w_raw, h_raw);
           
-          float w_model = w_raw * scale_x; // TODO try permuations with 960, cell_w, and 16
-          float h_model = h_raw * scale_y;
+          float w_model = w_raw * 60.0f;
+          float h_model = h_raw * 34.0f;
 
           //grab the actual x-y from the current cell
           float x_model = (j + x_raw) * cell_w;
@@ -304,9 +322,11 @@ private:
           // Now scale to original image size:
           float x = x_model * scale_x;
           float y = y_model * scale_y;
-          float w = w_model * 60.0f;
-          float h = h_model * 34.0f;
+
+          float w = w_model * scale_x;
+          float h = h_model * scale_y;
                   
+          //RCLCPP_INFO(this->get_logger(), "proc vals: {x = %.2f, y = %.2f, w = %.2f, h = %.2f}", x, y, w ,h);
 
           vision_msgs::msg::Detection2D det;
           
@@ -325,6 +345,8 @@ private:
         }
       }
     }
+
+    raw_detections = size_suppress(raw_detections, img_w * (20.0f / 960.0f),  img_h * (20.0f / 544.0f));
 
     // Now group by class and run NMS
     std::map<std::string, std::vector<vision_msgs::msg::Detection2D>> detections_by_class;

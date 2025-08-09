@@ -16,12 +16,12 @@ public:
         RCLCPP_INFO(this->get_logger(), "Drawing node has started up!");
 
         image_sub_ = this->create_subscription<sensor_msgs::msg::Image>(
-            "/image_raw", 10,
+            "/image_raw", 4,
             std::bind(&DrawingNode::image_callback, this, std::placeholders::_1)
         );
 
         box_sub_ = this->create_subscription<vision_msgs::msg::Detection2DArray>(
-            "/traffic_detections", 10,
+            "/traffic_detections", 4,
             std::bind(&DrawingNode::box_callback, this, std::placeholders::_1)
         );
 
@@ -63,24 +63,32 @@ private:
             if (box.results.empty()) continue;
             auto b_id = box.results[0].hypothesis.class_id;
 
-
+            cv::Scalar color;
             if (b_id == "car") {
-                cv::rectangle(img, pt1, pt2, cv::Scalar(0, 0, 255));
+                color = cv::Scalar(0, 0, 255);
             } else if (b_id == "bicycle"){
-                cv::rectangle(img, pt1, pt2, cv::Scalar(255, 0, 0));
+                color = cv::Scalar(255, 0, 0);
             } else if (b_id == "person"){
-                cv::rectangle(img, pt1, pt2, cv::Scalar(40, 255, 0));
+                color = cv::Scalar(40, 255, 0);
             } else if (b_id == "road_sign"){
-                cv::rectangle(img, pt1, pt2, cv::Scalar(60, 187, 255));
+                color = cv::Scalar(60, 187, 255);
             } else {
                 return;
             }
+            int thickness_scalar = std::max(1, static_cast<int>(std::floor(latest_image_->image.cols / 960.0f)));
+
+            cv::rectangle(img, pt1, pt2, color, thickness_scalar);
+
+            cv::putText(
+                img, b_id, cv::Point(pt1.x, pt1.y - 5), 
+                cv::FONT_HERSHEY_SIMPLEX, 
+                0.5 * thickness_scalar,
+                cv::Scalar(255, 255, 255), 
+                1 * thickness_scalar
+            );
             
-            cv::putText(img, b_id, cv::Point(pt1.x, pt1.y - 5), 
-            cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1);
             
-            
-            cv::circle(img, cv::Point(ctr.x, ctr.y), 3, cv::Scalar(255, 255, 255), -1);  // center dot
+            cv::circle(img, cv::Point(ctr.x, ctr.y), 2 * thickness_scalar, cv::Scalar(255, 255, 255), -1);  // center dot
             
 
 
