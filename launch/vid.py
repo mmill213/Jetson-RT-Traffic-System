@@ -8,8 +8,8 @@ def generate_launch_description():
 
     video_path_arg = DeclareLaunchArgument(
         'video_path',
-        #default_value= os.path.expanduser('~/Jetson-RT-Traffic-System/video/vecteezy_car-and-truck-traffic-on-the-highway-in-europe-poland_7957364.mp4'),
-        default_value= os.path.expanduser('~/Jetson-RT-Traffic-System/video/2103099-hd_1280_720_60fps.mp4'),
+        default_value= os.path.expanduser('~/Jetson-RT-Traffic-System/video/vecteezy_car-and-truck-traffic-on-the-highway-in-europe-poland_7957364.mp4'),
+        #default_value= os.path.expanduser('~/Jetson-RT-Traffic-System/video/2103099-hd_1280_720_60fps.mp4'),
         description='Path to the video file to publish'
     )
 
@@ -23,7 +23,7 @@ def generate_launch_description():
             output='screen',
             parameters=[{
                 'conf_thresh': 0.6,#0.58,
-                'intersection_max': 0.5 #0.1
+                'intersection_max': 0.3 #0.1
 
             }]
         ),
@@ -34,8 +34,8 @@ def generate_launch_description():
             output='screen',
             parameters=[{
                 'video_path': LaunchConfiguration('video_path'),
-                #'width': 960,
-                #'height': 544,
+                'width': 960,
+                'height': 544,
                 'fps': 8.0
                 }]
         ),

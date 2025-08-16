@@ -24,13 +24,16 @@
 #include <cstdlib>
 #include <string>
 
+
+ 
+///  
 std::string get_model_path() {
   const char* home = std::getenv("HOME");
   if (!home) home = "~";
   return std::string(home) + "/Jetson-RT-Traffic-System/camera-model/model.trt";
 }
-#define MODEL_PATH get_model_path().c_str()
-
+#define MODEL_PATH get_model_path().c_str() // only used in the contructor
+///
 
 class Logger : public nvinfer1::ILogger {
   void log(Severity severity, const char* msg) noexcept override {
@@ -97,20 +100,20 @@ std::vector<vision_msgs::msg::Detection2D> non_max_suppression(const std::vector
 
 std::vector<vision_msgs::msg::Detection2D> size_suppress(const std::vector<vision_msgs::msg::Detection2D>& boxes, float w_min = 20.0f, float h_min = 20.0f){
   std::vector<vision_msgs::msg::Detection2D> result;
-  #define cur boxes[i]
+  
 
   for (size_t i = 0; i < boxes.size(); i++){
     
-    if (cur.bbox.size_x <= w_min || cur.bbox.size_y <= h_min){
+    if (boxes[i].bbox.size_x <= w_min || boxes[i].bbox.size_y <= h_min){
       continue;
     }
 
-    result.push_back(cur);
+    result.push_back(boxes[i]);
     
   }
  
   return result;
-  #undef cur
+  
 }
 
 class TrafficDetector : public rclcpp::Node {
@@ -217,7 +220,7 @@ private:
     // model expects rgb8
     cv::Mat image;
     try {
-      auto cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::RGB8);
+      auto cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
       image = cv_ptr->image;
     } catch (cv_bridge::Exception& e) {
       RCLCPP_ERROR(this->get_logger(), "cv_bridge exception: %s", e.what());
@@ -331,7 +334,7 @@ private:
           vision_msgs::msg::Detection2D det;
           
 
-          //log to the bbox data structure
+          // log to the bbox data structure
           det.bbox.center.position.x = x;
           det.bbox.center.position.y = y;
           det.bbox.size_x = w;
@@ -346,6 +349,7 @@ private:
       }
     }
 
+    //suppress detections that are smaller than what the model could see in the input shape of the model
     raw_detections = size_suppress(raw_detections, img_w * (20.0f / 960.0f),  img_h * (20.0f / 544.0f));
 
     // Now group by class and run NMS
@@ -365,6 +369,7 @@ private:
             filtered_detections.detections.push_back(d);
         }
     }
+    // end nms section
 
     this->detection_pub_->publish(filtered_detections);
   }
@@ -389,12 +394,6 @@ private:
   int cov_idx;
   int bbox_idx;
 };
-
-
-
-
-
-
 
 
 

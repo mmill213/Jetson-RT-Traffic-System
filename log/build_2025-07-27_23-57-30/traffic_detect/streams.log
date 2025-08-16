@@ -1,9 +1,0 @@
-[0.044s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6
-[0.148s] [35m[1mConsolidate compiler generated dependencies of target traffic_detect_node[0m
-[0.192s] [ 50%] [32mBuilding CXX object CMakeFiles/traffic_detect_node.dir/src/main.cpp.o[0m
-[0.202s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/local/cuda/lib64/libcudart_static.a: not a directory
-[0.202s] [01m[Kcc1plus:[m[K [01;35m[Kwarning: [m[K/usr/lib/aarch64-linux-gnu/librt.a: not a directory
-[18.963s] gmake[2]: *** [CMakeFiles/traffic_detect_node.dir/build.make:76: CMakeFiles/traffic_detect_node.dir/src/main.cpp.o] Interrupt
-[18.964s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/traffic_detect_node.dir/all] Interrupt
-[18.964s] gmake: *** [Makefile:146: all] Interrupt
-[19.189s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/build/traffic_detect' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main-user/Jetson-RT-Traffic-System/install/videopub:/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/build/traffic_detect -- -j6 -l6

@@ -45,3 +45,5 @@ build/*
 install/*
 log/*
 video/*
+
+camera-model/cal_trt.bin
