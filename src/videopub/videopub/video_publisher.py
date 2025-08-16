@@ -33,11 +33,6 @@ class VideoPublisher(Node):
         self.resize_enabled = width > 0 and height > 0
         self.resize_dims = (width, height)
         
-        
-        if not video_path:
-            self.get_logger().error('Parameter "video_path" not set or empty! Exiting...')
-            raise RuntimeError('video_path parameter not set')
-        
 
         
         # build publisher and utils
@@ -80,6 +75,7 @@ class VideoPublisher(Node):
                     frame = cv2.resize(frame, self.resize_dims)
            
                 ros_image = self.bridge.cv2_to_imgmsg(frame, encoding='bgr8')
+                
             
                 self.publisher_.publish(ros_image)
                 self.get_logger().info('Publishing video frame')

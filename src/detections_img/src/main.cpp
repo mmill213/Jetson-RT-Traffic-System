@@ -53,7 +53,7 @@ private:
         cv::Mat img = latest_image_->image.clone();
 
 
-        for (const auto box : latest_boxes_->detections){
+        for (const auto &box : latest_boxes_->detections){
             const auto ctr = box.bbox.center.position;
             float w = box.bbox.size_x;
             float h = box.bbox.size_y;

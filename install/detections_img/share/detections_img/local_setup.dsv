@@ -1,1 +1,2 @@
-/home/main-user/Jetson-RT-Traffic-System/build/detections_img/ament_cmake_environment_hooks/local_setup.dsv
+source;share/detections_img/environment/ament_prefix_path.sh
+source;share/detections_img/environment/path.sh

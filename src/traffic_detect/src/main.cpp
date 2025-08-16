@@ -171,7 +171,7 @@ public:
       }
     } // load idxs
 
-    void* buffers[3];
+    //void* buffers[3];
 
     size_t input_size = 1 * 3 * 544 * 960 * sizeof(float);
     size_t cov_size = 1 * 4 * 34 * 60 * sizeof(float);

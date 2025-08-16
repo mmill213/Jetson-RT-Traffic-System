@@ -66,7 +66,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/local/cuda/include;/usr/lib/gcc/aarch64-linux-gnu/11/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/lib/gcc/aarch64-linux-gnu/11/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/local/cuda/lib;/usr/lib/gcc/aarch64-linux-gnu/11;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib;/usr/local/cuda/lib64")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/aarch64-linux-gnu/11;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
