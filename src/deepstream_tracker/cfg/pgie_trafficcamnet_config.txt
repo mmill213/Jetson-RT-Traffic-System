@@ -1,0 +1,36 @@
+[property]
+gpu-id=0
+
+# If you have an engine already, set it here:
+# model-engine-file=/absolute/path/to/trafficcamnet_b1_gpu0_int8.engine
+
+onnx-file=/home/main-user/Jetson-RT-Traffic-System/models/Primary_Detector/resnet18_trafficcamnet_pruned.onnx
+network-mode=2                # 0=FP32,1=FP16,2=INT8 (if calibrations provided)
+# or, for TAO .etlt models:
+
+num-detected-classes=4
+labelfile-path=/home/main-user/Jetson-RT-Traffic-System/models/Primary_Detector/labels.txt   # make a labels.txt with:
+# car
+# person
+# road_sign
+# two_wheeler
+
+batch-size=1
+process-mode=1            # primary detector
+model-color-format=0      # 0=RGB
+network-height=544
+network-width=960
+interval=0
+gie-unique-id=1
+maintain-aspect-ratio=1
+symmetric-padding=1
+infer-dims=3;544;960      # channels;h;w (if needed)
+
+# Tune thresholds to reduce spam
+cluster-mode=2            # DBSCAN/ NMS depends on model; 2 = NMS for detectnet_v2
+nms-iou-threshold=0.5
+confidence-threshold=0.4
+
+# Optional: enable tensor dump / perf for debugging
+# enable-dbscan=0
+# output-blob-names=

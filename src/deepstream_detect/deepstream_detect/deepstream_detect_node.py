@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 import sys
-sys.path.append('../')
 import os
-sys.path.append(os.path.expanduser('~/Jetson-RT-Traffic-System/src/deepstream_detect/deepstream_detect/common'))
+
+sys.path.append('../')
+sys.path.append(os.path.dirname(__file__))
 import gi
 gi.require_version('Gst', '1.0')
 from gi.repository import GLib, Gst
@@ -12,7 +13,7 @@ import configparser
 import pyds
 
 import rclpy
-from rclpy import Node
+from rclpy.node import Node
 from sensor_msgs.msg import Image
 from vision_msgs.msg import Detection2D, Detection2DArray
 from vision_msgs.msg import ObjectHypothesisWithPose
@@ -58,7 +59,12 @@ class DeepStreamNode(Node):
         self.pipeline.add(self.source_bin)
         sinkpad = self.streammux.request_pad_simple(f"sink{topic.replace('/', '-')}")
         srcpad = self.source_bin.get_static_pad("src")
-        srcpad.link(sinkpad)
+        if srcpad is None:
+            raise RuntimeError("Failed to get src pad from source bin")
+        ret = srcpad.link(sinkpad)
+        if ret != Gst.PadLinkReturn.OK:
+            raise RuntimeError(f"Failed to link srcpad to streammux sinkpad: {ret}")
+
 
         # Primary inference
         self.pgie = Gst.ElementFactory.make("nvinfer", "primary-inference")
