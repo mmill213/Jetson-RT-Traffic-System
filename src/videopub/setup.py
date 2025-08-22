@@ -20,7 +20,7 @@ setup(
     maintainer_email='you@email.com',
     description='Python video publisher node for ROS 2',
     license='MIT',
-    tests_require=['pytest'],
+    #tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'video_publisher = videopub.video_publisher:main',
