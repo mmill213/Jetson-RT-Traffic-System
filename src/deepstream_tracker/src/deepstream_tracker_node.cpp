@@ -33,7 +33,7 @@ public:
     declare_parameter<std::string>("tracker_config", pkg_share + "/cfg/tracker_iou_config.txt");
 
 
-    pub_ = create_publisher<Detection2DArray>("detections", 10);
+    pub_ = create_publisher<Detection2DArray>("traffic_detections", 10);
 
     std::string source_topic = get_parameter("source_topic").as_string();
     if (source_topic.empty()) {
@@ -62,22 +62,25 @@ public:
 private:
 
   GstElement* build_pipeline(int width, int height) {
-    
       std::string pgie = get_parameter("pgie_config").as_string();
       std::string tracker_cfg = get_parameter("tracker_config").as_string();
-
+    
       gst_init(nullptr, nullptr);
-
+    
+      // Create GStreamer elements
       pipeline_ = gst_pipeline_new("ds-pipeline");
-      appsrc_    = gst_element_factory_make("appsrc", "source");
-      auto streammux = gst_element_factory_make("nvstreammux", "streammux");
-      auto pgie_elt  = gst_element_factory_make("nvinfer", "primary-nvinfer");
-      auto tracker   = gst_element_factory_make("nvtracker", "tracker");
-      auto nvvconv   = gst_element_factory_make("nvvideoconvert", "conv");
-      auto sink      = gst_element_factory_make("fakesink", "fakesink");
-
-
-      if (!pipeline_ || !appsrc_ || !streammux || !pgie_elt || !tracker || !nvvconv || !sink) {
+      appsrc_ = gst_element_factory_make("appsrc", "source");
+      auto videoconvert = gst_element_factory_make("videoconvert", "videoconvert");       // CPU conversion
+      auto capsfilter = gst_element_factory_make("capsfilter", "capsfilter");           // Force NV12
+      auto nvvconv_to_nvmm = gst_element_factory_make("nvvideoconvert", "nvvconv_to_nvmm"); // CPU -> GPU
+      auto streammux = gst_element_factory_make("nvstreammux", "nvstreammux");
+      auto pgie_elt = gst_element_factory_make("nvinfer", "primary-nvinfer");
+      auto tracker = gst_element_factory_make("nvtracker", "tracker");
+      auto nvvconv = gst_element_factory_make("nvvideoconvert", "conv");
+      auto sink = gst_element_factory_make("fakesink", "fakesink");
+    
+      if (!pipeline_ || !appsrc_ || !videoconvert || !capsfilter || !nvvconv_to_nvmm || 
+          !streammux || !pgie_elt || !tracker || !nvvconv || !sink) {
           RCLCPP_FATAL(get_logger(), "Failed to create GStreamer elements");
           return nullptr;
       }
@@ -88,71 +91,199 @@ private:
           "format", G_TYPE_STRING, "BGR",
           "width", G_TYPE_INT, width,
           "height", G_TYPE_INT, height,
-          "framerate", GST_TYPE_FRACTION, 30, 1,
           NULL
       );
-
-      // settings 
       g_object_set(appsrc_, "caps", caps, "format", GST_FORMAT_TIME, "is-live", TRUE, NULL);
       gst_caps_unref(caps);
-      g_object_set(G_OBJECT(streammux),
-          "batch-size", 1,
-          "width", width,
-          "height", height,
-          "batched-push-timeout", 40000,
-          NULL);
+    
+      // Capsfilter to NV12
+      GstCaps* caps_nv12 = gst_caps_new_simple(
+        "video/x-raw", 
+        "format", 
+        G_TYPE_STRING, 
+        "NV12",
+        NULL);
 
+      g_object_set(capsfilter, "caps", caps_nv12, NULL);
+      gst_caps_unref(caps_nv12);
+
+      //nv video conversion on gpu memoty
+      g_object_set(G_OBJECT(nvvconv_to_nvmm), 
+      "nvbuf-memory-type", 0 /* 0 = GPU NVMM */, 
+      NULL);
+
+    
+      // Streammux settings
+      g_object_set(G_OBJECT(streammux),
+                   "batch-size", 1,
+                   "width", width,
+                   "height", height,
+                   "batched-push-timeout", 40000,
+                   NULL);
+    
+      // nvinfer & tracker settings
       g_object_set(G_OBJECT(pgie_elt), "config-file-path", pgie.c_str(), NULL);
       g_object_set(G_OBJECT(tracker), "ll-config-file", tracker_cfg.c_str(), NULL);
-      g_object_set(G_OBJECT(tracker), "ll-lib-file", "/opt/nvidia/deepstream/deepstream/lib/libnvds_nvmultiobjecttracker.so", NULL);
-
+      g_object_set(G_OBJECT(tracker), "ll-lib-file",
+                   "/opt/nvidia/deepstream/deepstream/lib/libnvds_nvmultiobjecttracker.so", NULL);
     
-      gst_bin_add_many(GST_BIN(pipeline_), appsrc_, streammux, pgie_elt, tracker, nvvconv, sink, NULL);
+      // Add elements to pipeline
+      gst_bin_add_many(GST_BIN(pipeline_),
+                       appsrc_, videoconvert, capsfilter, nvvconv_to_nvmm,
+                       streammux, pgie_elt, tracker, nvvconv, sink, NULL);
     
-      // Link appsrc → streammux
-      GstPad* sinkpad = gst_element_get_request_pad(streammux, "sink_0");
-      GstPad* srcpad  = gst_element_get_static_pad(appsrc_, "src");
-      if (gst_pad_link(srcpad, sinkpad) != GST_PAD_LINK_OK) {
-          RCLCPP_FATAL(get_logger(), "Failed to link appsrc to streammux");
+      // Link CPU elements one by one
+      if (!gst_element_link(appsrc_, videoconvert)) {
+          RCLCPP_FATAL(get_logger(), "Failed to link appsrc -> videoconvert");
+          perror("link err: ");
+          return nullptr;
+      }
+      if (!gst_element_link(videoconvert, capsfilter)) {
+          RCLCPP_FATAL(get_logger(), "Failed to link videoconvert -> capsfilter");
+          perror("link err: ");
+          return nullptr;
+      }
+      if (!gst_element_link(capsfilter, nvvconv_to_nvmm)) {
+          RCLCPP_FATAL(get_logger(), "Failed to link capsfilter -> nvvconv_to_nvmm");
+          perror("link err: ");
+          return nullptr;
+      }
+      // Get sink pad from nvstreammux
+      GstPad *sinkpad, *srcpad;
+      
+      // nvvideoconvert's src pad
+      srcpad = gst_element_get_static_pad(nvvconv_to_nvmm, "src");
+      
+      // streammux sink pad (sink_0 for first source)
+      sinkpad = gst_element_get_request_pad(streammux, "sink_0");
+      if (!sinkpad) {
+          RCLCPP_FATAL(get_logger(), "Streammux request sink pad failed. Exiting.\n");
           return nullptr;
       }
       gst_object_unref(srcpad);
       gst_object_unref(sinkpad);
-    
-      // Rest of pipeline
-      if (!gst_element_link_many(streammux, pgie_elt, tracker, nvvconv, sink, NULL)) {
-          RCLCPP_FATAL(get_logger(), "Failed to link downstream pipeline");
+      
+      // Link the two pads
+      if (gst_pad_link(srcpad, sinkpad) != GST_PAD_LINK_OK) {
+          RCLCPP_FATAL(get_logger(), "Failed to link nvvconv_to_nvmm to streammux\n");
+      }
+
+      // Link downstream GPU pipeline one by one
+      if (!gst_element_link(streammux, pgie_elt)) {
+          RCLCPP_FATAL(get_logger(), "Failed to link streammux -> pgie_elt");
+          perror("link err: ");
+          return nullptr;
+      }
+      if (!gst_element_link(pgie_elt, tracker)) {
+          RCLCPP_FATAL(get_logger(), "Failed to link pgie_elt -> tracker");
+          perror("link err: ");
+          return nullptr;
+      }
+      if (!gst_element_link(tracker, nvvconv)) {
+          RCLCPP_FATAL(get_logger(), "Failed to link tracker -> nvvconv");
+          perror("link err: ");
+          return nullptr;
+      }
+      if (!gst_element_link(nvvconv, sink)) {
+          RCLCPP_FATAL(get_logger(), "Failed to link nvvconv -> sink");
+          perror("link err: ");
           return nullptr;
       }
     
-      gst_element_set_state(pipeline_, GST_STATE_PLAYING);
+      // Add probe on tracker src pad
+      GstPad* tracker_src_pad = gst_element_get_static_pad(tracker, "src");
+      if (!tracker_src_pad) {
+          RCLCPP_FATAL(get_logger(), "Unable to get tracker src pad");
+      } else {
+          gst_pad_add_probe(tracker_src_pad, GST_PAD_PROBE_TYPE_BUFFER,
+                            (GstPadProbeCallback)tracker_src_pad_buffer_probe,
+                            this, NULL);
+      }
     
-      RCLCPP_INFO(this->get_logger(), "Pipeline built!");
+      gst_element_set_state(pipeline_, GST_STATE_PLAYING);
+      RCLCPP_INFO(get_logger(), "Pipeline built successfully!");
       return pipeline_;
     }
 
 
-    void image_callback(const sensor_msgs::msg::Image::SharedPtr msg){
-      cv::Mat frame = cv_bridge::toCvShare(msg, "bgr8")->image;
+    void image_callback(const sensor_msgs::msg::Image::SharedPtr msg) {
+        cv::Mat frame = cv_bridge::toCvShare(msg, "bgr8")->image;
+        
+
+        if (!has_set_up  && !frame.empty()){
+          RCLCPP_INFO(this->get_logger(), "Recieved first frame, generating pipeline with size: %dx%d", frame.cols, frame.rows);
+          build_pipeline(frame.cols, frame.rows); 
+          has_set_up = true;
+        }
+        RCLCPP_INFO(this->get_logger(), "rx img msg");
+        GstBuffer* buffer = gst_buffer_new_allocate(NULL, frame.total() * frame.elemSize(), NULL);
+        GstMapInfo map;
+
+        if (gst_buffer_map(buffer, &map, GST_MAP_WRITE)) { 
+          memcpy(map.data, frame.data, frame.total() * frame.elemSize()); 
+          gst_buffer_unmap(buffer, &map); 
+        }
+
+        GST_BUFFER_PTS(buffer) = gst_util_uint64_scale(
+          msg->header.stamp.sec * (guint64)1e9 + msg->header.stamp.nanosec, 
+          GST_SECOND, 
+          1
+        );
+
+        GST_BUFFER_DURATION(buffer) = gst_util_uint64_scale(1, GST_SECOND, 30); // assume 30fps 
+        gst_app_src_push_buffer(GST_APP_SRC(appsrc_), buffer);
+    }
 
 
+    static GstPadProbeReturn tracker_src_pad_buffer_probe(GstPad *pad, GstPadProbeInfo *info, gpointer user_data) {
+        auto *node = static_cast<DeepStreamTrackerNode*>(user_data);
 
-      if (!has_set_up && !frame.empty()){
-        RCLCPP_INFO(this->get_logger(), "Recieved first frame, generating pipeline with size: %dx%d", frame.cols, frame.rows);
-        build_pipeline(frame.cols, frame.rows);
-        has_set_up = true;
-      }
+        RCLCPP_INFO(node->get_logger(), "inside probe callback");
 
-      
-      // Push frame
-      GstBuffer* buffer = gst_buffer_new_allocate(NULL, frame.total() * frame.elemSize(), NULL);
-      GstMapInfo map;
-      if (gst_buffer_map(buffer, &map, GST_MAP_WRITE)) {
-        memcpy(map.data, frame.data, frame.total() * frame.elemSize());
-        gst_buffer_unmap(buffer, &map);
-      }
-      gst_app_src_push_buffer(GST_APP_SRC(appsrc_), buffer);
+        GstBuffer *buf = GST_PAD_PROBE_INFO_BUFFER(info);
+        if (!buf) return GST_PAD_PROBE_OK;
 
+        NvDsBatchMeta *batch_meta = gst_buffer_get_nvds_batch_meta(buf);
+        if (!batch_meta) return GST_PAD_PROBE_OK;
+
+        for (NvDsMetaList *l_frame = batch_meta->frame_meta_list;
+             l_frame != nullptr; l_frame = l_frame->next) {
+            NvDsFrameMeta *frame_meta = (NvDsFrameMeta*)(l_frame->data);
+
+            RCLCPP_INFO(node->get_logger(),
+            "Frame %d: %d objects",
+            frame_meta->frame_num,
+            g_list_length(frame_meta->obj_meta_list));
+
+            
+            vision_msgs::msg::Detection2DArray det_array;
+            det_array.header.stamp = node->now();
+            det_array.header.frame_id = "camera"; // or use your Image header
+            
+            for (NvDsMetaList *l_obj = frame_meta->obj_meta_list;
+                 l_obj != nullptr; l_obj = l_obj->next) {
+                NvDsObjectMeta *obj_meta = (NvDsObjectMeta*)(l_obj->data);
+                
+                vision_msgs::msg::Detection2D det;
+                det.bbox.center.position.x = obj_meta->rect_params.left + obj_meta->rect_params.width / 2.0;
+                det.bbox.center.position.y = obj_meta->rect_params.top + obj_meta->rect_params.height / 2.0;
+                det.bbox.size_x   = obj_meta->rect_params.width;
+                det.bbox.size_y   = obj_meta->rect_params.height;
+                
+                ObjectHypothesisWithPose hyp;
+                hyp.hypothesis.class_id = std::to_string(obj_meta->class_id);
+                hyp.hypothesis.score    = obj_meta->confidence;
+                
+                det.results.push_back(hyp);
+                det_array.detections.push_back(det);
+            }
+          
+            RCLCPP_INFO(node->get_logger(), "det arr size: %d", det_array.detections.size());
+            if (!det_array.detections.empty()) {
+                node->pub_->publish(det_array);
+            }
+        }
+        return GST_PAD_PROBE_OK;
     }
 
 
