@@ -33,6 +33,7 @@ private:
     vision_msgs::msg::Detection2DArray::SharedPtr latest_boxes_;
 
     void image_callback(const sensor_msgs::msg::Image::SharedPtr msg) {
+        //RCLCPP_INFO(get_logger(), "got a new image");
         try {
             latest_image_ = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
             try_render();
@@ -42,6 +43,8 @@ private:
     }
 
     void box_callback(const vision_msgs::msg::Detection2DArray::SharedPtr msg) {
+        //RCLCPP_INFO(get_logger(), "got a new arr");
+        
         latest_boxes_ = msg;
         try_render();
     }
@@ -50,6 +53,8 @@ private:
         if (!latest_boxes_ || !latest_image_){
             return;
         }
+
+        //RCLCPP_INFO(get_logger(), "try to draw");
         cv::Mat img = latest_image_->image.clone();
 
 
@@ -59,11 +64,14 @@ private:
             float h = box.bbox.size_y;
             cv::Point pt1(static_cast<int>(ctr.x - w/2.0f), static_cast<int>(ctr.y - h/2.0f));
             cv::Point pt2(static_cast<int>(ctr.x + w/2.0f), static_cast<int>(ctr.y + h/2.0f));
-
+            //RCLCPP_INFO(get_logger(), "results size: %d", box.results.size());
             if (box.results.empty()) continue;
             auto b_id = box.results[0].hypothesis.class_id;
 
             cv::Scalar color;
+
+            //RCLCPP_INFO(get_logger(), "skipped?");
+
             if (b_id == "car") {
                 color = cv::Scalar(0, 0, 255);
             } else if (b_id == "bicycle"){
@@ -75,6 +83,9 @@ private:
             } else {
                 return;
             }
+
+            //RCLCPP_INFO(get_logger(), "returned?");
+
             int thickness_scalar = std::max(1, static_cast<int>(std::floor(latest_image_->image.cols / 960.0f)));
 
             cv::rectangle(img, pt1, pt2, color, thickness_scalar);
@@ -98,6 +109,7 @@ private:
             latest_image_->header, sensor_msgs::image_encodings::BGR8, img
         ).toImageMsg();
 
+        RCLCPP_INFO(get_logger(), "sending img from drawing node");
         image_pub_->publish(*msg);  
 
 

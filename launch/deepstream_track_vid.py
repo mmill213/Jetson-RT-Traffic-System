@@ -35,9 +35,9 @@ def generate_launch_description():
             output='screen',
             parameters=[{
                 'video_path': LaunchConfiguration('video_path'),
-                'width': 960,
-                'height': 544,
-                'fps': 8.0
+                #'width': 960,
+                #'height': 544,
+                'fps': 12.0
                 }]
         ),
 
