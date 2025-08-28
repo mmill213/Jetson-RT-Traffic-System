@@ -17,26 +17,26 @@ def generate_launch_description():
         video_path_arg,
 
         Node(
-            package='deepstream_detect',
-            executable='deepstream_detect_node',
+            package='deepstream_tracker',
+            executable='deepstream_tracker_node',
             name='traffic_detect_node',
             output='screen',
             parameters=[{
-                'fps': 8.0,
-                'topic_name': '/image_raw'
+                #'fps': 8.0,
+                'source_topic': '/image_raw'
 
             }]
         ),
         Node(
-            package='videopub',
-            executable='video_publisher',
+            package='video_streamer_cpp',
+            executable='video_streamer_node',
             name='video_publisher_node',
             output='screen',
             parameters=[{
-                'video_path': LaunchConfiguration('video_path'),
-                'width': 960,
-                'height': 544,
-                'fps': 8.0
+                'video_filepath': LaunchConfiguration('video_path'),
+                #'width': 960,
+                #'height': 544,
+                'fps': 8
                 }]
         ),
 

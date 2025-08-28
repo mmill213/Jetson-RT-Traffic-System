@@ -109,7 +109,7 @@ private:
             latest_image_->header, sensor_msgs::image_encodings::BGR8, img
         ).toImageMsg();
 
-        RCLCPP_INFO(get_logger(), "sending img from drawing node");
+        //RCLCPP_INFO(get_logger(), "sending img from drawing node");
         image_pub_->publish(*msg);  
 
 
