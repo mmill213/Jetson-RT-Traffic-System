@@ -14,6 +14,11 @@ public:
         declare_parameter<std::string>("video_filepath", "");
         declare_parameter<int>("fps", 30);
 
+        declare_parameter("width", 960);
+        declare_parameter("height", 544);
+        
+        width_ = get_parameter("width").as_int();
+        height_ = get_parameter("height").as_int();
 
         int fps = get_parameter("fps").as_int();
 
@@ -41,10 +46,19 @@ private:
             cap_.set(cv::CAP_PROP_POS_FRAMES, 0);
             return;
         }
+        cv::Mat output_frame;
+        cv::resize(frame, output_frame, cv::Size(width_, height_));
+        
+        cv::Mat rgb_frame;
+        cv::cvtColor(output_frame, rgb_frame, cv::COLOR_BGR2RGB);
 
         sensor_msgs::msg::Image::SharedPtr msg = cv_bridge::CvImage(
-            std_msgs::msg::Header(), "bgr8", frame
+           std_msgs::msg::Header(), "rgb8", rgb_frame
         ).toImageMsg();
+
+        // sensor_msgs::msg::Image::SharedPtr msg = cv_bridge::CvImage(
+        //     std_msgs::msg::Header(), "bgr8", frame
+        // ).toImageMsg();
 
         image_pub_.publish(msg);
     }
@@ -52,6 +66,9 @@ private:
     cv::VideoCapture cap_;
     image_transport::Publisher image_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
+
+    int width_;
+    int height_;
 };
 
 int main(int argc, char ** argv)

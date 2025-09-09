@@ -34,6 +34,7 @@ private:
 
     void image_callback(const sensor_msgs::msg::Image::SharedPtr msg) {
         //RCLCPP_INFO(get_logger(), "got a new image");
+
         try {
             latest_image_ = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
             try_render();
@@ -43,9 +44,10 @@ private:
     }
 
     void box_callback(const vision_msgs::msg::Detection2DArray::SharedPtr msg) {
-        //RCLCPP_INFO(get_logger(), "got a new arr");
+        //RCLCPP_INFO(get_logger(), "got a new box arr");
         
         latest_boxes_ = msg;
+        
         try_render();
     }
 
@@ -65,7 +67,7 @@ private:
             cv::Point pt1(static_cast<int>(ctr.x - w/2.0f), static_cast<int>(ctr.y - h/2.0f));
             cv::Point pt2(static_cast<int>(ctr.x + w/2.0f), static_cast<int>(ctr.y + h/2.0f));
             //RCLCPP_INFO(get_logger(), "results size: %d", box.results.size());
-            if (box.results.empty()) continue;
+            // if (box.results.empty()) continue;
             auto b_id = box.results[0].hypothesis.class_id;
 
             cv::Scalar color;
@@ -112,7 +114,8 @@ private:
         //RCLCPP_INFO(get_logger(), "sending img from drawing node");
         image_pub_->publish(*msg);  
 
-
+        latest_image_.reset();
+        latest_boxes_.reset();
     }
 
     rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr image_sub_;

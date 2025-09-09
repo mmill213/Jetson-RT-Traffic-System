@@ -17,17 +17,23 @@ def generate_launch_description():
             package='usb_cam',
             executable='usb_cam_node_exe',
             name='usb_cam_node',
+            output='screen',
             parameters=[{
-                    "video_device": "/dev/video0",
-                    "image_width": 640,
-                    "image_height": 480,
-                    "framerate": 30.0,
-                    #"pixel_format": "uyvy",
-                    "pixel_format": "yuyv",
-                    "output_encoding": "bgr8",
-                    "io_method": "mmap"
-                }],  
-            output='screen'
+                "video_device": "/dev/video0",
+                "image_width": 1280,
+                "image_height": 720,
+                "framerate": 30.0,
+                "pixel_format": "uyvy",
+                "io_method": "mmap",
+
+                "brightness": 2,
+                "contrast": 3,
+                "saturation": 4,
+                "sharpness": 1,
+                "gain": 2,
+                "white_balance_automatic": True,
+                "auto_exposure": 3
+            }]
         ), 
         Node(
             package='detections_img',
