@@ -1,5 +1,0 @@
-/usr/bin/ld: cannot find -lcudart: No such file or directory
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/traffic_detect_node.dir/build.make:193: traffic_detect_node] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/traffic_detect_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

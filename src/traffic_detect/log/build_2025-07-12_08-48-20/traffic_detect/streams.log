@@ -1,6 +1,0 @@
-[0.020s] Invoking command in '/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6
-[0.033s] [0mCMake Error: The current CMakeCache.txt directory /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect/CMakeCache.txt is different than the directory /home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
-[0.055s] [0mCMake Error: The source directory "/home/nvidia/Jetson-RT-Traffic-System/src/traffic_detect" does not exist.
-[0.056s] Specify --help for usage, or press the help button on the CMake GUI.[0m
-[0.057s] gmake: *** [Makefile:267: cmake_check_build_system] Error 1
-[0.061s] Invoked command in '/home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/main-user/Jetson-RT-Traffic-System/src/traffic_detect/build/traffic_detect -- -j6 -l6
