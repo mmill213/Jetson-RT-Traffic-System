@@ -16,6 +16,7 @@ Current Capabilities:
   
   Draws Vehicle Path Trails.
 
+------------
 
 Upcoming Features:
 
@@ -25,7 +26,7 @@ Upcoming Features:
   
   Route Statistic Gathering Capabilities.
 
-
+-------------
 
 Original SURP Project Member: Isaac Pruett
 
