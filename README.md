@@ -7,18 +7,28 @@ Description:
  A vehicle tracking system that uses the Jetson Orin Nano board and Nvidia DeepStream software for tracking. The purpose is for CalTrans to have a cheaper, more lightweight, and reproducible vehicle tracking camera system than their current implementation.
 
 Current Capabilities: 
+
   Can Detect Vehicles.
+  
   Displays Vehicle IDs.
+  
   Can Be Used Over Streamed Video.
+  
   Draws Vehicle Path Trails.
 
+
 Upcoming Features:
+
   Drawing Node Integration.
+
   Vehicle Box Detection.
+  
   Route Statistic Gathering Capabilities.
 
 
 
 Original SURP Project Member: Isaac Pruett
+
 Capstone Team Members: Micah Miller, Jack Toyama, Binh To, Marco Menashe
+
 Project Supervisor: Dr. Seng
